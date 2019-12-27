@@ -1,0 +1,34 @@
+/* xxbd3000.baf
+Moves Vienxay into the Coalition Camp if she was not in party */
+
+IF
+    InParty("X3Vien")
+	Global("X3Vien_MoveCamp","BD3000",0)
+THEN
+  RESPONSE #100
+    SetGlobal("X3Vien_MoveCamp","BD3000",1)
+END
+
+IF
+  Global("X3Vien_MoveCamp","bd3000",0)
+  !Dead("X3Vien")
+  !InPartyAllowDead("X3Vien")
+THEN
+  RESPONSE #100
+    SetGlobal("X3Vien_MoveCamp","bd3000",1)
+    MoveGlobal("bd3000","X3Vien",[1824.1679]) //look up area coordinates for bd3000.are
+    ActionOverride("X3Vien",Face(N))
+    ReallyForceSpellDeadRES("bdrejuve","X3Vien")
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","locals",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Vien",ChangeAIScript("X32Vien",OVERRIDE))
+    ActionOverride("X3Vien",ChangeAIScript("bdasc3",CLASS))
+    ActionOverride("X3Vien",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("X3Vien",ChangeAIScript("BDTHIEF01",GENERAL))
+    ActionOverride("X3Vien",ChangeAIScript("",DEFAULT))
+    ActionOverride("X3Vien",SetDialogue("X32Vien"))
+    Continue()
+END

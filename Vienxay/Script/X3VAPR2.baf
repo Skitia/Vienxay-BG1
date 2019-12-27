@@ -1,0 +1,81 @@
+IF
+	See([PC])
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SmallWait(5)
+		Enemy()
+END
+
+IF
+	See([PC])
+	!Allegiance(Myself,ENEMY)
+	NumberOfTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		StartDialogue("X3VAPR2",[PC])
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	Global("X3Cast","LOCALS",0)
+	HaveSpell(WIZARD_INVISIBILITY)
+ THEN
+ RESPONSE #100
+	Spell(Myself,WIZARD_INVISIBILITY)
+	RandomWalk()
+	SetGlobal("X3Cast","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_HOLD_PERSON)
+	!StateCheck(NearestEnemyOf(Myself),STATE_SLEEPING)
+	!StateCheck(NearestEnemyOf(Myself),STATE_HELPLESS)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_HOLD_PERSON)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_LIGHTNING_BOLT)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	Global("X3Cast","LOCALS",1)
+	HaveSpell(WIZARD_INVISIBILITY)
+ THEN
+ RESPONSE #100
+	Spell(Myself,WIZARD_INVISIBILITY)
+	SetGlobal("X3Cast","LOCALS",2)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_BLINDNESS)
+	!StateCheck(NearestEnemyOf(Myself),STATE_BLIND)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_BLINDNESS)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MAGIC_MISSILE)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END

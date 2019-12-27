@@ -1,0 +1,9 @@
+IF
+	Global("SOD_fromimport","global",1)
+	InMyArea("X3Vien")
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride("X3Vien",SetDialog("X32VienJ"))
+		ActionOverride("X3Vien",ChangeAIScript("X32Vien",OVERRIDE))
+END

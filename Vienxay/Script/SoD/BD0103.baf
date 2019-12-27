@@ -1,0 +1,45 @@
+
+
+
+IF
+  OR(2)
+    InMyArea("X3Vien")
+    InPartyAllowDead("X3Vien")
+  GlobalLT("BD_PLOT","GLOBAL",51)
+THEN
+  RESPONSE #100
+    ActionOverride("X3Vien",LeaveParty())
+	ActionOverride("PlayerChest00",TakeCreatureItems("X3Vien",BACKPACK))
+    SmallWait(1)
+    ActionOverride("X3Vien",DestroySelf())
+    Continue()
+END
+
+IF
+	Global("bd_plot","global",55)
+	Global("X3_MVien","global",0)
+	InParty("X3Vien")
+THEN
+	RESPONSE #100
+	MoveGlobal("BD0103","X3Vien",[582.341])
+		ActionOverride("X3Vien",JumpToPoint([683.270]))
+		ActionOverride("X3Vien",Face(SW))
+		SetGlobal("X3_MVien","global",1)
+END
+ 	
+IF
+	Global("bd_plot","global",55)
+	Global("BD_PLAY_ONCE_X3Vien","BD0103",0)
+	Global("BD_OT_DELAY","BD0103",0)
+	IfValidForPartyDialog("X3Vien")
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("BD_OT_DELAY","BD0103",1)
+		SetGlobal("BD_PLAY_ONCE_X3Vien","BD0103",1)
+		Wait(1)
+		DisplayStringWait("X3Vien",~It's about time you wake up. I on the other hand, am well prepared.~) 
+		SetGlobal("BD_OT_DELAY","BD0103",0)
+		SetInterrupt(TRUE)
+END
+

@@ -1,0 +1,43 @@
+// This block prevents the apprentice from being killed if Vienxay is not in the party.
+// It simply removes them from the game instead.
+// Re-recruiting Vienxay will get them to respawn. 
+
+IF
+Global("X3VienQuestStart","GLOBAL",3)
+!InParty("X3Vien")
+THEN
+RESPONSE #100
+SetGlobal("X3VienQuestStart","GLOBAL",2)
+DestroySelf()
+END 
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_BLUR)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_BLUR)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MAGIC_MISSILE)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_LARLOCH_MINOR_DRAIN)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(Myself),WIZARD_LARLOCH_MINOR_DRAIN)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		Attack(NearestEnemyOf(Myself))
+END

@@ -1,0 +1,11 @@
+/*bdcut61.baf */
+IF
+	InParty("X3Vien")  
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride("X3Vien",LeaveParty())
+		SetGlobal("X3Vien_SoDparty_epilogue","GLOBAL",1)
+		SetGlobal("X3VienKickedOut","GLOBAL",1) //this is for inner mod detection, for example if the game's a continuous EET game. Put here whatever you need for your own mod.
+		ActionOverride("X3Vien",DestroyAllFragileEquipment(ADAMANTINE)) //this destroys all drow equipment, just in case the NPC had any.
+END

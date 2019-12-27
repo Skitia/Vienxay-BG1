@@ -1,0 +1,21 @@
+// ITEMS
+LOAD_TRA ~Vienxay/translations/English/vien_items.tra~
+//I was using an old version of NearInfinity. This INT_VAR isn't really necessary anymore. 
+//Note these gloves have a hidden ability to reduce Vienxay's spell slots by one, as a work around for her kit being seen as a specialist mage when it should't be.
+COPY_EXISTING ~Vienxay/Item/x3vglo.itm~ ~override/x3vglo.itm~
+SAY NAME1 @45
+SAY NAME2 @45
+SAY DESC @46
+  LPF ALTER_EFFECT
+      INT_VAR
+      match_opcode = 275
+      parameter1 = 20
+    END
+OUTER_SET strref = RESOLVE_STR_REF (@49)
+APPEND item_use.2da ~x3vglo Vienxay %strref% 3~
+
+COPY_EXISTING ~Vienxay/Item/X3VNote.itm~ ~override/X3VNote.itm~	
+
+SAY NAME1 @47
+SAY NAME2 @47
+SAY DESC @48

@@ -1,0 +1,19 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		OpenDoor("Door02")
+		ActionOverride("X3Vien",JumpToPoint([1458.329]))
+		ActionOverride("bdfritz",MoveToPoint([1456.321]))
+		Wait(7)
+		ActionOverride("bdfritz",MoveToPoint([1014.616]))
+		ActionOverride("X3Vien",MoveToPoint([1118.666]))
+		Wait(6) 
+		DisplayStringHead("X3Vien",~Finally! Free.~)
+		ActionOverride("bdfritz",Face(SW))
+		Wait(3)
+		DisplayStringHead("bdfritz",~Stay out of trouble and you'll stay that way.~)
+		Wait(2)
+		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
+END

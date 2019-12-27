@@ -1,0 +1,28 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		FadeToColor([20.0],0) 
+		Wait(2) 
+		FadeFromColor([30.0],0)
+		SmallWait(2)
+		CreateCreature("cutspy",[2312.238],S)
+		SmallWait(1) 
+		ActionOverride("X3Vien",FaceObject("cutspy")) 
+		Wait(2) 
+		DisplayStringHead("X3Vien",~Shar, give me your weave, and I will be your artist!~)
+		Wait(2)
+		PlaySound("EFF_P91")
+		ActionOverride("X3Vien",ForceSpellRES("X3VSBLT","cutspy")
+		Wait(2) 
+		DisplayStringHead("X3Vien",~Yes, yes! This is it!~)
+		Wait(5)
+		DisplayStringHead("X3Vien",~That is true power. My brilliance! My genius! Haha!~)
+		Wait(5)
+		ActionOverride("cutspy",DestroySelf())
+		SmallWait(1)
+		SetGlobal("X32VQuestTalk","GLOBAL",6)
+		SmallWait(1)
+		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
+END

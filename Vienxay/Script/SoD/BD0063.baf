@@ -1,0 +1,11 @@
+IF
+	Global("X3_NPC01","MYAREA",0)
+	IsValidForPartyDialog("X3Vien")  // Vien
+	RandomNum(2,1)
+	Delay(3)
+THEN
+	RESPONSE #100
+		SetGlobal("X3_NPC01","MYAREA",1)
+		DisplayStringHead("X3Vien",~Why are we *here*? My magic is useless in this place. Get us through quickly!~)  
+END
+

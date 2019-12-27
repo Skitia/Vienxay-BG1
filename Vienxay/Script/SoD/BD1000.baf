@@ -1,0 +1,38 @@
+IF
+  Global("X3Vien_MoveCamp","bd1000",0)
+  !Dead("X3Vien")
+  !InPartyAllowDead("X3Vien")
+THEN
+  RESPONSE #100
+    SetGlobal("X3Vien_MoveCamp","bd1000",1)
+    MoveGlobal("bd1000","X3Vien",[783.3404]) //look up area coordinates for bd1000.are
+    ActionOverride("X3Vien",Face(SE))
+    ReallyForceSpellDeadRES("bdrejuve","X3Vien")
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","locals",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","locals",0))
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Vien",ChangeAIScript("X32Vien",OVERRIDE))
+    ActionOverride("X3Vien",ChangeAIScript("bdasc3",CLASS))
+    ActionOverride("X3Vien",ChangeAIScript("BDSHOUT",RACE))
+    ActionOverride("X3Vien",ChangeAIScript("BDTHIE01",GENERAL))
+    ActionOverride("X3Vien",ChangeAIScript("",DEFAULT))
+    Continue()
+END
+
+IF
+  Global("bd_plot","global",170)
+  Global("bd_mdd016b_X3Vien","bd1000",0)
+  !GlobalTimerNotExpired("bd_mdd016b_timer","bd1000")
+  IfValidForPartyDialog("X3Vien")
+  NextTriggerObject("X3Vien")
+  Detect(Player1)
+THEN
+  RESPONSE #50
+    SetGlobal("bd_mdd016b_X3Vien","bd1000",1)
+  RESPONSE #50
+    SetGlobal("bd_mdd016b_X3Vien","bd1000",1)
+    SetGlobalTimer("bd_mdd016b_timer","bd1000",ONE_ROUND)
+    DisplayStringHead("X3Vien",~She thinks she's everything. Please. I'm so much better than she is.~)
+END

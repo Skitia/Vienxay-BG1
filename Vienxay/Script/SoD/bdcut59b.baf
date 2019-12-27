@@ -1,0 +1,24 @@
+
+
+IF
+  Global("X3Vien_kicked_bd4700","global",1) 
+  !Dead("X3Vien")
+  !InParty("X3Vien")
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveGlobal("bd4300","X3Vien",[485.564]) // This will almost never happen.
+    ActionOverride("X3Vien",Face(N))
+END
+
+
+IF
+  Global("X3Vien_kicked_bd4700","global",0)
+  !Dead("X3Vien")
+  !InParty("X3Vien")
+THEN
+  RESPONSE #100
+  CutSceneId(Player1)
+  MoveGlobal("bd4300","X3Vien",[934.873]) //coordinates wherever Biff should be waiting if he wasn't with the PC to Avernus. For example near Rayphus who is at [1840.1260], in the room to the northeast.
+  ActionOverride("X3Vien",Face(S))
+END

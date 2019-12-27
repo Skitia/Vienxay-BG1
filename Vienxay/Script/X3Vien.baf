@@ -1,0 +1,257 @@
+// Pause Timer to give time for music to finish between NPCs .
+IF 
+Global("X3PauseTimer","GLOBAL",0)
+InParty(Myself)
+THEN RESPONSE #100 
+SetGlobal("X3PauseTimer","GLOBAL",1)
+RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
+END 
+// Baeloth Conflict 
+IF
+	InParty(Myself)
+	InParty("Baeloth")
+    Global("X3VienBaelothConflict","LOCALS",0)
+THEN RESPONSE #100 
+SetGlobal("X3VienBaelothConflict","LOCALS",1)	
+END 
+
+IF 
+Global("X3VienBaelothConflict","LOCALS",-1)
+!InParty("Baeloth") 
+InParty(Myself)
+THEN RESPONSE #100 
+SetGlobal("X3VienBaelothConflict","LOCALS",0)
+END 
+
+IF 
+Global("X3VienBaelothConflict","LOCALS",-2)
+InParty("Baeloth") 
+!InParty(Myself)
+THEN RESPONSE #100 
+SetGlobal("X3VienBaelothConflict","LOCALS",0)
+END 
+
+
+// Baeloth Conflict Trigger 
+IF 
+Global("X3VienBaelothConflict","LOCALS",1)	
+THEN RESPONSE #100 
+StartDialogueNoSet(Player1)
+END 
+
+// SEX CHANGE
+
+IF
+    InParty(Myself)
+	Gender(Myself,MALE)
+	HasItemEquiped("belt05",Myself)
+    Global("X3VienSexChange","GLOBAL",0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienSexChange","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END
+
+// Quest Reminder.
+IF 
+	InParty(Myself)
+	AreaCheck("AR4800")
+	Global("X3VienQuestStart","Global",0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienQuestStart","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+
+// Durlag's Tower Remark
+IF 
+	InParty(Myself)
+	AreaCheck("AR0511")
+	Global("X3VienBasement","Global",0)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienBasement","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+
+// Third Talk, ONLY after exiting the inn.
+IF 
+	InParty(Myself)
+	!AreaCheck("AR4801")
+	Global("X3VienApprenticeTalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienApprenticeTalk","GLOBAL",2)
+	StartDialogueNoSet(Player1)
+END	 
+
+// Cloakwood, only if Master has not been confronted, thus after Apprentice Talk. 
+IF 
+	InParty(Myself)
+	AreaCheck("AR2200")
+	Global("X3VienCloak","GLOBAL",0)
+	GlobalLT("X3VienQuestDone","GLOBAL",1)
+	GlobalGT("X3VienApprenticeTalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienCloak","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+// Baldur's Gate, southwest section. 
+IF 
+	InParty(Myself)
+	AreaCheck("AR1100")
+	Global("X3VienBaldur","Global",0)
+THEN
+  RESPONSE #100
+	Wait(5)
+	SetGlobal("X3VienBaldur","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+
+// Larswood 
+
+IF 
+	InParty(Myself)
+	AreaCheck("AR2900")
+	Global("X3VienLars","GLOBAL",0)
+THEN
+  RESPONSE #100
+	Wait(5)
+	SetGlobal("X3VienLars","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+
+// Peldvale 
+
+IF 
+	InParty(Myself)
+	AreaCheck("AR2400")
+	Global("X3VienPeld","GLOBAL",0)
+THEN
+  RESPONSE #100
+	Wait(5)
+	SetGlobal("X3VienPeld","GLOBAL",1)
+	StartDialogueNoSet(Player1)
+END	
+
+
+/* DEBUG Situation: Player Kills Apprentice without talking to him first. 
+We destroy the apprentice and allow him to be re-created when Vienxay is not in the party, and talk is not yet done, but we will also need to do this for player trickery. */
+IF 
+	InParty(Myself)
+	Global("X3VienApprenticeTalk","GLOBAL",0)
+	Dead("X3VAPR")
+THEN
+  RESPONSE #100
+	Wait(1)
+	SetGlobal("X3VienAprKilledFirst","GLOBAL",1)
+	SetGlobal("X3VienApprenticeTalk","GLOBAL",1)
+	AddJournalEntry(@10023,QUEST)
+	StartDialogueNoSet(Player1)
+END	
+ 
+	
+IF 
+InParty(Myself)
+Global("X3VienTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3VienTimer","GLOBAL",3400) 
+SetGlobal("X3VienTalk","GLOBAL",1)       // Each block must run only once.
+END
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("X3VienTimer","GLOBAL")
+/* Note Bran used a silence line in hers. I'm not 100% interested in it, but can be placed here if we change our mind. */
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID)    
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)                          
+!See([ENEMY])
+!AreaType(DUNGEON)			  
+OR(4)                       // YOU WILL NEED TO ADD +1 TO THIS OR NUMBER FOR EVERY ADDITONAL TALK YOU ADD          
+Global("X3VienTalk","GLOBAL",1)
+Global("X3VienTalk","GLOBAL",3)
+Global("X3VienTalk","GLOBAL",5)
+Global("X3VienTalk","GLOBAL",7)
+THEN
+RESPONSE #100
+IncrementGlobal("X3VienTalk","GLOBAL",1)
+END
+
+// So, if timer expired, everybody's able to talk and there's no battle, we increase the variable by one. Now our X3VienTalk variable is at 2, or 4, or 6... or 20, or 30.
+// EXACTLY like the condition in the beginning of each talk, right?
+// Now all that's left is making Branwen talk to you. We could just add StartDialogueNoSet(Player1) into the last block, but the engine is tricky: if you give a command when Branwen's about to talk, she may miss her dialogue!
+// So we add another block. Actually, two blocks: one for the romanced Branwen and one for the non-romanced, because I want to play the music only if Branwen is romanced.
+IF
+RealGlobalTimerExpired("X3PauseTalkTimer","GLOBAL")
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+!AreaType(DUNGEON)
+OR(4)                                    // YOU WILL NEED TO ADD +1 TO THIS OR NUMBER FOR EVERY ADDITONAL TALK YOU ADD  
+Global("X3VienTalk","GLOBAL",2)
+Global("X3VienTalk","GLOBAL",4)
+Global("X3VienTalk","GLOBAL",6)
+Global("X3VienTalk","GLOBAL",8)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
+PlaySong(0)
+PlaySound("X3VSonD") 
+StartDialogueNoSet(Player1)
+END
+
+// Talk 6 
+IF 
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+!AreaType(DUNGEON)
+Global("X3VienQuestDone","GLOBAL",1)
+THEN 
+RESPONSE #100 
+Wait(5)
+SetGlobal("X3VienQuestDone","GLOBAL",2)
+StartDialogueNoSet(Player1) 
+END 
+// Final Talk 
+IF 
+RealGlobalTimerExpired("X3VienFinalTimer","GLOBAL")
+Global("X3VienFinalTalk","GLOBAL",0)
+THEN 
+RESPONSE #100 
+SetGlobal("X3VienFinalTalk","GLOBAL",1)
+END 
+
+IF 
+RealGlobalTimerExpired("X3PauseTalkTimer","GLOBAL")
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+!AreaType(DUNGEON)
+Global("X3VienFinalTalk","GLOBAL",1)
+THEN 
+RESPONSE #100 
+RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
+SetGlobal("X3VienFinalTalk","GLOBAL",2)
+PlaySong(0)
+PlaySound("X3VSonL") 
+StartDialogueNoSet(Player1)
+END 

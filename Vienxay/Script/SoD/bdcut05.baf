@@ -1,0 +1,9 @@
+/*IF
+	InParty("X3Vien")  // Vienxay
+	!Dead("X3Vien")  // Vienxay
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		ActionOverride("X3Vien",JumpToPoint([683.270]))
+		ActionOverride("X3Vien",Face(SW))
+END*/

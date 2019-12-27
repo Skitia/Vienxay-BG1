@@ -1,0 +1,10 @@
+IF
+Global("X3VienQuestStart","GLOBAL",2)
+InParty("X3Vien")
+THEN
+RESPONSE #100
+SetGlobal("X3VienQuestStart","GLOBAL",3)
+CreateCreature("X3VAPR",[604.457],SE)
+Continue()
+END 
+

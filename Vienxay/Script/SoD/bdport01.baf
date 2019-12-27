@@ -1,0 +1,18 @@
+IF
+	Global("X32VienTalk","GLOBAL",11)
+	Global("bd_plot","global",495)
+	InParty("X3Vien")  
+THEN
+	RESPONSE #100
+		SetGlobal("X32VienTalk","GLOBAL",12)
+END
+
+IF
+	Global("X32VienTalk","GLOBAL",12)
+	InParty("X3Vien")  // X3Vien
+	IsValidForPartyDialogue("X3Vien")  // X3Vien
+	!ActuallyInCombat()
+THEN
+	RESPONSE #100
+		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,18 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		FadeToColor([20.0],0)
+		Wait(2)
+		ActionOverride("X3Vien",JumpToPoint([2284.444]))
+		JumpToPoint([2200.449])
+		Wait(1)
+		MoveViewObject("X3Vien",INSTANT)
+		Wait(2)
+		FadeFromColor([20.0],0)
+		Wait(2)
+		SetGlobal("X32VQuestTalk","GLOBAL",5)
+		SmallWait(1)
+		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
+END

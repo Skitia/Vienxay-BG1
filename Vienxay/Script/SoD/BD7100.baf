@@ -1,0 +1,29 @@
+
+
+IF
+    InParty("X3Vien")
+	Global("X3VienMoveCamp","BD7100",0)
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMoveCamp","BD7100",1)
+END
+
+IF
+  Global("X3VienMoveCamp","BD7100",0)
+  !Dead("X3Vien")
+  !InPartyAllowDead("X3Vien")
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMoveCamp","BD7100",1)
+    MoveGlobal("BD7100","X3Vien",[783.3404])
+    ActionOverride("X3Vien",Face(NW))
+    ReallyForceSpellDeadRES("BDREJUVE","X3Vien")
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Vien",ChangeAIScript("X32Vien",OVERRIDE))
+    ActionOverride("X3Vien",ChangeAIScript("BDFIGH01",GENERAL))
+    Continue()
+END

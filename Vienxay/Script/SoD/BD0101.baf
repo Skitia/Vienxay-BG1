@@ -1,0 +1,95 @@
+/* We need to check for three instances, fortunately, only for this area.
+The first is if Vien never spawned, was in party. The second is if Vien never spawned, was not in party. The last is if Vien was spawned, was not killed, and is not in party.*/
+IF
+  InPartyAllowDead("X3Vien")
+  Global("X3VienMarch","BD0101",0)
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMarch","BD0101",1)  
+END 
+
+IF
+  Global("X3VienMarch","BD0101",0)
+  Global("X32VienSpawn","GLOBAL",0)
+  BeenInParty("X3Vien")
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMarch","BD0101",1)
+	SetGlobal("X32VienSpawn","GLOBAL",1) 	
+	MoveGlobal("BD0101","X3Vien",[551.663])
+	ActionOverride("X3Vien",Face(SE))
+    ReallyForceSpellDeadRES("BDREJUVE","X3Vien") // In case Vien died and was never raised. 	
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","LOCALS",0))
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))
+    ActionOverride("X3Vien",ChangeAIScript("X32Vien",OVERRIDE))
+    ActionOverride("X3Vien",ChangeAIScript("BDTHIE01",GENERAL))
+    Continue()
+END
+
+
+
+	// Never had Vien in the party. Creating Vien.
+IF
+  Global("X3VienMarch","BD0101",0)
+  Global("X32VienSpawn","GLOBAL",0)
+  !BeenInParty("X3Vien")
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMarch","BD0101",1)
+	SetGlobal("X32VienSpawn","GLOBAL",1) 
+	CreateCreature("X32Vien",[551.663],SE)
+	ActionOverride("X3Vien",MakeGlobal())
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","LOCALS",0)) // Need to research this one later. 
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))// Need to research what this means. 
+    ActionOverride("X3Vien",ChangeAIScript("BDTHIE01",GENERAL))
+    Continue()
+END	
+// Vien did spawn, but was not recruited. 
+IF
+  Global("X3VienMarch","BD0101",0)
+  Global("X32VienSpawn","GLOBAL",1)
+  !Dead("X3Vien") // If he's dead, the PC doesn't want him around...for some reason.
+  !InPartyAllowDead("X3Vien") // If he's not in the party, regardless of his state. 
+THEN
+  RESPONSE #100
+    SetGlobal("X3VienMarch","BD0101",1)
+	SetGlobal("X32Fritz","GLOBAL",2)
+	MoveGlobal("BD0101","X3Vien",[551.663])
+	ActionOverride("X3Vien",Face(SE))
+	ActionOverride("X3Vien",MakeGlobal())
+    ChangeEnemyAlly("X3Vien",NEUTRAL)
+    ChangeSpecifics("X3Vien",ALLIES)
+    ActionOverride("X3Vien",SetGlobal("bd_joined","LOCALS",0))
+    ActionOverride("X3Vien",SetGlobal("bd_retreat","LOCALS",0)) // Need to research this one later. 
+    ActionOverride("X3Vien",SaveObjectLocation("LOCALS","bd_default_loc",Myself))// Need to research what this means. 
+    ActionOverride("X3Vien",ChangeAIScript("BDTHIE01",GENERAL))
+    Continue()
+END	
+
+IF
+	Global("bd_mdd010z_ot","bd0101",1)
+	!GlobalTimerNotExpired("bd_mdd010z_ot_timer","bd0101")
+	InMyArea("X3Vien")
+	!InParty("X3Vien")
+THEN
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("X3Vien",~Gods. So many peasants.~) // Comment here when you replace the string with @ tra.
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("X3Vien",~Hrmph. Is this it? Evermeet's armies were far more glorious.~) // Now which one of your big, strong soldiers will help with my packs?
+	RESPONSE #10
+		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
+		SetGlobal("bd_mdd010z_ot","bd0101",0)
+		DisplayStringHead("X3Vien",~Are we going to march or not?~) // Someone stole your purse? This city...
+	RESPONSE #90 // ~Need to research the particular use of 90.
+		Continue()
+END

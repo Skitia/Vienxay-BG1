@@ -1,0 +1,11 @@
+IF
+Global("AprSpawn","GLOBAL",0)
+Global("X3VienApprenticeTalk","GLOBAL",3)
+InParty("X3Vien")
+!Dead("X3VMAS")
+THEN
+RESPONSE #100
+SetGlobal("AprSpawn","GLOBAL",1)
+CreateCreature("X3VAPR2",[4180.1430],NW)
+Continue()
+END

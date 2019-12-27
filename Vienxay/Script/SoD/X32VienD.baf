@@ -1,0 +1,26 @@
+// Quest Event
+IF
+AreaCheck("BD7100")
+InParty(Myself)
+Global("X32VQuestTalk","GLOBAL",3)
+TimeOfDay(NIGHT)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+IncrementGlobal("X32VQuestTalk","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END
+
+IF
+InParty(Myself)
+GlobalTimerExpired("X32VienGameTalkTimer","GLOBAL")
+RealGlobalTimerExpired("X32VienRealTalkTimer","GLOBAL")
+Global("X32VienTalk","GLOBAL",9)
+!StateCheck(Player1,CD_STATE_NOTVALID)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+THEN
+RESPONSE #100
+IncrementGlobal("X32VienTalk","GLOBAL",1)
+StartDialogueNoSet(Player1)
+END

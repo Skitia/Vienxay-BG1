@@ -1,0 +1,131 @@
+IF
+	See([PC])
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		SmallWait(5)
+		Shout(12)
+		Enemy()
+END
+
+IF 
+OR(3)
+Heard("X3VAPR3",12)
+Heard("X3VAPR5",12)
+Heard("X3VAPR4",12)
+THEN RESPONSE #100 
+Enemy() 
+END 
+
+IF 
+	Dead("X3VMAS")
+THEN 
+	RESPONSE #100
+		SetGlobal("X3VienQuestDone","GLOBAL",1)
+		AddJournalEntry(@10024,QUEST_DONE)
+		AddexperienceParty(9000)
+END 
+
+IF
+	See([PC])
+	!Allegiance(Myself,ENEMY)
+	NumberOfTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		StartDialogue("X3VMAS",[PC])
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	Global("X3Cast","LOCALS",0)
+ THEN
+ RESPONSE #100
+	ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+	ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+	ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+	Wait(2)
+	SetGlobal("X3Cast","LOCALS",1)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_SECRET_WORD)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_SECRET_WORD)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MINOR_SPELL_DEFLECTION)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_MINOR_SPELL_DEFLECTION)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_LIGHTNING_BOLT)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_HOLD_PERSON)
+	!StateCheck(NearestEnemyOf(Myself),STATE_HELPLESS)
+	!StateCheck(NearestEnemyOf(Myself),STATE_SLEEPING)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_HOLD_PERSON)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_BLINDNESS)
+	!StateCheck(NearestEnemyOf(Myself),STATE_BLIND)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_BLINDNESS)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MELF_ACID_ARROW)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_MELF_ACID_ARROW)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_GLITTERDUST)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_GLITTERDUST)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_CHROMATIC_ORB)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_CHROMATIC_ORB)
+END
+
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MAGIC_MISSILE)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_MAGIC_MISSILE)
+END
+
+
+
+
+
+
+
