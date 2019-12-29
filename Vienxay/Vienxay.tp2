@@ -1,5 +1,5 @@
 BACKUP ~Vienxay\backup~
-AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
+AUTHOR ~Vienxay: https://skitias-stories.com/contact~
 README ~Vienxay/readme.txt~
 
 VERSION ~1.42~
@@ -63,8 +63,6 @@ OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
   ACTION_READLN ~music~
 END
       ACTION_IF ("music" = 1) THEN BEGIN
-	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
-
 	MKDIR ~music/blank~
 	COPY ~Vienxay/Music/blank.mus~ ~music~
 		~Vienxay/Music/blank.acm~ ~music/blank/blanka.acm~
