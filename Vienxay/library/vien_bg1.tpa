@@ -188,7 +188,7 @@ COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
   SAY SELECT_RARE1 @40 // ~Ugh! I don't believe you properly appreciate the sacrifices I am making to help you.~
   SAY SELECT_RARE2 @41 // ~*Sigh* How may I assist you?~
   SAY REACT_TO_DIE_GENERAL @42 // ~Another incompetent peasant dead.~ 
-  
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~)) 
 // JOURNAL ///
 
 ADD_JOURNAL TITLE (%Vienxay's Vengeance%) @10021 @10022 @10023 @10024 @10025 @10026  USING ~Vienxay/tra/english/Vien_bg1.tra~
