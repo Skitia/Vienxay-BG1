@@ -65,7 +65,7 @@ ADD_KIT ~X3VSM~
  ~X3VSM                	0       0       0       0       0	0~
 
  // appended to ALIGNMNT.2da
- ~X3VSM                  	1       1       1       1      1	1       1       1       1~
+ ~X3VSM                  	0       0       0       0      1	1       0       1       1~
 
  // appended to DUALCLAS.2da
  ~X3VSM                  	0       0       0       0       0       0~
@@ -74,7 +74,7 @@ ADD_KIT ~X3VSM~
  ~%MOD_FOLDER%/Spells/X3VK.2da~
 
  // PC races and classes allowed to use this kit, from KITTABLE.2da
- ~K_MT_H   K_MT_D  K_MT_G  K_MT_E  K_MT_HE  K_MT_HL  K_MT_HO~
+ ~~
 
  // usability flags, added to the end of the KITLIST.2da entry
  ~0x00004000     13~
