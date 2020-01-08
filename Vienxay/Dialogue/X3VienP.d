@@ -5,7 +5,7 @@ BEGIN X3VienP
 IF ~Global("X3VienKickedOut","GLOBAL",0)~ kicked1
 SAY @1 /*~You are an idiot. Getting rid of me?! I'm your most useful and high-class ally!~*/
 ++ @2 /*~I'm sorry, my mistake. Stay with me.~ */ DO ~JoinParty()~ EXIT
-++ @3 /*Don't be offended. If I need you, I know to find you outside the Friendly Arm Inn.*/ DO ~SetGlobal("X3VienKickedOut","GLOBAL",1) EscapeAreaMove("AR2300",4012,2570,S)~ EXIT
+++ @3 /*Don't be offended. If I need you, I know to find you outside the Friendly Arm Inn.*/ DO ~SetGlobal("X3VienKickedOut","GLOBAL",1) EscapeAreaMove("%bg1_eet_symbol%2300",4012,2570,S)~ EXIT
 ++ @9 DO ~SetGlobal("X3VienKickedOut","GLOBAL",1)LeaveParty()~ EXIT // ~Stay here for now.~ 
 END
 

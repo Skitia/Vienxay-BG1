@@ -44,7 +44,7 @@ SAY @583
 IF ~~ DO ~SetGlobal("X32VienBaelothConflict","LOCALS",-2)
 SetGlobal("X3VienKickedOut","GLOBAL",1)
 SetDialog("X3VienP")
-EscapeAreaMove("AR2300",4012,2570,S)LeaveParty()~
+EscapeAreaMove("%bg1_eet_symbol%2300",4012,2570,S)LeaveParty()~
 EXIT 
 END 
 
@@ -803,7 +803,7 @@ DO ~SetGlobal("X3VienBaelothConflict","LOCALS",-1)~
 == BAELOTHJ @585 // ~A fiery fool to force this idea of leaving! To do better without I, Baeloth? Bah!~
 DO ~SetGlobal("KickedOut","LOCALS",1)
 SetDialog("BAELOTHP")
-EscapeAreaMove("AR2300",4721,3045,S)LeaveParty()~
+EscapeAreaMove("%bg1_eet_symbol%2300",4721,3045,S)LeaveParty()~
 EXIT 
 
 // Lighthouse
