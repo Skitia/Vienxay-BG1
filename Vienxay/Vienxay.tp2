@@ -37,8 +37,17 @@ LANGUAGE ~English~
          ~english~
          ~Vienxay/translations/english/Vienxay.TRA~
 
-BEGIN @6 /* Verr'Sza - the rakshasa NPC for BG1EE */
+BEGIN @6 /* Vienxay NPC for BG1EE */
   REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */ 
+
+ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" AR
+END
+
+ACTION_IF GAME_IS ~EET~ THEN BEGIN
+OUTER_SPRINT "bg1_eet_symbol" BG
+END
+  
 INCLUDE ~Vienxay/library/Vien_items.tpa~  
 INCLUDE ~Vienxay/library/vien_bg1.tpa~ 
 
