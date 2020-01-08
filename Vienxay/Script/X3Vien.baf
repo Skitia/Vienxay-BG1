@@ -1,4 +1,6 @@
 // Pause Timer to give time for music to finish between NPCs .
+
+
 IF 
 Global("X3PauseTimer","GLOBAL",0)
 InParty(Myself)
@@ -56,7 +58,7 @@ END
 // Quest Reminder.
 IF 
 	InParty(Myself)
-	AreaCheck("AR4800")
+	AreaCheck("%bg1_eet_symbol%4800")
 	Global("X3VienQuestStart","Global",0)
 THEN
   RESPONSE #100
@@ -68,7 +70,7 @@ END
 // Durlag's Tower Remark
 IF 
 	InParty(Myself)
-	AreaCheck("AR0511")
+	AreaCheck("%bg1_eet_symbol%0511")
 	Global("X3VienBasement","Global",0)
 THEN
   RESPONSE #100
@@ -80,7 +82,7 @@ END
 // Third Talk, ONLY after exiting the inn.
 IF 
 	InParty(Myself)
-	!AreaCheck("AR4801")
+	!AreaCheck("%bg1_eet_symbol%4801")
 	Global("X3VienApprenticeTalk","GLOBAL",1)
 THEN
   RESPONSE #100
@@ -92,7 +94,7 @@ END
 // Cloakwood, only if Master has not been confronted, thus after Apprentice Talk. 
 IF 
 	InParty(Myself)
-	AreaCheck("AR2200")
+	AreaCheck("%bg1_eet_symbol%2200")
 	Global("X3VienCloak","GLOBAL",0)
 	GlobalLT("X3VienQuestDone","GLOBAL",1)
 	GlobalGT("X3VienApprenticeTalk","GLOBAL",1)
@@ -105,7 +107,7 @@ END
 // Baldur's Gate, southwest section. 
 IF 
 	InParty(Myself)
-	AreaCheck("AR1100")
+	AreaCheck("%bg1_eet_symbol%1100")
 	Global("X3VienBaldur","Global",0)
 THEN
   RESPONSE #100
@@ -118,7 +120,7 @@ END
 
 IF 
 	InParty(Myself)
-	AreaCheck("AR2900")
+	AreaCheck("%bg1_eet_symbol%2900")
 	Global("X3VienLars","GLOBAL",0)
 THEN
   RESPONSE #100
@@ -131,7 +133,7 @@ END
 
 IF 
 	InParty(Myself)
-	AreaCheck("AR2400")
+	AreaCheck("%bg1_eet_symbol%2400")
 	Global("X3VienPeld","GLOBAL",0)
 THEN
   RESPONSE #100

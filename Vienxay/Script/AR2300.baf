@@ -16,6 +16,7 @@ XPLT(Player1,1251)
 THEN
 RESPONSE #100
 SetGlobal("X3VienExperienceSet","GLOBAL",1)
+ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
 AddXPObject("X3Vien",1000)
 Continue()
 END
@@ -30,6 +31,7 @@ RESPONSE #100
 SetGlobal("X3VienExperienceSet","GLOBAL",1)
 AddXPObject("X3Vien",2000)
 ActionOverride("X3Vien",AddSpecialAbility("SPWI201"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
 Continue()
 END
 
@@ -44,6 +46,7 @@ SetGlobal("X3VienExperienceSet","GLOBAL",1)
 AddXPObject("X3Vien",4000)
 ActionOverride("X3Vien",AddSpecialAbility("SPWI201"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 Continue()
 END
 
@@ -59,6 +62,7 @@ AddXPObject("X3Vien",8000)
 ActionOverride("X3Vien",AddSpecialAbility("SPWI201"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
 Continue()
 END
 
@@ -75,6 +79,7 @@ ActionOverride("X3Vien",AddSpecialAbility("SPWI201"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI304"))
 Continue()
 END
 
@@ -92,6 +97,7 @@ ActionOverride("X3Vien",AddSpecialAbility("SPWI206"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI304"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI305"))
 Continue()
 END
 
@@ -110,6 +116,7 @@ ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI304"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI305"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI307"))
 Continue()
 END
 
@@ -128,7 +135,8 @@ ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI304"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI305"))
-ActionOverride("X3Vien",AddSpecialAbility("SPWI420"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI307"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI408"))
 Continue()
 END
 
@@ -146,6 +154,7 @@ ActionOverride("X3Vien",AddSpecialAbility("SPWI203"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI207"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI304"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI305"))
+ActionOverride("X3Vien",AddSpecialAbility("SPWI307"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI420"))
 ActionOverride("X3Vien",AddSpecialAbility("SPWI408"))
 Continue()
