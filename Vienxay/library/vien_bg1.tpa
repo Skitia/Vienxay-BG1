@@ -32,7 +32,6 @@ END
 
 INCLUDE ~%MOD_FOLDER%/library/fl#add_kit_ee.tpa~
 INCLUDE ~%MOD_FOLDER%/library/qd_multiclass.tpa~
-//COPY ~%MOD_FOLDER%/spells/mage~ ~override~
 ADD_KIT ~X3VSM~
 
  // appended to CLASWEAP.2da
@@ -74,7 +73,7 @@ ADD_KIT ~X3VSM~
  ~%MOD_FOLDER%/Spells/X3VK.2da~
 
  // PC races and classes allowed to use this kit, from KITTABLE.2da
- ~~
+ ~K_MT_H   K_MT_D  K_MT_G  K_MT_E  K_MT_HE  K_MT_HL  K_MT_HO~
 
  // usability flags, added to the end of the KITLIST.2da entry
  ~0x00004000     13~
@@ -206,43 +205,11 @@ APPEND ~interdia.2da~ ~X3VIEN X3VienB~
 
 
   // Area scripts
-      EXTEND_TOP ~ar2300.bcs~ ~Vienxay/Script/ar2300.baf~
-        EVALUATE_BUFFER
-		      EXTEND_TOP ~ar4801.bcs~ ~Vienxay/Script/ar4801.baf~
-        EVALUATE_BUFFER
-			EXTEND_TOP ~ar1600.bcs~ ~Vienxay/Script/ar1600.baf~
-        EVALUATE_BUFFER
-			EXTEND_TOP ~ar2100.bcs~ ~Vienxay/Script/ar2100.baf~
-        EVALUATE_BUFFER
-
-
+      EXTEND_TOP ~%bg1_eet_symbol%2300.bcs~ ~Vienxay/Script/ar2300.baf~ EVAL
+	  EXTEND_TOP ~%bg1_eet_symbol%4801.bcs~ ~Vienxay/Script/ar4801.baf~ EVAL
+	  EXTEND_TOP ~%bg1_eet_symbol%1600.bcs~ ~Vienxay/Script/ar1600.baf~ EVAL
+	  EXTEND_TOP ~%bg1_eet_symbol%2100.bcs~ ~Vienxay/Script/ar2100.baf~ EVAL
       
-
-
-
-///////////////////////////////////////////////
-/* We do not have music right now. 
-We are going to comment out all of this, but we will add music in the future, so I am going to set it up.
-If we ever do, we can just remove this text and the two asterisks and slashes, and make sure the file names are set up right.
-COPY_EXISTING ~songlist.2da~ ~override~
-REPLACE_TEXTUALLY
-~0 No_music ****~
-~0 X31VieMU X31VieMU.MUS~
-
-COPY ~Vienxay\X31VieMU.mus~ ~music/X31VieMU.mus~
-*/
-///////////////////////////////////////////////
-
-
-
-// This code is also used by BG2 Fixpack - it would help you to run custom music for your NPC from "a clean slate", installing "blank" music you could run it with. Not everyone installs the Fixpack, though, so here we go:
-// Feel free to skip this code if you're not using any music in your mod, only your NPC's voice.
-/*COPY_EXISTING ~songlist.2da~ ~override~
-SET_2DA_ENTRY 2 1 2 ~Blank~
-SET_2DA_ENTRY 2 2 2 ~Blank.mus~*/
-
-//COPY ~Vienxay/Audio~ ~override~ // This add's Vienxay's sole attack file (For the moment). 
-
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
