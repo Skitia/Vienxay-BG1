@@ -767,7 +767,7 @@ DO ~StartCutSceneMode()StartCutScene("X3Vcut04")~ EXIT
 
 CHAIN IF ~Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",6)IsValidForPartyDialogue("Viconia")~ THEN X32VienJ QTalk3.1 // Vienxay gave her fealty to Shar. 
 ~Yes, yes, yes! Oh, you will not regret this <CHARNAME>.~ 
-== BDVICONJ ~Enjoy Shar's power, darthiir.~ 
+== BDVICONJ ~Enjoy the shadow's embrace, darthiir.~ 
 == X32VIENJ ~Of course I will.~
 END 
 ++ ~Just be careful with this power. You don't want to wind up in another cell.~ + QTalk3.A
@@ -783,17 +783,17 @@ END
  
 CHAIN X32VienJ QTalk3.A 
 ~With this power, I will *never* have to fear a cell again. Our enemies shall have much to fear now.~
-DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")~ 
+DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")~ 
 EXIT 
 
 CHAIN X32VienJ QTalk3.B 
 ~Yes, it was all me. I suppose I am that perfect. Our enemies shall have much to fear now.~
-DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")~ 
+DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")~ 
 EXIT 
 
 CHAIN X32VienJ QTalk3.C 
 ~Don't rush my basking of this glorious moment! One last moment to enjoy this triumph before we go, then we can be off to destroy our enemies. What? Fine. Let's go.~
-DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")~ 
+DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")~ 
 EXIT 
 
 CHAIN IF ~!Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",6)~ THEN X32VienJ QTalk3.3 
@@ -805,20 +805,20 @@ END
 
 
 CHAIN X32VienJ QTalk3.D 
-~I am fine. It could have gone worse. I will not try to take more from the shadow weave than this singular spell. Let us be thankful it worked.~
+~I am fine. It could have gone worse. I will not try to take more from the shadows than this singular spell. Let us be thankful it worked.~
 EXTERN X32VienJ QTalk3.G 
 
 CHAIN X32VienJ QTalk3.E 
-~Absolutely. Though I will not try to take more from the shadow weave than this singular spell. Let us rejoin the others, we have enemies to take down.~
+~Absolutely. Though I will not try to take more from the shadows than this singular spell. Let us rejoin the others, we have enemies to take down.~
 EXTERN X32VienJ QTalk3.G 
 
 CHAIN X32VienJ QTalk3.F 
-~Do not worry about me. I will be fine. I will not try to take more from Shar's weave than this singular spell. Let us be thankful it was not worse.~
+~Do not worry about me. I will be fine. I will not try to take more from the shadows than this singular spell. Let us be thankful it was not worse.~
 EXTERN X32VienJ QTalk3.G 
 
 CHAIN X32VienJ QTalk3.G 
 ~Let us join the others. We have enemies to take care of still.~ 
-DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")ChangeStat("X3Vien",WIS,-1,ADD)~ 
+DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")ChangeStat("X3Vien",WIS,-1,ADD)~ 
 EXIT 
 
 // Conflict Chains (Viconia/Baeloth)

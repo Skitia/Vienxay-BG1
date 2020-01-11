@@ -79,7 +79,7 @@ ADD_KIT ~X3VSM~
  ~0x00004000     13~
 
  // HLA table to use; see LUABBR.2da
- ~Th4~ // Will need to have a custom one that incorporates both Shadowdancer and Mage abilities. 
+ ~X3V~ // Will need to have a custom one that incorporates both Shadowdancer and Mage abilities. 
 
  // list of starting equipment for PCs starting in ToB. Appended column-wise to 25STWEAP.2da
  ~* * * * * * * * * * * * * * * * * * *  *~
@@ -117,6 +117,8 @@ END
 
 
 LAF HANDLE_AUDIO END
+//HLA 
+COPY	"%MOD_FOLDER%/Spells/LUX3V.2da" override
 //Spell
 COPY	"Vienxay/Spells/X3VSB.bam" override
 COPY	"Vienxay/Spells/X3VSBLT.spl" override

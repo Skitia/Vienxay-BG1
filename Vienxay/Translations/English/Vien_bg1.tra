@@ -77,13 +77,12 @@ Weight: 1 ~
 Level: 4
 Range: 40
 Duration: Instant
-Casting Time: 2
+Casting Time: 3
 Area of Effect: 1 Creature 
 Saving Throw: Spell for Half 
 
-This Shadow Weave spell is similar to magic missile. Shadowbolt creates up to 11 cold, airy missiles, which dart from the wizard to the intended target. 
-Each missile does 1d6+1 magic cold damage. At 7th level this is seven missiles, at eigth this is eight, ninth this is nine, tenth this is ten, up to eleven at level eleven. 
-While potentially more powerful, unlike magic missile, each bolt can be saved against for half damage, has less range, and is ineffective against cold immune creatures.~ 
+This Shadow Magic spell is similar to magic missile. Shadowbolt creates three cold, airy missiles, which dart from the wizard to the intended target. 
+Each missile does 1d6+1 magic cold damage. Another missile is gained from level 8 and every level after up to 15, maxing at eleven missiles.~ 
 
 @57 = ~Adding Crossmod Banter between Vienxay and Drake.~
 @150 = ~Recruitment Drive
