@@ -76,7 +76,7 @@
 @75 = ~To make you mad, really.~
 @76 = ~I'm not here to play executioner to every pawn. They are not the one we seek.~
 @77 = ~Because I believed it was the best decision, got it?~
-@78 = ~Hells. Fine. You have a point. I am just...angry. Stupid man got roped away from me with her seductive Sharran darkness!~
+@78 = ~Fine. You have a point. I am just...angry. That stupid man got roped away from me with her seductive Sharran darkness!~
 @79 = ~You did it to make me MAD?! Oh, I am very angry, <CHARNAME>.~ 
 @80 = ~If you play this game when we meet my former master, I will be livid.~
 @81 = ~We know where she is now. I expect you to make every preparation before we meet her, her magic will be fierce.~
@@ -517,7 +517,7 @@
 @502 = ~But I'll speak no more of it. I am beginning to terribly miss it.~
 @503 = ~Whatever I say. Don't say it so dismissively. What I say is pure gold.~
 @504 = ~These forests are the only thing of decency you can find amongst these lands.~
-@505 = ~Always with the insults.~
+@505 = ~Are you that unhappy with everything else?~
 @506 = ~I do enjoy the serenity of nature.~ 
 @507 = ~Can you just be quiet?~
 @508 = ~Yes, I am not fond of the civilization here. But I will bite my tongue if that is what you are begging me to do.~
@@ -611,3 +611,6 @@
 @591 = ~I'm not paying you to grovel. Off with you.~
 // New 1.41 
 @592 = ~Here we go again. Another false accusation. Ugh.~
+@593 =  ~There is no need to be so rude. Please, he needs help.~
+// 1.5+
+@594 = ~I am not weak, and I do not need your pity. But I do need companions. Will you let me join you or not?~
