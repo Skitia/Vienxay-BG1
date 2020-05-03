@@ -993,9 +993,16 @@ I_C_T Landri 0 X3VienLandri0
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @471 //~We're not butlers. One of us here is elven nobility. Such rudeness.~
 END
 
+//Caldo 
+I_C_T Caldo 0 X3VienCaldo0
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @474 
+END
+
+
 //Lena 
 I_C_T Lena 0 X3VienLena0
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @472 
+== Lena @593 // ~There is no need to be so rude. Please, he needs help.~
 END
 
 //Lantanara
@@ -1003,10 +1010,6 @@ I_C_T2 Lantan 1 X3VienLantan1
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @473 
 END
 
-//Caldo 
-I_C_T Caldo 0 X3VienCaldo0
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @474 
-END
 
 //Slave4 
 I_C_T Slave4 0 X3VienSlave4
@@ -1080,6 +1083,7 @@ END
 
 I_C_T Viconi 5 X3VienViconia5 
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @576 // ~Typically I would be against this arrangement, to walk with a drow. But she seems weak and...helpless. Even my heart pities her.~
+== Viconi @594 // ~I am not weak, and I do not need your pity. But I do need companions. Will you let me join you or not?~
 END
 
 I_C_T Viconi 6 X3VienViconia6
@@ -1096,6 +1100,7 @@ END
 // New 
 I_C_T FLAM5 0 X3VienFlam50
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @592 // ~Here we go again. Another false accusation. Ugh.~
+== FLAM5 ~Lying won't help you at all.~
 END
 
 APPEND X3VienJ 
@@ -1933,7 +1938,7 @@ SAY @452 // ~Yes, such is the reaction I'd expect from people outside of Evermee
 END 
 
 IF ~~ Vienxay.Male 
-SAY @392 // ~I've had my brief curiosities and drunken incidents, but excluding those all were certainly male. It is my preference, my attraction, and they please me best.~
+SAY @392 // ~I've had my brief curiosities and drunken incidents. None that I regret. Women are great lovers, and I the greatest of all, naturally.~
 ++ @448 + Vienxay.PExpect // ~That is very surprising that you would have any lovers at all.~
 ++ @450 + Vienxay.Regret // ~I regret bringing up this topic.~
 ++ @205 + Vienxay.PTalk // ~Let's talk about something else.~ 

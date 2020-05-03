@@ -38,7 +38,7 @@ CHAIN X3VMAS FOOL
 EXTERN X3VMAS BATTLE 
 
 CHAIN X3VienJ Truth2
-@16 // ~...It is true. I did not know the full effects of the spell taught. I have never wielded the shadow weave sense.~
+@16 // ~...It is true. I did not know the full effects of the spell taught. I have never wielded the shadow weave since.~
 == X3VienJ @17 // ~I confess I was weak, and selfish, and did not stop what I knew was terrible until that moment.
 == X3VienJ @18 // ~She has killed elves purposefully, for her experiments, for Shar's gain. That is the difference between us.~
 == X3VienJ @19 // ~I took a life...because I was unknowing of the power I was using, and afraid.~

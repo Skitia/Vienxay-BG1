@@ -71,7 +71,7 @@ END
 // Talk 1 
 
 IF ~Global("X32VienTalk","GLOBAL",2)~ Talk1 
-SAY ~So, the hero of Baldur's gate. Don't expect that to last long.~
+SAY ~So, the hero of Baldur's gate. Don't expect that to last long.~ [X3VSonD]
 ++ ~What are you on about?~ + Talk1.A
 ++ ~Do you ever say *anything* nice?~ + Talk1.B
 ++ ~Oh do be quiet.~ + Talk1.C
@@ -127,7 +127,7 @@ END
 // Talk 2
 
 IF ~Global("X32VienTalk","GLOBAL",4)~ Talk2
-SAY ~This crusade is really all another example of human inferiority.~ 
+SAY ~This crusade is really all another example of human inferiority.~ [X3VSonD] 
 ++ ~And what do you mean by that?~ + Talk2.A
 +~Race(Player1,HUMAN)~+ ~Hey, watch it, elf.~ + Talk2.B
 ++ ~Caelar is not fully human, Vienxay. Nor would most consider her inferior.~ + Talk2.C
@@ -205,12 +205,12 @@ SAY ~I must speak with you at once.~ [X3VSpeak]
 END 
 
 IF ~~ Talk3.B 
-SAY ~Please, I was hardly asking you.~
+SAY ~Please, I was hardly asking you.~ [X3VSonD]
 IF ~~ + Talk3.A 
 END 
 
 IF ~~ Talk3.A 
-SAY ~It's about before. About being stuck in this war.~
+SAY ~It's about before. About being stuck in this war.~ [X3VSonD]
 ++ ~You don't want to be here, helping?~ + Talk3.C
 ++ ~We don't always choose where we go.~ + Talk3.D
 ++ ~Nothing is keeping you here. Leave if you wish.~ + Talk3.E
@@ -262,7 +262,7 @@ END
 // Talk 4 
 
 IF ~Global("X32VienTalk","GLOBAL",8)~ Talk4 
-SAY ~I want your honest opinion. What do you think of me?~
+SAY ~I want your honest opinion. What do you think of me?~ [X3VSpeak] 
 ++ ~Oh dear. Where do I even start?~ + Talk4.A
 ++ ~Why do you ask?~ + Talk4.B 
 ++ ~I like you well enough, despite everything.~ + Talk4.C 
@@ -312,7 +312,7 @@ SAY ~I have done my most to be a good friend to you and do my part, despite bein
 +~OR(3)Race(Player1,HALFLING)Race(Player1,DWARF)Race(Player1,GNOME)~+ ~Just a friend?~ + Talk4.H4 
 +~!Race(Player1,ELF)~+ ~I'm surprised. I'm not even an elf.~ + Talk4.I
 ++ ~I appreciate that friendship.~ + Talk4.J
-++ ~That friendship is definitely one way.~ DO ~SetGlobal("X32Vien000RomanceActive","GLOBAL",3)~ + Talk4.K
+++ ~That friendship is definitely one way.~ DO ~SetGlobal("X32VienRomanceActive","GLOBAL",3)~ + Talk4.K
 END 
 
 IF ~~ Talk4.H1 
@@ -379,7 +379,7 @@ IF ~!Race(Player1,ELF)~ + T5.B2
 END 
 
 IF ~~ T5.B1 
-SAY ~I have not met such a...impressive individual of our people for some time.~
+SAY ~I have not met such a...impressive individual of our people for some time.~ [X3VSpeak] 
 = ~Not one so strong, striking, and of course, competent.~
 ++ ~You look lovely, yourself, Vienxay.~ + T5.C1
 ++ ~What are you getting at?~ + T5.D 
@@ -421,7 +421,7 @@ END
 
 IF ~~ T5.E 
 SAY ~And why not? I am not hideous. Are you nervous?~
-++ ~This is too soon, Vienxay. I care about you, and that's why I want to slow down.~ DO ~SetGlobal("X32VienRomanceActive","GLOBAL",2)~ + T5.I 
+++ ~This is too soon, Vienxay. I care about you, and that's why I want to slow down.~ DO ~SetGlobal("X32VienRomanceActive","GLOBAL",2)~ + T5.K 
 ++ ~I don't want this. You're a friend to me.~ DO ~SetGlobal("X32VienRomanceActive","GLOBAL",3)~ + T5.F 
 ++ ~A little.~ + T5.J
 END 
@@ -442,7 +442,7 @@ SAY ~Sleeping alone is lonely. Companionship can stir a bit excitement and relax
 END 
 
 IF ~~ T5.H 
-SAY ~Then get closer, hero. You'll have one rest to remember far more fondly than all others.~
+SAY ~Then come closer, <CHARNAME>. You'll have one rest to remember far more fondly than all others.~
 IF ~~ DO ~IncrementGlobal("X32VienTalk","GLOBAL",1)SetGlobal("X32VienPIDTalk3","GLOBAL",1)RestParty()~ EXIT // This PID variable activates Vienxay's last PID Talk and is used in talk 6
 END 
 
@@ -597,115 +597,95 @@ END
 // Shadow Weave. This talk will only fire at night, and one game day after talk 3.
 
 IF ~Global("X32VQuestTalk","GLOBAL",2)~ QTalk 
-SAY ~A moment, <CHARNAME>. Away from the others.~ 
-+~Global("X32VienWasInBG1","GLOBAL",1)~+ ~I am listening.~ + QTalk.A1 
-+~!Global("X32VienWasInBG1","GLOBAL",1)~+ ~I am listening.~ + QTalk.A2 
-++ ~We need to continue on.~ + QTalk.B
-++ ~What are you complaining about, now?~ + QTalk.C 
+SAY ~<CHARNAME>. Have you listened to some of the rumors going around camp?~ 
+++ ~What are you talking about?~ + QTalk.1 
+++ ~Do tell.~ + QTalk.1
+++ ~I don't have time for gossip.~ + QTalk.2
 END 
 
-IF ~~ QTalk.A1 
-SAY ~You know what I learned from my mentor. The battle with these crusaders is not going to get easier.~
-IF ~~ + QTalk.A
+IF ~~ QTalk.1
+SAY ~I've picked up word of an elder mage who practices shadow magic in the forest, taking the horns of wyverns and spider silk for her art.~
+= ~If this is truly Shadow Magic and not Shar's aspect, I could have someone who may be able to share the secrets of their power with me. And the more powerful I am, the better we are.~
+++ ~You want to speak to this elder mage, then?~ + QTalk.3
+++ ~I'll consider it. We could use more power if we are to win this fight.~ + QTalk.4
+++ ~If you can't tell, Vienxay, we're in the middle of an expedition. We don't have time for detours.~ + QTalk.5 
 END 
 
-IF ~~ QTalk.A2
-SAY ~Before I was exiled from Evermeet, I had a mentor who used... a different source of magic. She taught me how it worked, and how to access it.~ 
-IF ~~ + QTalk.A 
+IF ~~ QTalk.2 
+SAY ~You should make time for it. Sometimes, you find useful tidbits of information spout in the rubbish of the common human's speech.~
+IF ~~ + QTalk.1 
 END 
 
-IF ~~ QTalk.A 
-SAY ~I remember my lessons well. I could draw into it, and use the same source of magic as my mentor for our benefit against our enemies.~
-+~Alignment("X3Vien",NEUTRAL)~+ ~This would go against what I've tried to teach you. I can't allow that.~ + QTalk.D 
-++ ~Vienxay, we aren't fighting evil with evil.~ + QTalk.D
-++ ~What is involved?~ + QTalk.F 
-END 
-
-IF ~~ QTalk.B 
-SAY ~Please, it will be  brief! Besides, it is important.~
-IF ~Global("X32VienWasInBG1","GLOBAL",1)~ + QTalk.A1 
-IF ~!Global("X32VienWasInBG1","GLOBAL",1)~ + QTalk.A2 
-END  
-
-IF ~~ QTalk.C 
-SAY ~Please, just listen first and use those ears of yours, thank you.~
-IF ~Global("X32VienWasInBG1","GLOBAL",1)~ + QTalk.A1 
-IF ~!Global("X32VienWasInBG1","GLOBAL",1)~ + QTalk.A2 
-END  
-
-IF ~~ QTalk.D 
-SAY ~Even with what we are up against? Against these odds? It is worth it. At least hear what is involved before you throw away opportunity.~
-IF ~~ + QTalk.G 
-END 
-
-IF ~~ QTalk.F
-SAY ~At night, perhaps before a rest, I would simply make an agreement with the Nightsinger.~
-IF ~InParty("Viconia")InParty("Dorn")~ + QTalk.F1 
-IF ~!InParty("Viconia")InParty("Dorn")~ + QTalk.F2 
-IF ~!InParty("Viconia")!InParty("Dorn")~ + QTalk.F3 
-IF ~~ + QTalk.G 
-END 
-
-IF ~~ QTalk.F1 
-SAY ~I am loathe to do it, but the drow priestess can assist. It'd be hardly different than Dorn's arrangement, really.~
-IF ~~ + QTalk.G 
-END 
-
-IF ~~ QTalk.F2  
-SAY ~It'd be hardly different than Dorn's arrangement, really.~
-IF ~~ + QTalk.G 
-END 
-
-IF ~~ QTalk.F3 
-SAY ~I am loathe to do it, but the drow priestess can assist.~ 
-END 
-
-IF ~~ QTalk.G 
-SAY ~I could instead risk a piece of my mind, in exchange for this spell power. I would only dare draw a singular spell to limit the cost, I can't risk all of my perfection.~
-++ ~Why do you ask me this? You could do this without my say.~ + QTalk.H 
-++ ~I don't think giving fealty is a good idea, but we could use power. Let's take the risk of your mind instead.~ + QTalk.I 
-+~InParty("Viconia")~+ ~Make your agreement, then.~  + QTalk.J1
-+~!InParty("Viconia")~+ ~Make your agreement, then.~  + QTalk.J2
-+~Alignment("X3Vien",NEUTRAL)~+ ~No. We are not doing this, Vienxay.~ + QTalk.K 
-+~Alignment("X3Vien",NEUTRAL_EVIL)~+ ~No. We are not doing this, Vienxay.~ + QTalk.L
-END 
-
-IF ~~ QTalk.H 
-SAY ~You are our leader, and...a friend. It would be more for you than me, and so I wish to be useful.~
-++ ~I don't think giving fealty is a good idea, but we could use power. Let's take the risk of your mind instead.~ + QTalk.I 
-+~InParty("Viconia")~+ ~Make your agreement, then.~  + QTalk.J1
-+~!InParty("Viconia")~+ ~Make your agreement, then.~  + QTalk.J2
-+~Alignment("X3Vien",NEUTRAL)~+ ~No. We are not doing this, Vienxay.~ + QTalk.K 
-+~Alignment("X3Vien",NEUTRAL_EVIL)~+ ~No. We are not doing this, Vienxay.~ + QTalk.L
-END 
-
-IF ~~ QTalk.I 
-SAY ~Let us rest at night in the Troll Claw Woods. We can do it there, and I will pull you away from the others to see if I can call forth the spell I learned from my mentor.~
+IF ~~ QTalk.3 
+SAY ~Of course I do. There are very few known practitioners of my art that are not...like my mentor, or unknown. If these men whispers held even a sliver of truth, it's an opportunity for me.~
+= ~I am sure the expedition would not mind a small delay to their advantage, if it turns out to be a delay at all.~
 IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",3)AddJournalEntry(@153,QUEST)~ EXIT  
+END  
+
+IF ~~ QTalk.4 
+SAY ~I am glad you see it my way. All we have to do is find this forest and this "elder mage", and see what she will give for a taste of knowledge. I am sure it will be a breeze.~
+IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",3)AddJournalEntry(@153,QUEST)~ EXIT  
+END  
+
+IF ~~ QTalk.5 
+SAY ~Well I can't force you to be sensible...but perhaps if we are lucky, our road and my goals may yet still align.~
+IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",3)AddJournalEntry(@153,QUEST)~ EXIT  
+END  
+
+IF ~Global("X32VQuestTalk","GLOBAL",9)~ QTalkFinal 
+SAY ~I suppose...I should have expected that I wouldn't be able to gather the knowledge I wanted from this tome so quickly. This could take months, years, even.~
+++ ~Don't be discouraged. Have you made any progress?~ + progress 
+++ ~Then perhaps it's worthless, then. We may have just got manipulated by that mage.~ + manipulated 
+++ ~Are you talking to yourself?~ + yourself 
 END 
 
-IF ~~ QTalk.J1 
-SAY ~Let us rest at night in the Troll Claw Woods. We can do it there, and I will pull you and the priestess away from the others. It is best we are unseen.~
-IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",3)AddJournalEntry(@153,QUEST)SetGlobal("X32VQuestChoice","GLOBAL",1)~ EXIT 
+IF ~~ progress 
+SAY ~All I have comprehended is this spell Shadowbolt. An innate bit of cold shadowy bolt that I could fling. I was hoping for something grander...more befitting of my greatness.~
+= ~But...I still feel like a lowly student, the same sort that fell for my master's tricks back in Evermeet. I don't even know if I've improved at all.~
++~Global("X32VienWasInBG1","GLOBAL",1)~+ ~You've come a long way since I've met you, Vienxay. You've grown and become stronger, believe me.~ + believe_me 
+++ ~You just have to keep pushing forward. If you give up now, then you know you'll never get better.~ + pushing_forward 
+++ ~You haven't, really. But sometimes people just meet their plateau.~ + plateau 
+++ ~I haven't known for very long, but...I think your skills with magic have been helpful to our cause.~ + helpful 
+END
+
+IF ~~ believe_me 
+SAY ~That...is comforting, <CHARNAME>. I don't know why I was doubting myself so.~
+IF ~~ + new_spell  
 END 
 
-IF ~~ QTalk.J2 
-SAY ~Let us rest at night in the Troll Claw Woods. We can do it there, and I will pull you away from the others. It is best we are unseen.~
-IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",3)AddJournalEntry(@153,QUEST)SetGlobal("X32VQuestChoice","GLOBAL",1)~ EXIT 
+IF ~~ new_spell 
+SAY ~I suppose I will see just how useful Shadowbolt is in our next battle, if you'll let me. I am eager to test my new knowledge.~
+IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",10)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")~ EXIT 
 END 
 
-IF ~~ QTalk.K 
-SAY ~Your conviction to your ideals is...both irritating and impressive. I'll heed what you've tried to teach me, and not ask this of you again.~
-IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",10)AddJournalEntry(@154,QUEST_DONE)~ EXIT 
+IF ~~ pushing_forward 
+SAY ~Ugh, I suppose you are right. Still, it would be better if results were more instaneous. I need the gratification.~ 
+IF ~~ + new_spell 
 END 
 
-IF ~~ QTalk.L 
-SAY ~You are foolish. You'll regret this if we all get killed.~ 
-IF ~~ DO ~SetGlobal("X32VQuestTalk","GLOBAL",10)SetGlobal("X32VienRomanceActive","GLOBAL",3)AddJournalEntry(@154,QUEST_DONE)~ EXIT  
+IF ~~ plateau 
+SAY ~You are the worst! You are supposed to tell me how great I am. I guess you are just trying to be honest with your opinion. I can...tolerate that. Barely.~
+IF ~~ + new_spell 
 END 
 
-// QTalk Accepted 
+IF ~~ helpful 
+SAY ~"Helpful". I suppose...that is at least progress. Far from the terrified elf I was when I first left Evermeet that was afraid she couldn't protect herself from any element of danger, let alone others.~
+IF ~~ + new_spell 
+END 
 
+
+IF ~~ manipulated 
+SAY ~I wouldn't put it past her. Everyone else who know a thing about Shadow Magic only ended up using me before.~
+IF ~~ + progress 
+END 
+
+IF ~~ yourself 
+SAY ~Of course I am not talking to myself! Ugh. Fine, I was. I'm just frustrated at my lack of progress.~
+IF ~~ + progress 
+END  
+
+/*
+Old Quest Content below.
 CHAIN IF ~Global("X32VQuestTalk","GLOBAL",4)~ THEN X32VIENJ QTalk2 
 ~Come, away from the others. Let us get this over with.~
 END 
@@ -820,7 +800,7 @@ CHAIN X32VienJ QTalk3.G
 ~Let us join the others. We have enemies to take care of still.~ 
 DO ~SetGlobal("X32VQuestTalk","GLOBAL",9)AddSpecialAbility("X3VSBLT")AddSpecialAbility("X3VSBLT")ChangeStat("X3Vien",WIS,-1,ADD)~ 
 EXIT 
-
+*/
 // Conflict Chains (Viconia/Baeloth)
 CHAIN X32VIENJ VC.C 
 ~A wise choice.~

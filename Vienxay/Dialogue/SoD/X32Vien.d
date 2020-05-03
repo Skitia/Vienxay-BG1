@@ -240,6 +240,7 @@ DO ~JoinParty()~ EXIT
 CHAIN IF ~Global("bd_joined","LOCALS",0)~ THEN X32Vien p
 ~Ugh. I suppose this is better than being stuck in a cell.~
 END
++~Global("X32VQuestTalk","GLOBAL",6)PartyHasItem("X3VBook")~+ ~I've brought you back this tome from the Elder Mage.~ DO ~TakePartyItem("X3VBook")SetGlobal("X32VQuestTalk","GLOBAL",7)~ + q.done
 ++ ~I'd have you along, if you're willing.~ + p.0
 ++ ~I'm in need of your skills. Come join me.~ + p.0
 ++ ~It's not that bad.~ + p.1 
@@ -252,6 +253,15 @@ DO ~JoinParty()~ EXIT
 CHAIN X32Vien p.1
 ~Hrmph. Don't die without me.~
 EXIT
+
+CHAIN X32VIEN q.done 
+~I must admit, I didn't expect you to remember. I suppose I am thankful. Well, if you're going to have me sit around here, I'll get right to reading.~
+END 
+++ ~Enjoy.~ EXIT 
+++ ~I'd have you along actually, if you're willing.~ + p.0
+++ ~I'm in need of your skills. Come join me.~ + p.0
+++ ~I'll see you later.~ + p.1 
+
 
 APPEND X32Vien 
 
