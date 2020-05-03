@@ -1,7 +1,7 @@
 // ITEMS
 LOAD_TRA ~Vienxay/translations/English/vien_items.tra~
 //I was using an old version of NearInfinity. This INT_VAR isn't really necessary anymore. 
-//Note these gloves have a hidden ability to reduce Vienxay's spell slots by one, as a work around for her kit being seen as a specialist mage when it should't be.
+
 COPY_EXISTING ~Vienxay/Item/x3vglo.itm~ ~override/x3vglo.itm~
 SAY NAME1 @45
 SAY NAME2 @45
@@ -19,3 +19,8 @@ COPY_EXISTING ~Vienxay/Item/X3VNote.itm~ ~override/X3VNote.itm~
 SAY NAME1 @47
 SAY NAME2 @47
 SAY DESC @48
+//New Item: Secrets of Shadows. 
+COPY_EXISTING ~Vienxay/Item/X3VBook.itm~ ~override/X3VBook.itm~	
+SAY NAME1 @50
+SAY NAME2 @50
+SAY DESC @51

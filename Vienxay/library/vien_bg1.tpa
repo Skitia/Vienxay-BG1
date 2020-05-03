@@ -193,7 +193,7 @@ COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
 // JOURNAL ///
 
 ADD_JOURNAL TITLE (%Vienxay's Vengeance%) @10021 @10022 @10023 @10024 @10025 @10026  USING ~Vienxay/tra/english/Vien_bg1.tra~
-ADD_JOURNAL TITLE (@152) @153 @154 @155 USING ~Vienxay/tra/english/Vien_bg1.tra~ // SoD Quest. 
+ADD_JOURNAL TITLE (@152) @153 @154 @155 @149 @148 @147 USING ~Vienxay/tra/english/Vien_bg1.tra~ // SoD Quest. 
 ////
  
 APPEND ~pdialog.2da~ ~X3VIEN X3VienP X3VienJ X3vienD~
