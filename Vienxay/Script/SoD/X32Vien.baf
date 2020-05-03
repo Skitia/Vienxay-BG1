@@ -117,6 +117,7 @@ THEN
 END 
 
 IF 
+InParty("X3Vien") 
 GlobalTimerExpired("X32VienQuestTimer","GLOBAL")
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
@@ -131,6 +132,7 @@ END
 
 
 IF
+InParty("X3Vien") 
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID)
 !StateCheck(Myself,CD_STATE_NOTVALID)
