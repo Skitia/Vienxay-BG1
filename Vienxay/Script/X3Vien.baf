@@ -228,7 +228,6 @@ THEN
 RESPONSE #100
 RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
 PlaySong(0)
-PlaySound("X3VSonD") 
 StartDialogueNoSet(Player1)
 END
 
@@ -272,6 +271,5 @@ RESPONSE #100
 RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
 SetGlobal("X3VienFinalTalk","GLOBAL",2)
 PlaySong(0)
-PlaySound("X3VSonL") 
 StartDialogueNoSet(Player1)
 END 

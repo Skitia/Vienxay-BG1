@@ -1,4 +1,4 @@
-@0 = ~My feet are killing me. And the food we have is awful. I miss the cuisine back home.~
+@0 = ~My feet are killing me. And the food we have is awful. I miss the cuisine back home.~ [X3VSonD]
 @1 = ~You complain a lot, Vienxay. Why not just go home?~ 
 @2 = ~You're welcome to cook.~ 
 @3 =  ~We can stop for a moment. We've been moving quite a bit.~ 
@@ -31,7 +31,7 @@
 @30 = ~I am hideous! And it won't come off! Get it off of me, NOW!~
 @31 = ~This is absolutely ridiculous.~
 @32 = ~If we were in my family manor, I would have you cleaning the floors for this insolence! Ugh!~
-@33 = ~If the people filtered who could even come into this land, there wouldn't be all of these peasants causing a ruckus. Evermeet had it right.~
+@33 = ~If the people filtered who could even come into this land, there wouldn't be all of these peasants causing a ruckus. Evermeet had it right.~ [X3VSonD]
 @34 = ~Vienxay, it is not just the lower class, and not all of them are bad.~
 @35 = ~Whining again, I see.~
 @36 = ~And what would you even propose?~
@@ -66,7 +66,7 @@
 @65 = ~The Queen is a force to be respected, and far more reasonable than the typical human leadership you've locally, with your fat mayors and foolish lords.~
 @66 = ~Yes, of course. And thank you. I feel better now, even if this land is still awful.~
 @67 = ~What was the land like?~ 
-@68 = ~<CHARNAME>, we need to talk.~
+@68 = ~<CHARNAME>, we need to talk.~ 
 @69 = ~What's wrong?~
 @70 = ~Speak your mind.~
 @71 = ~Now isn't the time.~ 
@@ -98,7 +98,7 @@
 @96 = ~Thank you, <CHARNAME>.~
 @97 = ~I've every *right* to fret. This is crucial to me.~
 @98 = ~I don't appreciate vague reassurance, <CHARNAME>.~
-@99 = ~I've a question of you, <CHARNAME>.~
+@99 = ~I've a question of you, <CHARNAME>.~ [X3VSonD]
 @100 = ~What is it?~ 
 @101 = ~I'm listening.~
 @102 = ~This will be interesting.~
@@ -146,7 +146,7 @@
 @143 = ~They're bound to be in the vicinity, perhaps the inn. Let's look around.~
 @144 = ~You idiot. How the hell are we supposed to find her now?~
 @145 = ~Wait. He has a letter...she's in the Cloakwood, is she? I suppose it's not a lost cause after all.~ 
-@146 = ~<CHARNAME>, a moment.~
+@146 = ~<CHARNAME>, a moment.~ [X3VSonD]
 @147 = ~Yes, Vienxay?~ 
 @148 = ~What is it now?~
 @149 = ~Can it wait?~ 
@@ -384,7 +384,7 @@
 @381 = ~I *will* pursue her. Without you. Good riddance, you useless peasant.~
 @382 = ~Individually she is very powerful, but you had no faith in our own power combined? You disgust me.~
 @383 = ~Don't lecture me. Not right now. Not after you just let her go!~
-@384 = ~I feel every desire to leave and get the job done myself. Why should I bother staying with such incompetent fools?~
+@384 = ~I feel every desire to leave and get the job done myself. Why should I bother staying with such incompetent fools?~ [X3VSonD]
 @385 = ~Because you are needed *here*. Let the gods judge her, and we can move forward with our lives.~
 @386 = ~Because your master is insignificant now, spared because of our own leniency. Take that as satisfaction.~
 @387 = ~Because I like you, and want you to see more than just petty revenge!~
@@ -393,7 +393,7 @@
 @390 = ~I...I suppose it hardly matters, in the grand scope of things. How I hate to admit it.~
 @389 = ~I shall continue to follow your lead, but don't bother me! I want space from all of your...mercifulness.~
 @391 = ~That does not matter to me. Only vengeance matters to me.~ 
-@392 = ~I've had my brief curiosities and drunken incidents, but excluding those all were certainly male. It is my preference, my attraction, and they please me best.~
+@392 =~I've had my brief curiosities and drunken incidents. None that I regret. Elven women are great lovers, and I the greatest of all, naturally.~
 @393 = ~Let us be away from this place. We may have cause for revelry later.~
 @394 = ~I've no interest in chatting now, peasant. Stand aside.~
 @395 = ~I've no interest in chatting now, peasant. Stand aside.~
@@ -405,7 +405,7 @@
 @401 = ~Then I am glad our goals aligned to get this deed done.~
 @402 = ~It has been too long since another Tel'Quessir has supported this much. I truly mean it when I say thank you.~
 @403 = ~One of your kind has never done so much for me, at such risk. I truly mean it when I say thank you.~
-@404 = ~<CHARNAME>, I need...an ear. I would appreciate you listening.~
+@404 = ~<CHARNAME>, I need...an ear. I would appreciate you listening.~ [X3VSonL]
 @405 = ~I'm always here, Vienxay.~ 
 @406 = ~What is it?~
 @407 = ~This isn't the time.~ 
@@ -534,7 +534,7 @@
 @518 = ~I'm not surprised.~
 @519 = ~Not surprised? Do you expect me to suffer? No matter. You should hear the story before you judge.~
 @520 = ~Yes, I know that. Obviously. Ugh. Let me tell you how I got into this awful situation anyway.~
-@521 = ~Dead. Hahaha, yes! Dead! Dead! At last, you bitch, the grave you deserve.~
+@521 = ~Dead. Hahaha, yes! Dead! Dead! At last, you bitch, the grave you deserve.~ [X3VSonD]
 // Talk 5 Revision 
 @522 = ~I've led us this far. Have some trust.~
 @523 = ~You must be prepared to be just as ruthless. Whatever this organization is, they certainly do not have issues with money.~

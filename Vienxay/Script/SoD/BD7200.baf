@@ -1,0 +1,7 @@
+IF 
+Global("X32VQuestTalk","GLOBAL",3)
+THEN RESPONSE #100 
+SetGlobal("X32VQuestTalk","GLOBAL",4)
+CreateCreature("X3VElder",[1168.1350],SE)
+Continue()
+END

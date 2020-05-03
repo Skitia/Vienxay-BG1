@@ -1,4 +1,4 @@
-// Quest Event
+/* Old Quest Event.
 IF
 AreaCheck("BD7100")
 InParty(Myself)
@@ -11,7 +11,8 @@ RESPONSE #100
 IncrementGlobal("X32VQuestTalk","GLOBAL",1)
 StartDialogueNoSet(Player1)
 END
-
+*/
+// Talk #5
 IF
 InParty(Myself)
 GlobalTimerExpired("X32VienGameTalkTimer","GLOBAL")

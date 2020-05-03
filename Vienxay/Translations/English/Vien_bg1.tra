@@ -79,7 +79,7 @@ Range: 40
 Duration: Instant
 Casting Time: 3
 Area of Effect: 1 Creature 
-Saving Throw: Spell for Half 
+Saving Throw: None
 
 This Shadow Magic spell is similar to magic missile. Shadowbolt creates three cold, airy missiles, which dart from the wizard to the intended target. 
 Each missile does 1d6+1 magic cold damage. Another missile is gained from level 8 and every level after up to 15, maxing at eleven missiles.~ 
@@ -93,19 +93,31 @@ Vienxay will join my party if I get her released. Officer Fritz seems to be the 
 
 Vienxay has joined my party.I'm still not sure if it is the best decision to bring her along, but her skills could prove helpful.~
 
-@152 = ~Shar's Weave.~
+@152 = ~The Elder Mage~
 
-@153 = ~Shar's Weave. 
+@153 = ~The Elder Mage
 
-Vienxay has made an offer for her to pull from Shar's Weave to assist our party. She wishes to perform a simple pact of sorts when we rest in the Troll Claw woods at night.~
+Vienxay has heard rumor of an elder mage who is knowledgeable in shadow magic somewhere within the deeper forests where spiders and wyverns lie about. She would like to attempt to barter with them in exchange for power.~
 
-@154 = ~Shar's Weave. 
+@154 = ~The Elder Mage 
 
-Vienxay made an offer to pull from Shar's Weave to assist our cause. I declined her offer.~ 
+We have met with the Elder Mage. She has promised us a tome of knowledge regarding shadow magic if we give her an emerald.~ 
 
-@155 = ~Shar's Weave. 
+@155 = ~The Elder Mage
 
-Vienxay's short, simple rite is complete and she can now pull a spell from the shadow weave. Time will tell if it was worth the price.~
+We've retrieved the tome Secrets of Shadows from the Elder Mage. We should give it to Vienxay.~
+
+@149 = ~The Elder Mage 
+The Elder Mage would not let us have a tome of knowledge containing secrets about shadow magic without a favor. We decided to attack her instead.~
+
+@148 = ~The Elder Mage 
+
+We've retrieved the tome Secrets of Shadows from the Elder Mage. We should see if Vienxay learns anything from it in a few days.~
+
+@147 = ~The Elder Mage 
+
+We've given Vienxay the tome Secrets of Shadows. Hopefully it helps her expand her knowledge of shadow magic. We could use her talents in the coming battles.~
+
 
 // Journals
 @10020 = ~Vienxay's Vengeance~
