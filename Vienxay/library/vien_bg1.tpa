@@ -131,8 +131,9 @@ COPY	"Vienxay/Spells/X3VSBLT.spl" override
 	COPY	"Vienxay/Spells/X3VB3.spl" override
 	COPY	"Vienxay/Spells/X3VB4.spl" override
 	COPY	"Vienxay/Spells/X3VSA.spl" override	
-	SAY NAME1 ~Shadow Jump~
-	SAY NAME2 ~Shadow Jump~
+	SAY NAME1 @159
+	SAY NAME2 @159
+	SAY 0x50 @160
 ///
 
 COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
