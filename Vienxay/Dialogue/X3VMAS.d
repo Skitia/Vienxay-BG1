@@ -50,7 +50,7 @@ END
 CHAIN X3VienJ Defend 
 @23 // ~Pleasantly suprising, and soothing to hear from you.~
 == X3VMAS @24 // ~I would disagree, but let's get back to our business. 
-== X3VMAS @25 // ~Let me instead give you an opportunity to live while appeasing my old student, a deal to continue breathing that is towards your advantage.~
+== X3VMAS @25 // ~Let me instead give you an opportunity to live and avoid a dull disadvantegous battle for yourselves, where you come out alive and with profit.~
 == X3VienJ @26 // ~Do NOT hear her out, <CHARNAME>. She is manipulating you!
 == X3VMAS @27 // ~I'm sure they are able to decide for themselves, former apprentice.~
 END 
@@ -59,7 +59,7 @@ END
 ++ @7 EXTERN X3VMAS BATTLE // ~You aren't going to talk your way out of this.~
 
 CHAIN X3VMAS OFFER2 
-@28 // ~I agree with that very acute observation. Allow me to make you an offer.~
+@28 // ~I agree with that very acute observation. We can agree then, that supporting her ends is unnecessary. I believe we can even come to an agreement that allows you to live.~
 == X3VienJ @26 // ~Do NOT hear her out, <CHARNAME>. She is manipulating you!
 == X3VMAS @27 // ~I'm sure they are able to decide for themselves, former apprentice.~
 END 
@@ -82,14 +82,14 @@ END
 CHAIN X3VMAS AIR 
 @36 // ~Wise choice. Here you are, use my little gift well.~
 == X3VienJ @37 // ~What?! You are an idiot.~
-== X3VMAS @38 // ~The only idiot is you, your flaring emotions make you so weak. You were never worth my teaching. Goodbye.~
+== X3VMAS @38 // ~The only idiot is you, your flaring emotions make you so weak. You were never worth my teachings. Goodbye.~
 DO ~ActionOverride("X3VAPR3",EscapeArea())ActionOverride("X3VAPR4",EscapeArea())ActionOverride("X3VAPR5",EscapeArea())EscapeArea()AddexperienceParty(6000)GiveGoldForce(1000)GiveItemCreate("SCRL7B",Player1,0,0,0)AddJournalEntry(@10025,QUEST_DONE)SetGlobal("X3VienQuestDone","GLOBAL",1)SetGlobal("X3VienBribed","GLOBAL",1)~
 EXIT 
 
 CHAIN X3VMAS Earth
 @36 // ~Wise choice. Here you are, use my little gift well.~
 == X3VienJ @37 // ~What?! You are an idiot.~
-== X3VMAS @38 // ~The only idiot is you, your flaring emotions make you so weak. You were never worth my teaching. Goodbye.~
+== X3VMAS @38 // ~The only idiot is you, your flaring emotions make you so weak. You were never worth my teachings. Goodbye.~
 DO ~ActionOverride("X3VAPR3",EscapeArea())ActionOverride("X3VAPR4",EscapeArea())ActionOverride("X3VAPR5",EscapeArea())EscapeArea()AddexperienceParty(6000)GiveGoldForce(1000)GiveItemCreate("SCRL7C",Player1,0,0,0)AddJournalEntry(@10025,QUEST_DONE)SetGlobal("X3VienQuestDone","GLOBAL",1)SetGlobal("X3VienBribed","GLOBAL",1)~
 EXIT 
 

@@ -309,6 +309,19 @@ THEN BEGIN
 COMPILE ~Vienxay/dialogue/CrossMod/Drake.d~
 END 
 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BC0Siren.dlg~
+THEN BEGIN
+  PRINT @58 // Adding crossmod banter between Vienxay and Sirene
+COMPILE ~Vienxay/dialogue/CrossMod/Sirene.d~
+END 
+
+ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
+THEN BEGIN
+  PRINT @59 // Adding crossmod banter between Vienxay and Aura
+COMPILE ~Vienxay/dialogue/CrossMod/Aura.d~
+END 
+
 //TO MAKE IT DISPLAY RIGHT IN WEIDU
 
 LOAD_TRA ~Vienxay/translations/English/Vienxay.tra~
