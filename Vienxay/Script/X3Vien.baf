@@ -257,7 +257,6 @@ SetGlobal("X3VienFinalTalk","GLOBAL",1)
 END 
 
 IF 
-RealGlobalTimerExpired("X3PauseTalkTimer","GLOBAL")
 InParty(Myself)
 See(Player1)
 !StateCheck(Player1,CD_STATE_NOTVALID) 
@@ -268,7 +267,6 @@ CombatCounter(0)
 Global("X3VienFinalTalk","GLOBAL",1)
 THEN 
 RESPONSE #100 
-RealSetGlobalTimer("X3PauseTalkTimer","GLOBAL",ONE_MINUTE)
 SetGlobal("X3VienFinalTalk","GLOBAL",2)
 PlaySong(0)
 StartDialogueNoSet(Player1)
