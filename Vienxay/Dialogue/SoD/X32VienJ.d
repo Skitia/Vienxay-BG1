@@ -1605,7 +1605,7 @@ SAY  ~Yes?~ [VienCom1]
 +~RandomNum(3,1)~+ ~Can you give me any tips about Stealth?~ + Vienxay.PStealth1 // ~Can you give me any tips about Stealth?~
 +~RandomNum(3,2)~+ ~Can you give me any tips about Stealth?~ + Vienxay.PStealth2
 +~RandomNum(3,3)~+ ~Can you give me any tips about Stealth?~ + Vienxay.PStealth3
-+~Global("X32VQuestTalk","GLOBAL",9)Global("X3VienWandTopic","GLOBAL",0)~+ ~Could you teach me the Shadow weave?~ DO ~SetGlobal("X3VienWandTopic","GLOBAL",1)~ + Vienxay.PWand // ~Could you teach me the Shadow weave?~
+//+~Global("X32VQuestTalk","GLOBAL",9)Global("X3VienWandTopic","GLOBAL",0)~+ ~Could you teach me the Shadow weave?~ DO ~SetGlobal("X3VienWandTopic","GLOBAL",1)~ + Vienxay.PWand // ~Could you teach me the Shadow weave?~
 END 
 
 IF ~~ Vienxay.PCompanionThoughts 
@@ -1808,7 +1808,7 @@ SAY ~You fret needlessly. There will be no usurpation of your leadership. Althou
 ++ ~Let's talk about something else.~  + Vienxay.PTalk // ~Let's talk about something else.~ 
 ++ ~Let's keep moving.~ EXIT // ~Let's keep moving.~
 END 
-
+/*
 IF ~~ Vienxay.PWand 
 SAY ~I am certain that the luxury of time does not exist for this. Besides...~
 IF ~Class(Player1,MAGE_ALL)Alignment(Player1,MASK_GOOD)~ + Vienxay.PTeach1
@@ -1857,7 +1857,7 @@ SAY ~You're not like I. There is nothing I can teach you.~
 ++ ~Let's talk about something else.~  + Vienxay.PTalk // ~Let's talk about something else.~ 
 ++ ~Let's keep moving.~ EXIT // ~Let's keep moving.~
 END 
-
+*/
 
 IF ~~ Vienxay.PStealth1
 SAY ~You want advice? Stop talking to me and be quiet.~

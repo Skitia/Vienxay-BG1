@@ -1698,9 +1698,8 @@ END
 IF ~~ PT3Body 
 SAY @257 // ~He was good in bed. He knew how to please a lady. I've had many lovers before, and he was better than most of them.~
 ++ @254 + PT3Body1 // ~That is...more than I needed to know.~
-+~Race(Player1,ELF)Gender(Player1,Male)~+ @246 + PT3Body2 // ~Better than most? You haven't had me yet.~
-+~!Race(Player1,ELF)Gender(Player1,Male)~+ @246 + PT3Body3 // ~Better than most? You haven't had me yet.~
-+~Gender(Player1,Female)~+ @246 + PT3Body4 // ~Better than most? You haven't had me yet.~
++~Race(Player1,ELF)~+ @246 + PT3Body2 // ~Better than most? You haven't had me yet.~
++~!Race(Player1,ELF)~+ @246 + PT3Body3 // ~Better than most? You haven't had me yet.~
 +~Dead("X3VAPR")~+ @255 + PT3Dead1 // ~I still don't understand why you wanted Lacius dead.~
 +~!Dead("X3VAPR")~+ @255 + PT3Dead2 // ~I still don't understand why you wanted Lacius dead.~
 ++ @205 + Vienxay.PTalk // ~Let's talk about something else.~ 
