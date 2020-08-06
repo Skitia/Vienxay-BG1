@@ -1547,6 +1547,7 @@ SAY  ~*Sigh* How may I assist you?~ [VienRar2]
  +~HPPercentGT(Myself,74)RandomNum(5,5)~+ ~How are you doing?~ + Vienxay.PHowAreYou5 // ~How are you doing?~
  +~HPPercentLT(Myself,75)HPPercentGT(Myself,49)RandomNum(2,2)~+ ~How are you doing?~ + Vienxay.PHowAreYouInjured2  // ~How are you doing?~
  ++ ~Let's stop and chat for a bit.~ + Vienxay.PTalk // ~Let's stop and chat for a bit.~ 
+ ++ ~I think there's a problem with your voice.~ + stringfix //Exists to fix 1.56->1.57 Vienxay playthroughs.
  ++ ~I need nothing at the moment.~ EXIT // ~I need nothing at the moment.~ 
  END 
  
@@ -2012,6 +2013,13 @@ SAY ~Well, obviously! Ugh, I'm getting flustered now.~
 ++ ~Let's talk about something else.~ + Vienxay.PTalk
 ++ ~Let's continue on.~ EXIT 
 END 
+
+IF ~~ stringfix
+ SAY ~What?! How rude! I...ugh! I will just drink some water over here, 'lest I spend it glaring at you.~
+IF ~~ THEN DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3reset")~ EXIT 
+END
 
 
 /*Append End*/

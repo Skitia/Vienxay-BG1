@@ -1237,6 +1237,7 @@ IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])!Global("X3VienPIDOFF","G
  +~RandomNum(3,2)~+ @353 + Vienxay.PThinkingAbout1b //~What are you thinking about?~
  +~RandomNum(3,3)~+ @353 + Vienxay.PThinkingAbout1c  //~What are you thinking about?~
  ++ @359 + Vienxay.PTalk // ~Let's stop and chat for a bit.~ 
+ ++ @595 + stringfix //Exists to fix 1.56->1.57 Vienxay playthroughs.
 ++ @169  EXIT
  END 
  
@@ -2035,6 +2036,13 @@ END
 IF ~~ Vienxay.PStealth3
 SAY @334 // ~If you had any hope in the art, you wouldn't be asking me.~
 IF ~~ EXIT 
+END
+
+IF ~~ stringfix
+ SAY @596
+IF ~~ THEN DO ~ClearAllActions() 
+      StartCutSceneMode() 
+      StartCutScene("X3reset")~ EXIT 
 END
 
 END  

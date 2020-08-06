@@ -614,3 +614,6 @@
 @593 =  ~There is no need to be so rude. Please, he needs help.~
 // 1.5+
 @594 = ~I am not weak, and I do not need your pity. But I do need companions. Will you let me join you or not?~
+// StringFix for 1.56->1.57
+@595 = ~I think there's a problem with your voice.~
+@596 = ~What?! How rude! I...ugh! I will just drink some water over here, 'lest I spend it glaring at you.~

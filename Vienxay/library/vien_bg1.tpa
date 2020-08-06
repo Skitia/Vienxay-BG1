@@ -226,6 +226,7 @@ COMPILE EVALUATE_BUFFER ~Vienxay/Script/X3VAPR3.baf~
 COMPILE EVALUATE_BUFFER ~Vienxay/Script/X3VAPR4.baf~
 COMPILE EVALUATE_BUFFER ~Vienxay/Script/X3VAPR5.baf~
 COMPILE EVALUATE_BUFFER ~Vienxay/Script/X3VMAS.baf~
+COMPILE EVALUATE_BUFFER ~Vienxay/Script/X3reset.baf~
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 COMPILE EVALUATE_BUFFER ~Vienxay/dialogue/X3VIEN.d~
