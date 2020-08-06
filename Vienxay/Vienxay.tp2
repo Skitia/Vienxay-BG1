@@ -2,17 +2,16 @@ BACKUP ~Vienxay\backup~
 AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
 README ~Vienxay/readme.txt~
 
-VERSION ~1.56~
+VERSION ~1.57~
 AUTO_TRA ~Vienxay/translations/%s~
 
 ALWAYS
-  INCLUDE ~Vienxay/library/eet.tph~
   INCLUDE ~Vienxay/library/functions.tph~
 END
 
-// Crossplatform var stuff blatantly stolen from cmorgan/gavin/bg1npc/isra!
+// Note: Most of the BGT compatability/tutu compatability is removed. Ignore the lines suggesting such!
 ALWAYS
-ACTION_IF FILE_EXISTS_IN_GAME ~neera.dlg~ THEN BEGIN
+ACTION_IF GAME_IS ~bgee~ THEN BEGIN
   /*Tell the player it is using BG:EE stuff */
   PRINT @1 /* BG:EE install detected */
   INCLUDE ~Vienxay\library\liam_bgee_vars.tpa~
@@ -27,11 +26,17 @@ END ELSE BEGIN
         PRINT @3 /* BGT install detected. */
         INCLUDE ~Vienxay\library\g3_bgt_cpmvars.tpa~
         /* Tell the player it is not Tutu or BGT */
-    END ELSE BEGIN FAIL @4 /* Please install on BG:EE, Tutu or BGT. */
+	END ELSE BEGIN
+		ACTION_IF is_eet BEGIN
+			INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
+			PRINT @8	// ~Enhanced Edition Trilogy install detected.~
+	    END ELSE BEGIN 
+	FAIL @4 /* Please install on BG:EE, Tutu or BGT. */
     END
   END
 END
 END
+END 
 
 LANGUAGE ~English~
          ~english~
@@ -55,9 +60,36 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
 INCLUDE ~Vienxay/library/vien_sod.tpa~ 
 END
 
-		COPY ~%MOD_FOLDER%/portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
-		COPY ~%MOD_FOLDER%/portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
-		COPY ~%MOD_FOLDER%/portraits/VienxayS.bmp~ ~override/VienxayS.bmp~
+PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
+
+PRINT ~Please choose one of the following:
+[1] Default by Crisshasart
+[2] Alt by Aeries1986
+[3] Old Version (NWN)~
+
+OUTER_SPRINT ~portrait~ ~placeholder_value~
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
+  ACTION_READLN ~portrait~
+END
+      ACTION_IF ("portrait" = 1) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/VienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT ~Portrait: Default by Crisshasart~
+	  END
+      ACTION_IF ("portrait" = 2) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT ~Portrait: Alt by Aeries1986~
+	  END
+      ACTION_IF ("portrait" = 3) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT ~Portrait: Old Version (NWN)~
+	  END
+
 		
 PRINT ~Would you like to install Music for Vienxay? These will play during banters with the player.~
 

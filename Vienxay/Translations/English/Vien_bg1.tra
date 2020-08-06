@@ -2,49 +2,51 @@
 // Vienxay's Lines and Items
 @1 = ~Vienxay~
 @2 = ~Some elves are just awful, and Vienxay is said to be one of them. Vienxay would disagree with such assertions, telling you she came from a prominent house in Evermeet, until a series of “misunderstandings” has her ousted and wandering the landscape. She speaks angrily of a visiting mage who tricked her and ruined her name and wanting to restore her former rightful glory.~
-@3 = ~Oh goddess, we're all going to die.~ [VienFear]
-@4 = ~By my art, we have triumphed!~ [VienHap]
-@5 = ~I suppose not everyone can be as perfect as me.~ 
-@6 = ~Gods. Your behavior is nothing but foolish to me.~ 
-@7 = ~You are absolutely infuriating. I don't know how I deal with this.~
-@8 = ~Everyone gather around me!~ [VienLead]
-@9 = ~Isn't this enough for one day? I need to refresh my spells.~ [VienRest]
-@10 = ~Well. This is special.~ [VienBore]
-@11 = ~There they are! We'll easily destroy them.~  [VienCry1]
-@12 = ~My art will bring you low!~ [VienCry2]
-@13 = ~You will rue the day you invited my attack.~ [VienCry3]
-@14 = ~Prepare to face the judgment of Mystra!~ [VienCry4]
-@15 = ~Trust in Mystra, and bring them down.~ [VienCry5]
+@3 = ~I will not die here.~ [VienFear]
+@4 = ~This party is doing better than I thought it would.~ [VienHap]
+@5 = ~If we were under my leadership, things would be looking much better around here.~
+@6 = ~Must we come to the aid of every commoner?~ [VienSer] 
+@7 = ~I'm done here. Be fools if you wish, but you do so without me.~ [VieBreak]
+@8 = ~A wise choice. I will bring us victory.~ [VienLead]
+@9 = ~I need to refresh my spells. Let us rest.~ [VienRest]
+@10 = ~Ugh.~ [VienBore]
+@11 = ~You will regret crossing an elf.~  [VienCry1]
+@12 = ~Prepare to be destroyed!~ [VienCry2]
+@13 = ~No one faces me and lives.~ [VienCry3]
+@14 = ~My art and shadows will end you all.~ [VienCry4]
+@15 = ~With vengeance!~ [VienCry5]
 @16 = ~Ugh!~ [VieDam]
-@17 = ~Mystra, take them, not me!~ [VienDyng]
-@18 = ~Quick, hurry! Protect me!~ [VienHurt]
-@19 = ~The land here is nothing compared to Evermeet.~
-@20 = ~The extreme inferiority of cities outside my homeland is not shocking at all.~
-@21 = ~My talents will shine in this place. Naturally, of course.~
-@22 = ~The sun will not hinder my talents, I assure you.~
-@23 = ~I excel at night, unlike everyone else here. Lean on my talents as much as you need.~
+@17 = ~My power...was not...~ [VienDyng]
+@18 = ~Someone, heal me now!~ [VienHurt]
+@19 = ~The forests...they bring me back to Evermeet.~ [X3VFor]
+@20 = ~Humans and their hideous cities.~ [X3VCit]
+@21 = ~Trek carefully. Leave the traps to me.~ [X3VDun]
+@22 = ~Evermeet...how I miss you.~ [X3VDay]
+@23 = ~My talents are well suited to the night.~ [X3VNigh]
 @24 = ~Yes?~ [VienCom1]
-@25 = ~Yes, hello.~ [VienCom2]
-@26 = ~Yes, of course.~ [VienCom3]
-@27 = ~Pay Attention!~ [VienCom4]
-@28 =  ~Stand aside, peasant.~ [VienAct2]
-@29 = ~I hardly think that's wise.~ [VienAct1]
-@30 = ~Stand aside, peasant.~ [VienAct2]
-@31 = ~That's not worth my time.~ [VienAct3]
-@32 = ~Of course I can do that.~ [VienAct4]
-@49 = ~My wet nurse was tougher!~ [VienCrtH]
-@33 = ~Shar take you!~ [VienCrtM]
-@34 = ~Well. This is what happens when you don't use magic.~ [VienImm]
-@35 = ~This is too much weight. Aren't there hirelings to carry this for us?~ [VienInv]
-@36 = ~What? What just happened? That's inconceivable!~ [VienSpel]
+@25 = ~Speak.~ [VienCom2]
+@26 = ~Your desire?~ [VienCom3]
+@27 = ~My art is yours.~ [VienCom4]
+@280 = ~This is Vienxay.~ [VienCom5]
+@290 = ~You called the shadowmage?~ [VienCom6]
+@28 =  ~If that is your command.~ [VienAct1]
+@29 = ~Hrmph.~ [VienAct2]
+@30 = ~Done.~ [VienAct3]
+@31 = ~Ugh, fine.~ [VienAct4]
+@32 = ~That's it?~ [VienAct5]
+@330 = ~Follow me.~ [VienAct6]
+@490 = ~Hahaha, yes!~ [VienCrtH]
+@33 = ~Ugh! I won't miss twice.~ [VienCrtM]
+@34 = ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
+@35 = ~Do I look like I have room?~ [VienInv]
+@36 = ~My spell failed? Impossible!~ [VienSpel]
 @37 = ~It's done.~ [VienDone]
-@38 = ~Do I have to waste an invisibility spell, or do you think you can manage to stay hidden?~ [VienHide] 
-@39 = ~It's done.~ [VienDone]
-@40 = ~Ugh! I don't believe you properly appreciate the sacrifices I am making to help you.~ [VienRar1]
-@41 = ~*Sigh* How may I assist you?~ [VienRar2]
-@42 = ~Another incompetent peasant dead.~ 
-@43 = ~Ugh! I don't believe you properly appreciate the sacrifices I am making to help you.~ [VienRar1]
-@44 = ~*Sigh* How may I assist you?~ [VienRar2]
+@38 = ~None can see the shadowmage.~ [VienHide] 
+@40 = ~Do you even appreciate my contributions?~ [VienRar1]
+@41 = ~Give your command already. I have no patience for this.~ [VienRar2]
+@42 = ~Another fallen? Fight harder, fools!~ [X3VDie]
+@43 = ~That's mine now.~ [X3VPick]
+@44 = ~I walk.~ [VienAct7]
 @45 = ~Vienxay's Silk Gloves~
 @46 = ~ Vienxay's Silk Gloves are warm, snug, and absolutely silent when rubbed against one another. They are the thief's dream, assisting with quiet work and not leaving behind any sign they were ever there. Vienxay will not part lightly with these.
 
@@ -157,7 +159,7 @@ We were attacked by an apprentice of Vienxay's old master. They must definitely 
 Advantages: 
 - + 15% Bonus to Hide in Shadows and Move Silently
 - Slippery Mind: +1 bonus to saving throws
-- May cast Shadow Jump once per day. Gains one use at level 5 and an additional use every 5 levels thereafter.
+- May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
 SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.
 

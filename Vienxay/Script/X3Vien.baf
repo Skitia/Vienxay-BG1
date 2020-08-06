@@ -273,3 +273,5 @@ SetGlobal("X3VienFinalTalk","GLOBAL",2)
 PlaySong(0)
 StartDialogueNoSet(Player1)
 END 
+
+

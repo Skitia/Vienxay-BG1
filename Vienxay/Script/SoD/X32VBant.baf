@@ -110,7 +110,7 @@ RESPONSE #40
 	SetGlobal("X32VienDorn1","MYAREA",-1)
 END
 
-// This only fires if Vienxay took on the Shadow Weave 
+
 IF
 	InMyArea(Player1)
 	!ActuallyInCombat()
@@ -1119,7 +1119,7 @@ RESPONSE #60
 END
 
 /* Note, Vienxay and Recorder will have different banters within their respective banter files.*/
-// This one will only fire if Vienxay was asked to use the shadow weave.
+
 IF
 InMyArea(Player1)
 !ActuallyInCombat()

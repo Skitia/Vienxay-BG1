@@ -17,51 +17,51 @@ COPY ~%MOD_FOLDER%/cre/SoD/x32Vien.cre~ ~override~
   WRITE_ASCII 0X34 ~VienxayM~ #8   //small portrait, we do not have one right now, comment out.
   WRITE_ASCII 0x3c ~VienxayL~ #8   //medium portrait, we do not have one right now, comment out. 
   SAY BIO @2
-  SAY MORALE @3 // ~Oh goddess, we're all going to die.~
-  SAY HAPPY @4 // ~By my art, we have triumphed!~
-  SAY UNHAPPY_ANNOYED @5
-  SAY UNHAPPY_SERIOUS @6
-  SAY UNHAPPY_BREAKING_POINT @7  
-  SAY LEADER @8 // ~Everyone gather around me!~
-  SAY TIRED @9 // ~Isn't this enough for one day? I need to refresh my spells.~
-  SAY BORED @10 // ~Well. This is special.~
-  SAY BATTLE_CRY1 @11 // ~There they are! We'll easily destroy them.~
-  SAY BATTLE_CRY2 @12 // ~My art will bring you low!~
-  SAY BATTLE_CRY3 @13 // ~You will rue the day you invited my attack.~
-  SAY BATTLE_CRY4 @14 // ~Prepare to face the judgement of Mystra!~
-  SAY BATTLE_CRY5 @15 // ~Trust in Mystra, and bring them down.~
+  SAY MORALE @3 // ~I will not die here.~
+  SAY HAPPY @4 // ~This party is doing better than I thought it would.~
+  SAY UNHAPPY_ANNOYED @5 // ~If we were under my leadership, things would be looking much better around here.~
+  SAY UNHAPPY_SERIOUS @6 // ~Must we come to the aid of every commoner?~
+  SAY UNHAPPY_BREAKING_POINT @7  // ~I'm done here. Be fools if you wish, but you do so without me.~
+  SAY LEADER @8 // ~A wise choice. I will bring us victory.~
+  SAY TIRED @9 // ~I need to refresh my spells. Let us rest.~
+  SAY BORED @10 // ~Ugh.~
+  SAY BATTLE_CRY1 @11 // ~You will regret crossing an elf.~
+  SAY BATTLE_CRY2 @12 // ~Prepare to be destroyed!~
+  SAY BATTLE_CRY3 @13 // ~No one faces me and lives.~
+  SAY BATTLE_CRY4 @14 // ~My art and shadows will end you all.~
+  SAY BATTLE_CRY5 @15 // ~With vengeance!~
   SAY DAMAGE @16 //~Ugh!~ 
-  SAY DYING @17 //~Mystra, take them, not me!~
-  SAY HURT @18 // ~Quick, hurry! Protect me!~
-  SAY AREA_FOREST @19 // ~The land here is nothing compared to Evermeet.~
-  SAY AREA_CITY @20
-  SAY AREA_DUNGEON @21
-  SAY AREA_DAY @22
-  SAY AREA_NIGHT @23
-  SAY SELECT_COMMON1 @24 // ~Yes?~
-  SAY SELECT_COMMON2 @25 // ~Yes, hello.~
-  SAY SELECT_COMMON3 @26 // ~Yes, of course.~
-  SAY SELECT_COMMON4 @27 // ~Pay Attention!~
-  SAY SELECT_COMMON5 @25 // ~Yes, hello.~
-  SAY SELECT_COMMON6 @24 // ~Yes?~
-  SAY SELECT_ACTION1 @29 // ~I hardly think that's wise.~
-  SAY SELECT_ACTION2 @30  // ~Stand aside, peasant.~
-  SAY SELECT_ACTION3 @31 // ~That's not worth my time.~
-  SAY SELECT_ACTION4 @32 // ~Of course I can do that.~
-  SAY SELECT_ACTION5 @29 // ~I hardly think that's wise.~
-  SAY SELECT_ACTION6 @30 // ~Stand aside, peasant.~
-  SAY SELECT_ACTION7 @31 // ~That's not worth my time.~
-  SAY CRITICAL_HIT @49 //~My wet nurse was tougher!~ 
-  SAY CRITICAL_MISS @33 //~Shar take you!~ 
-  SAY TARGET_IMMUNE @34 // ~Well. This is what happens when you don't use magic.~
-  SAY INVENTORY_FULL @35 // ~This is too much weight. Aren't there hirelings to carry this for us?~  
-  SAY SPELL_DISRUPTED @36 // ~What? What just happened? That's inconceivable!~ 
+  SAY DYING @17 //~My power...was not...~
+  SAY HURT @18 // ~Someone, heal me now!~
+  SAY AREA_FOREST @19 // ~The forests...they bring me back to Evermeet.~ [X3VFor]
+  SAY AREA_CITY @20 // ~Humans and their hideous cities.~ [X3VCit]
+  SAY AREA_DUNGEON @21 // ~Trek carefully. Leave the traps to me.~ [X3VDun]
+  SAY AREA_DAY @22 // ~Evermeet...how I miss you.~ [X3VDay]
+  SAY AREA_NIGHT @23 // ~My talents are well suited to the night.~ [X3VNigh]
+  SAY SELECT_COMMON1 @24 // ~Yes?~ [VienCome3]
+  SAY SELECT_COMMON2 @25 // ~Speak.~ [VienCom2]
+  SAY SELECT_COMMON3 @26 // ~Your desire?~ [VienCom3]
+  SAY SELECT_COMMON4 @27 // ~My art is yours.~ [VienCom4]
+  SAY SELECT_COMMON5 @280 // ~This is Vienxay.~ [VienCom5]
+  SAY SELECT_COMMON6 @290 // ~You called the shadowmage?~ [VienCom6]
+  SAY SELECT_ACTION1 @28 // ~If that is your command.~ [VienAct1]
+  SAY SELECT_ACTION2 @29  // ~Hrmph.~ [VienAct2]
+  SAY SELECT_ACTION3 @30 // ~Done.~ [VienAct3]
+  SAY SELECT_ACTION4 @31 // ~Ugh, fine.~ [VienAct4]
+  SAY SELECT_ACTION5 @32 // ~That's it?~ [VienAct5]
+  SAY SELECT_ACTION6 @330 // ~Follow me.~ [VienAct6]
+  SAY SELECT_ACTION7 @44 // ~I walk.~ [VienAct7]
+  SAY CRITICAL_HIT @49 //~Hahaha, yes!~ [VienCrtH] 
+  SAY CRITICAL_MISS @33 //~Ugh! I won't miss twice.~ [VienCrtM]
+  SAY TARGET_IMMUNE @34 // ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
+  SAY INVENTORY_FULL @35 // ~Do I look like I have room?~  [VienInv]
+  SAY SPELL_DISRUPTED @36 // ~My spell failed? Impossible!~ [VienSpel]
   SAY SET_A_TRAP @37 // ~It's done.~  
-  SAY HIDDEN_IN_SHADOWS @38 // ~Do I have to waste an invisibility spell, or do you think you can manage to stay hidden?~ 
-  SAY PICKED_POCKET @39 // ~It's done.~ 
-  SAY SELECT_RARE1 @40 // ~Ugh! I don't believe you properly appreciate the sacrifices I am making to help you.~
-  SAY SELECT_RARE2 @41 // ~*Sigh* How may I assist you?~
-  SAY REACT_TO_DIE_GENERAL @42 // ~Another incompetent peasant dead.~ 
+  SAY HIDDEN_IN_SHADOWS @38 // ~None can see the shadowmage.~ 
+  SAY PICKED_POCKET @43 // ~That's mine now.~ [X3VPick]
+  SAY SELECT_RARE1 @40 // ~Do you even appreciate my contributions?~
+  SAY SELECT_RARE2 @41 // ~Give your command already. I have no patience for this.~ [VienRar2]
+  SAY REACT_TO_DIE_GENERAL @42 // ~Another fallen? Fight harder, fools!~ [X3VDie]
  
 APPEND ~bddialog.2da~ ~X3Vien X32Vien X32VienJ X32VienD~ 
   UNLESS ~X3Vien~
