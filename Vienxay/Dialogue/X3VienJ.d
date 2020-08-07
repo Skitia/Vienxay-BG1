@@ -1227,7 +1227,7 @@ END
 
 
 IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])!Global("X3VienPIDOFF","GLOBAL",1)~ THEN BEGIN Vienxay.PID 
- SAY @168 // ~*Sigh* How may I assist you?~ [VienRar2]~
+ SAY @168 // ~Speak.~ [VienCom2]~
  + ~HPPercentGT(Myself,74)RandomNum(3,1)~ + @225 + Vienxay.PHowAreYou1 // ~How are you doing?~
  + ~HPPercentGT(Myself,74)RandomNum(3,2)~ + @225 + Vienxay.PHowAreYou2 // ~How are you doing?~
  + ~HPPercentGT(Myself,74)RandomNum(3,3)~ + @225 + Vienxay.PHowAreYou3 // ~How are you doing?~
