@@ -472,8 +472,8 @@ SAY @136 // ~They are only so interesting, though I do love them. My youngest si
 END 
 
 IF ~~ T4.Shadow 
-SAY @137 // ~Yes. My mentor taught me the power of shadow, and it was also my undoing. Dangerously similar to the shadow weave, yet still uniquely apart. Still, the power entertained me, allowed me to do even more with my already great talents.~
-++ @138 + T4.Share // ~Have you thought of sharing the lessons of your talents?~
+SAY @597 // ~Yes. My mentor taught me the power of shadow, and it was also my undoing. Dangerously similar to the shadow weave, yet still uniquely apart. Still, the power entertained me, allowed me to do even more with my already great talents.~
+++ @598 + T4.Share // ~Have you thought of sharing the lessons of your talents?~
 ++ @133 + T4.Over // ~It suits you, though we've spoken long enough.~
 ++ @134 + T4.Insult // ~You're not that good, Vienxay.~
 END 

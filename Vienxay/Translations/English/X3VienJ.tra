@@ -137,8 +137,6 @@
 @136 = ~They are only so interesting, though I do love them. My youngest sister is naive and doesn't understand the world much, sweet and goodly.~
 @137 = ~My other, also younger sister is more rebellious, getting into the wrong crowds. She never made the mistakes I did, though, and she knows how to behave when she needs to.~
 @138 = ~Naturally, my example was one they were not able to follow completely, with my greatness and achievements in Evermeet.~
-@137 = ~Yes. My mentor taught me the power of shadow, and it was also my undoing. Dangerously similar to the shadow weave, yet still uniquely apart. Still, the power entertained me, allowed me to do even more with my already great talents.~
-@138 = ~Have you thought of sharing the lessons of your talents?~
 @139 = ~Please. You may attack me with your tongue in lie, but I know the truth. You'd be lucky to even have me share my talent, though I've little time for such nonsense.~
 @140 = ~I suppose I could share my talent, though I'd hardly want to teach a lesson. I'll...ruminate on it for your benefit, however.~
 @141 = ~Now, off to the next road, or, whatever, isn't it?~
@@ -617,3 +615,5 @@
 // StringFix for 1.56->1.57
 @595 = ~I think there's a problem with your voice.~
 @596 = ~What?! How rude! I...ugh! I will just drink some water over here, 'lest I spend it glaring at you.~
+@597 = ~Yes. My mentor taught me the power of shadow, and it was also my undoing. Dangerously similar to the shadow weave, yet still uniquely apart. Still, the power entertained me, allowed me to do even more with my already great talents.~
+@598 = ~Have you thought of sharing the lessons of your talents?~
