@@ -2,7 +2,7 @@ BACKUP ~Vienxay\backup~
 AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
 README ~Vienxay/readme.txt~
 
-VERSION ~1.58~
+VERSION ~1.59~
 AUTO_TRA ~Vienxay/translations/%s~
 
 ALWAYS
@@ -27,7 +27,7 @@ END ELSE BEGIN
         INCLUDE ~Vienxay\library\g3_bgt_cpmvars.tpa~
         /* Tell the player it is not Tutu or BGT */
 	END ELSE BEGIN
-		ACTION_IF is_eet BEGIN
+		ACTION_IF GAME_IS ~eet~ BEGIN
 			INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 			PRINT @8	// ~Enhanced Edition Trilogy install detected.~
 	    END ELSE BEGIN 
