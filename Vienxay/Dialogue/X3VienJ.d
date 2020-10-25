@@ -754,6 +754,54 @@ SAY @541 // ~As sensible as that may seem, no home will ever match what I had. N
 IF ~~ + T7.Listen 
 END 
 
+//New Eighth Talk, though can happen before 7 
+IF ~Global("X3VienPastTalk","GLOBAL",2)~ T8
+SAY @599 // ~Ugh, it is bothering me, but I keep thinking of the memories with my mentor. The spells she helped me break through, and the tomes she helped me access.~
++~Dead("X3VMAS")~+ @600 DO ~IncrementGlobal("X3VienPastTalk","GLOBAL",1)~ + T8.1
+++ @601 DO ~IncrementGlobal("X3VienPastTalk","GLOBAL",1)~ + T8.2
++~!Dead("X3VMAS")~+ @602 DO ~IncrementGlobal("X3VienPastTalk","GLOBAL",1)~ + T8.2
+++ @603 DO ~IncrementGlobal("X3VienPastTalk","GLOBAL",1)~ + T8.3
+++ @604 DO ~IncrementGlobal("X3VienPastTalk","GLOBAL",1)~ + T8.Exit 
+END 
+
+IF ~~ T8.1 
+SAY @605 
+IF ~~ + T8.3 
+END 
+
+IF ~~ T8.2 
+SAY @606 
+IF ~~ + T8.3 
+END 
+
+IF ~~ T8.3 
+SAY @607 // ~I remember struggling with a particular evokation. Something to show off to the family, a bit of a glittery flare to impress. All it was doing when I casted it was nearly cause a small fire.~
+= @608 // ~She showed me how to control it, how to maintain the right posture and movement of the hand, how to say the right chant with absolute flawlessness. Five minutes of her teaching, and I was doing it perfectly.~
+= @609 // ~I...simply find myself appreciating that. Despite all that she did to me. She did give me things that are forever useful.~
+++ @610 + T8.4 //~People aren't all bad. I think it's okay to have conflicted feelings on her.~
+++ @611 + T8.5 //~But you are still the mage using them. You also deserve credit.~
+++ @612 + T8.4//~It sounds like you don't hate her as much as you thought you did.~
+END 
+
+IF ~~ T8.4 
+SAY @613 // ~Hrmph. If anything, it makes me hate her more than I did before. I do not like to feel this way. It is infuriatingly troubling.~
+IF ~~ + T8.6 
+END 
+
+IF ~~ T8.5 
+SAY @614 // ~Oh, I certainly do credit myself. But I...regretfully must admit that I would not have made it as far without her.~
+IF ~~ + T8.6 
+END 
+
+IF ~~ T8.Exit 
+SAY @615 // ~Yes, yes, whatever. Have it your way.~
+IF ~~ EXIT 
+END 
+
+IF ~~ T8.6 
+SAY @616 
+IF ~~ EXIT 
+END 
 
 // Reputation/Alignment Shift Talk.
 /* This only appears post quest, and if party's reputation hits 18.*/
