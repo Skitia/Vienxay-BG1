@@ -826,7 +826,7 @@ END
 IF ~~ VieRep3 
 SAY @427 // ~Still...many of my people believe such as you. Humans though, betray. Very, very well. And my master learned that so well and betrayed me too. Vengeance though, always has its way.~
 = @428 // ~If the opportunity came about, many of those you helped would turn on you, or even aid these assassins and enemies that have such an interest in yourself.~
-= @429 // ~Does that make you reconsider this needless charity? You are only setting yourself up to be stabbed in the back.~
+= @429 // ~Does that make you reconsider your acts of charity? That this all could very well be you being used, only to be stabbed in the back?~
 ++ @430 + VieRep4 // ~If that is the case, why haven't you betrayed me?~
 ++ @431 + VieRep5 // ~People are better then that, Vienxay. They aren't all selfish.~
 ++ @432 + VieRep5 // ~You have a point. I'll be more thoughtful.~
@@ -839,7 +839,7 @@ IF ~~ DO ~IncrementGlobal("X3RepTalk","GLOBAL",1)~ EXIT
 END 
 
 IF ~~ VieRep5 
-SAY @435 // ~It is just advice in the end. But I suppose...it is tolerable. So I will still follow. Someone will have to protect you from the inevitable backstabber, after all.~
+SAY @435 // ~It is just advice in the end. But I can tolerate your actions well enough if they persist, so I will still follow where you go. Someone will have to protect you from the inevitable backstabber, after all.~
 IF ~~ DO ~IncrementGlobal("X3VienRepTalk","GLOBAL",1)~ EXIT 
 END 
 
