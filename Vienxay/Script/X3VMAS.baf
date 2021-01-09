@@ -36,6 +36,24 @@ THEN
 		StartDialogue("X3VMAS",[PC])
 END
 
+IF 
+Global("X3VMasJump","LOCALS",0)
+HPPercentLT(Myself,34)
+HaveSpellRES("X3VSA")
+DifficultyGT(NORMAL)
+THEN RESPONSE #100 
+SetGlobal("X3VMasJump","LOCALS",1)
+SpellRES("X3VSA",FarthestEnemyOf())
+END 
+
+IF 
+	Global("X3VMasJump","LOCALS",1)
+THEN RESPONSE #100
+	SetGlobal("X3VMasJump","LOCALS",2)
+	ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+	ForceSpell(FarthestEnemyOf(),WIZARD_LIGHTNING_BOLT)
+END 
+
 IF
     See(NearestEnemyOf(Myself))
 	Global("X3Cast","LOCALS",0)
@@ -64,6 +82,17 @@ IF
 	Spell(NearestEnemyOf(),WIZARD_MINOR_SPELL_DEFLECTION)
 END
 
+IF 
+    See(NearestEnemyOf(Myself))
+	HaveSpellRES("X3VSBLT")
+	Global("X3Cast","LOCALS",1)
+	DifficultyGT(EASY)
+ THEN
+ RESPONSE #100
+	SpellRES("X3VSBLT",NearestEnemyOf())
+	SetGlobal("X3Cast","LOCALS",2)
+END
+
 IF
     See(NearestEnemyOf(Myself))
 	HaveSpell(WIZARD_LIGHTNING_BOLT)
@@ -89,6 +118,17 @@ IF
  THEN
  RESPONSE #100
 	Spell(NearestEnemyOf(),WIZARD_BLINDNESS)
+END
+
+IF 
+    See(NearestEnemyOf(Myself))
+	HaveSpellRES("X3VSBLT")
+	Global("X3Cast","LOCALS",2)
+	DifficultyGT(EASY)
+ THEN
+ RESPONSE #100
+	SpellRES("X3VSBLT",NearestEnemyOf())
+	SetGlobal("X3Cast","LOCALS",3)
 END
 
 IF
@@ -123,9 +163,20 @@ IF
 	Spell(NearestEnemyOf(),WIZARD_MAGIC_MISSILE)
 END
 
+IF
+    See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MAGIC_MISSILE)
+ THEN
+ RESPONSE #100
+	Spell(NearestEnemyOf(),WIZARD_MAGIC_MISSILE)
+END
 
-
-
+IF
+    See(NearestEnemyOf(Myself))
+ THEN
+ RESPONSE #100
+	Attack(NearestEnemyOf())
+END
 
 
 
