@@ -102,7 +102,7 @@ EXIT
 
 CHAIN X3VMAS Declined 
 @41 // ~And here I thought you were wiser than Vienxay. But fools attract fools.~
-EXTERN X3VMAS Battle
+EXTERN X3VMAS BATTLE
 
 CHAIN X3VMAS BATTLE 
 @39 // ~Let me give you one final lesson, Vienxay, on the true power of Shar's weave.~ 
