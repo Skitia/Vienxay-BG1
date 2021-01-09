@@ -74,7 +74,7 @@ CHAIN X3VMAS OFFER
 == X3VienJ @31 // ~We do not *need* your hand out, Luna.~
 == X3VMAS @32 // ~I consider this generous. You are certain to live and live rewarded, rather than die for nothing. Evermeet will never take you back.~
 END 
-++ @14 EXTERN X3VMAS FOOL // ~I'll not ignore Vienxay. Your offer is declined.~ 
+++ @14 EXTERN X3VMAS Declined // ~I'll not ignore Vienxay. Your offer is declined.~ 
 ++ @33 EXTERN X3VMAS AIR // ~I accept your offer, and will take the scroll of air.~
 ++ @34 EXTERN X3VMAS Earth // ~I accept your offer, and will take the scroll of earth.~
 ++ @35 EXTERN X3VMAS Fire // ~I accept, your offer and will take the scroll of fire.~
@@ -99,6 +99,10 @@ CHAIN X3VMAS Fire
 == X3VMAS @38 // ~The only idiot is you, your flaring emotions make you so weak. You were never worth my teaching. Goodbye.~
 DO ~ActionOverride("X3VAPR3",EscapeArea())ActionOverride("X3VAPR4",EscapeArea())ActionOverride("X3VAPR5",EscapeArea())EscapeArea()AddexperienceParty(6000)GiveGoldForce(1000)GiveItemCreate("SCRL6X",Player1,0,0,0)AddJournalEntry(@10025,QUEST_DONE)SetGlobal("X3VienQuestDone","GLOBAL",1)SetGlobal("X3VienBribed","GLOBAL",1)~
 EXIT 
+
+CHAIN X3VMAS Declined 
+@41 // ~And here I thought you were wiser than Vienxay. But fools attract fools.~
+EXTERN X3VMAS Battle
 
 CHAIN X3VMAS BATTLE 
 @39 // ~Let me give you one final lesson, Vienxay, on the true power of Shar's weave.~ 
