@@ -1599,7 +1599,7 @@ SAY  ~Yes?~ [VienCom1]
 + ~Race(Player1,Elf)~ + ~What do you think of me?~ + Em.Me1 // ~What do you think of me?~
 + ~!Race(Player1,Elf)~ + ~What do you think of me?~ + Em.Me2 // ~What do you think of me?~
 // Dialogue From Talk Expansions. These fire once, and there will be 3 only: A talk of things while they were gone (7/8), something friendly, and something flirty. 
-+~Global("X32VienxayCell","GLOBAL",0)~+ ~I'd like to know more about how you ended up in a cell.~ DO ~SetGlobal("X32VienxayCell","GLOBAL",1)~  + Vienxay.PCell // ~I'd like to know more about how you ended up in a cell.~
++~Global("X32VienxayCell","GLOBAL",0)GlobalGT("Chapter","GLOBAL",7)~+ ~I'd like to know more about how you ended up in a cell.~ DO ~SetGlobal("X32VienxayCell","GLOBAL",1)~  + Vienxay.PCell // ~I'd like to know more about how you ended up in a cell.~
 +~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",9)~+ ~I'd like to talk about the Shadow Weave.~ DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWYes
 +~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",10)~+ ~I'd like to talk about the Shadow Weave.~ DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWNo
 +~Global("X3VienPHaughtyTopic","GLOBAL",0)~+ ~Are you always so haughty?~  DO ~SetGlobal("X3VienPHaughtyTopic","GLOBAL",1)~ + Vienxay.PHaughty // ~Are you always so haughty?~ 
