@@ -951,13 +951,6 @@ I_C_T Bently 0 X3VienBently0
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @549 // ~And that is why this inn is subpar.~
 END
 
-//Bentley
-I_C_T Bently 1 X3VienBently1
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @547 // ~Don't ask for elven wine. He had not a single pitcher.~
-== Bently IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @548 // ~We only have ale, lass.~
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @549 // ~And that is why this inn is subpar.~
-END
-
 //Jaheira 
 I_C_T Jaheir 0 X3VienJaheir0
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @550 // ~Were you wanting to meet these mutts? They've been here longer than I.~
