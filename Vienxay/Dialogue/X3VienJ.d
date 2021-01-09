@@ -808,8 +808,8 @@ END
 IF ~Global("X3VienRepTalk","GLOBAL",1)~ VieRep
 SAY @420 // ~I would like to talk.~
 = @421 // ~I've seen so much of "Helping them", and "Helping poor them.". Why? Why do you bother aiding such...hopeless people?~
-++ @422 + Rep1  // ~Because I want to do right.~
-++ @423  + Rep2 // ~Because I feel happy when others are happy.~
+++ @422 + Rep1  // ~I want to do right where I go, Vienxay, even if it takes us on a detour.~
+++ @423  + Rep2 // ~This isn't delaying our goals. Helping others is my goal.~
 ++ @424 + VieRep3 // ~Why don't you?~
 END 
 
@@ -819,27 +819,27 @@ IF ~~ + VieRep3
 END 
 
 IF ~~ Rep2 
-SAY @426 // ~Our emotions tied to another's well being seems more dangeorus than benefitial.~
+SAY @426 // ~I think it is silly. All of this needless pitying only makes it worse for them.~
 IF ~~ + VieRep3
 END 
 
 IF ~~ VieRep3 
-SAY @427 // ~Ever since I fell into the likes of my Master, I followed the ruthless ideals of the self-first.~
-= @428 // ~But I suppose there is little benefit to a legacy if you solely serve your own interests.~
-= @429 // ~Your example annoys me because it is...contagious, and I am beginning to think about...sometimes doing the same.~
-++ @430 + VieRep4 // ~Aiding others is something that would benefit you, Vienxay.~
-++ @431 + VieRep5 // ~You? Being less selfish? Don't make me laugh.~
-++ @432 + VieRep4 // ~You should follow your heart.~
+SAY @427 // ~Still...many of my people believe such as you. Humans though, betray. Very, very well. And my master learned that so well and betrayed me too. Vengeance though, always has its way.~
+= @428 // ~If the opportunity came about, many of those you helped would turn on you, or even aid these assassins and enemies that have such an interest in yourself.~
+= @429 // ~Does that make you reconsider this needless charity? You are only setting yourself up to be stabbed in the back.~
+++ @430 + VieRep4 // ~If that is the case, why haven't you betrayed me?~
+++ @431 + VieRep5 // ~People are better then that, Vienxay. They aren't all selfish.~
+++ @432 + VieRep5 // ~You have a point. I'll be more thoughtful.~
 ++ @433 + VieRep5 // ~I would rather not listen to this.~
 END 
 
 IF ~~ VieRep4 
-SAY @434 // ~I will think about it some more, at the least. It still is slightly discomforting, but...maybe...that is the lesson Evermeet wished to teach.~
-IF ~~ DO ~IncrementGlobal("X3RepTalk","GLOBAL",1)ChangeAlignment("X3Vien",NEUTRAL)~ EXIT 
+SAY @434 // ~Because I am not human. And yet I suppose that isn't answer enough, is it, for my master was not either. I suppose...it is because I do consider you a friend. And so I still follow. Someone will have to protect you from the inevitable backstabber, after all.~
+IF ~~ DO ~IncrementGlobal("X3RepTalk","GLOBAL",1)~ EXIT 
 END 
 
 IF ~~ VieRep5 
-SAY @435 // ~Fine. I will stop talking about this.~
+SAY @435 // ~It is just advice in the end. But I suppose...it is tolerable. So I will still follow. Someone will have to protect you from the inevitable backstabber, after all.~
 IF ~~ DO ~IncrementGlobal("X3VienRepTalk","GLOBAL",1)~ EXIT 
 END 
 

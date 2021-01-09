@@ -247,6 +247,23 @@ Wait(5)
 SetGlobal("X3VienQuestDone","GLOBAL",2)
 StartDialogueNoSet(Player1) 
 END 
+
+//Reputation 18 Talk: Reintroduced, no longer requires quest to be done, but no longer shifts alignment.
+IF 
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+!AreaType(DUNGEON)
+ReputationGT(Player1,17)
+Global("X3VienRepTalk","GLOBAL",0)
+THEN RESPONSE #100 
+SetGlobal("X3VienRepTalk","GLOBAL",1)
+StartDialogueNoSet(Player1) 
+END 
+
 // Final Talk 
 IF 
 RealGlobalTimerExpired("X3VienFinalTimer","GLOBAL")

@@ -6,9 +6,9 @@ Global("X3VienApprenticeTalk","GLOBAL",3)
 THEN
 RESPONSE #100
 SetGlobal("X3MasSpawn","GLOBAL",1)
-CreateCreature("X3VMAS",[3955.2573],SW)
-CreateCreature("X3VAPR5",[4178.2529],SW)
-CreateCreature("X3VAPR3",[4257.2631],SW)
-CreateCreature("X3VAPR4",[4067.2544],SW)
+CreateCreature("X3VMAS",[3955.2573],SE)
+CreateCreature("X3VAPR5",[4178.2529],SE)
+CreateCreature("X3VAPR3",[4257.2631],SE)
+CreateCreature("X3VAPR4",[4067.2544],SE)
 Continue()
 END
