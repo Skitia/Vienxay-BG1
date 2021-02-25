@@ -835,7 +835,7 @@ END
 
 IF ~~ VieRep4 
 SAY @434 // ~Because I am not human. And yet I suppose that isn't answer enough, is it, for my master was not either. I suppose...it is because I do consider you a friend. And so I still follow. Someone will have to protect you from the inevitable backstabber, after all.~
-IF ~~ DO ~IncrementGlobal("X3RepTalk","GLOBAL",1)~ EXIT 
+IF ~~ DO ~IncrementGlobal("X3VienRepTalk","GLOBAL",1)~ EXIT 
 END 
 
 IF ~~ VieRep5 
