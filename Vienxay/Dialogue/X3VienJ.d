@@ -861,12 +861,12 @@ END
 
 //Dead Cat 
 I_C_T Drienn 1 X3VienDrienn1
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @454 // ~Does she really believe in the idiotic idea that cats have nine lives? We may as well show her the reality of animal incompetence.~
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @618 // ~Does she really believe in the idiotic idea that cats have nine lives? We may as well show her the reality of animal incompetence.~
 END 
 
 // Noble #9 
 I_C_T Nobl9 0 X3VienNoble90 
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @455 // ~Excuse me?! Who do you think we are? Ugh! Humans are so aggravating.~
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @620 // ~Excuse me?! Who do you think we are? Ugh! Humans are so aggravating.~
 == Nobl9 @591 // ~I'm not paying you to grovel. Off with you.~
 END
 
@@ -877,7 +877,7 @@ END
 
 // Ashen
 I_C_T2 Ashen 2 X3VienAshen2
-== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @457 //~His description of this backwater land could not be more accurate.~
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @619 //~His description of this backwater land could not be more accurate.~
 END
 
 // Tamah 
@@ -1973,7 +1973,7 @@ SAY @461 // ~Excellent. You will come away knowing how to please and get what yo
 END 
 
 IF ~~ Vienxay.Regret 
-SAY @452 // ~Yes, such is the reaction I'd expect from people outside of Evermeet. Such prudes.~
+SAY @617 // ~Yes, such is the reaction I'd expect from people outside of Evermeet. Such prudes.~
 ++ @205 + Vienxay.PTalk // ~Let's talk about something else.~ 
 ++ @204 EXIT // ~Let's keep moving.~
 END 
