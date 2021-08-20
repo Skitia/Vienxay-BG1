@@ -175,10 +175,6 @@ COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
   SAY SELECT_ACTION1 @28 // ~If that is your command.~ [VienAct1]
   SAY SELECT_ACTION2 @29  // ~Hrmph.~ [VienAct2]
   SAY SELECT_ACTION3 @30 // ~Done.~ [VienAct3]
-  SAY SELECT_ACTION4 @31 // ~Ugh, fine.~ [VienAct4]
-  SAY SELECT_ACTION5 @32 // ~That's it?~ [VienAct5]
-  SAY SELECT_ACTION6 @330 // ~Follow me.~ [X3VAct6]
-  SAY SELECT_ACTION7 @44 // ~I walk.~ [VienAct7]
   SAY CRITICAL_HIT @490 //~Hahaha, yes!~ [VienCrtH]
   SAY CRITICAL_MISS @33 //~Ugh! I won't miss twice.~ [VienCrtM]
   SAY TARGET_IMMUNE @34 // ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
@@ -190,7 +186,30 @@ COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
   SAY SELECT_RARE1 @40 // ~Do you even appreciate my contributions?~ [VienRar1]
   SAY SELECT_RARE2 @41 // ~Give your command already. I have no patience for this.~ [VienRar2]
   SAY REACT_TO_DIE_GENERAL @42 // ~Another fallen? Fight harder, fools!~ [X3VDie]
-  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~)) 
+  WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~))
+
+ACTION_IF GAME_IS ~bgee~ BEGIN
+  COPY_EXISTING ~X3Vien.cre~ ~override/X3Vien.cre~
+    SAY 0x1E0 @31 // ~Ugh, fine.~ [VienAct4]                //  SAY BGEE_ACTION4
+    SAY 0x1E4 @32 // ~That's it?~ [VienAct5]                //  SAY BGEE_ACTION5
+    SAY 0x1E8 @330 // ~Follow me.~ [X3VAct6]                //  SAY BGEE_ACTION6
+    SAY 0x1EC @44 // ~I walk.~ [VienAct7]                   //  SAY BGEE_ACTION7
+    SAY SELECT_ACTION4 @40 // ~Do you even appreciate my contributions?~ [VienRar1]
+    SAY SELECT_ACTION5 @41 // ~Give your command already. I have no patience for this.~ [VienRar2]
+  BUT_ONLY
+END
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+  COPY_EXISTING ~X3Vien.cre~ ~override/X3Vien.cre~
+    SAY SELECT_ACTION4 @33 // ~Fair enough~ [AURAh]
+    SAY SELECT_ACTION5 @34 //~Come with me.~
+    SAY SELECT_ACTION6 @35 // ~Sounds fine to me.~
+    SAY SELECT_ACTION7 @36 // ~Hmm, I don't know.~
+    SAY 0x1D0 @40 // ~Do you even appreciate my contributions?~ [VienRar1]                    //  SAY BG2EE_SELECT_RARE1
+    SAY 0x1D4 @41 // ~Give your command already. I have no patience for this.~ [VienRar2]     //  SAY BG2EE_SELECT_RARE2
+  BUT_ONLY
+END
+
 // JOURNAL ///
 
 ADD_JOURNAL TITLE (%Vienxay's Vengeance%) @10021 @10022 @10023 @10024 @10025 @10026  USING ~Vienxay/tra/english/Vien_bg1.tra~
