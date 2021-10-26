@@ -20,7 +20,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("X32VienCryptComment1","GLOBAL",2)
-	DisplayStringHead("X3Vien",~It's goodbye after this, <CHARNAME>. I am *done* with wretched dungeon delving.~)
+	DisplayStringHead("X3Vien",@0)
 END
 
 
@@ -48,5 +48,5 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("X32VienCryptComment2","GLOBAL",2)
-	DisplayStringHead("X3Vien",~And so the last of their followers is defeated. Good riddance.~)
+	DisplayStringHead("X3Vien",@1)
 END

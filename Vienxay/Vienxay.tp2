@@ -60,12 +60,9 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
 INCLUDE ~Vienxay/library/vien_sod.tpa~ 
 END
 
-PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
+PRINT @9
 
-PRINT ~Please choose one of the following:
-[1] Default by Crisshasart
-[2] Alt by Aeries1986
-[3] Old Version (NWN)~
+PRINT @10
 
 OUTER_SPRINT ~portrait~ ~placeholder_value~
 OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
@@ -75,32 +72,29 @@ END
 		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/VienxayS.bmp~ ~override/VienxayS.bmp~
-      PRINT ~Portrait: Default by Crisshasart~
+      PRINT @11
 	  END
       ACTION_IF ("portrait" = 2) THEN BEGIN
 		COPY ~%MOD_FOLDER%/Portraits/AltVienxayL.bmp~ ~override/VienxayL.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/AltVienxayM.bmp~ ~override/VienxayM.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/AltVienxayS.bmp~ ~override/VienxayS.bmp~
-      PRINT ~Portrait: Alt by Aeries1986~
+      PRINT @12
 	  END
       ACTION_IF ("portrait" = 3) THEN BEGIN
 		COPY ~%MOD_FOLDER%/Portraits/OldVienxayL.bmp~ ~override/VienxayL.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/OldVienxayM.bmp~ ~override/VienxayM.bmp~
 		COPY ~%MOD_FOLDER%/Portraits/OldVienxayS.bmp~ ~override/VienxayS.bmp~
-      PRINT ~Portrait: Old Version (NWN)~
+      PRINT @13
 	  END
 
 		
-PRINT ~Would you like to install Music for Vienxay? These will play during banters with the player.~
+PRINT @14
 
-PRINT ~Please choose one of the following:
-[1] Yes
-[2] No
-~
+PRINT @15
 
 OUTER_SPRINT ~music~ ~placeholder_value~
 OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
-  PRINT ~Please select 1 or 2 and press Enter.~
+  PRINT @16
   ACTION_READLN ~music~
 END
       ACTION_IF ("music" = 1) THEN BEGIN
@@ -126,10 +120,10 @@ LAF HANDLE_AUDIO
     sox_path = ~Vienxay/music~
 END
 
-PRINT ~Installed Music for Vienxay.~
+PRINT @17
 END 
 
 ACTION_IF ("music" = 2) THEN BEGIN
-PRINT ~Did not install Music for Vienxay.~
+PRINT @18
 END 
 		

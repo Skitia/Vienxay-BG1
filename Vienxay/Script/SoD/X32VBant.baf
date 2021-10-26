@@ -7,15 +7,15 @@ GlobalGT("X32VienBaeloth1","MYAREA",0)
 Switch("X32VienBaeloth1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Listen, drow. First, my magic is superior. Second, you are unnecessary. Remember that.~)
+	DisplayStringHead("X3Vien",@0)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32KaleBaeloth1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Baeloth",~Arrogant abrasive cur. Wail and whining like the wind.~)
+	DisplayStringHead("Baeloth",@1)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32KaleBaeloth1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~You are so lucky that is what you are getting rather than a magic bolt through your gut.~)
+	DisplayStringHead("X3Vien",@2)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32KaleBaeloth1","MYAREA",-1)
 END 
@@ -29,23 +29,23 @@ IF
 	Switch("X32VienCorwin1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Corwin",~I've been watching you. You don't seem the type to cast in anger.~)
+	DisplayStringHead("Corwin",@3)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Of course not.~)
+	DisplayStringHead("X3Vien",@4)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Corwin",~Yet you were thrown in jail for reckless casting that got innocents hurt.~ )
+	DisplayStringHead("Corwin",@5 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~The idiot altered my aim at the last minute. I assure you I was aiming only at the peasant.~)
+	DisplayStringHead("X3Vien",@6)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Corwin",~Keep your aim steady, and your emotions in control, and you won't wind up in it again.~)
+	DisplayStringHead("Corwin",@7)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienCorwin1","MYAREA",-1)
 END
@@ -58,23 +58,23 @@ IF
 	Switch("X32VienCorwin2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~That runt of yours, ugh ,what was her name?~)
+	DisplayStringHead("X3Vien",@8)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Corwin",~That "runt" is my child, Rohma.~)
+	DisplayStringHead("Corwin",@9)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Whatever. Why did you make her? You clearly do not have time for her.~ )
+	DisplayStringHead("X3Vien",@10 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Corwin",~You are a ray of sunshine.~)
+	DisplayStringHead("Corwin",@11)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienCorwin2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Corwin",~I would give her all the time in the world, if I could. But I can't. Now leave me be.~)
+	DisplayStringHead("Corwin",@12)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienCorwin2","MYAREA",-1)
 END
@@ -89,23 +89,23 @@ IF
 	Switch("X32VienDorn1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~You reek, half-orc. You smell like orc.~)
+	DisplayStringHead("X3Vien",@13)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Dorn",~I smell like my last kill. A very good kill.~)
+	DisplayStringHead("Dorn",@14)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~You may be proud of it, but can you bathe, please?~ )
+	DisplayStringHead("X3Vien",@15 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Dorn",~We are at war! If you cannot handle the smell why are you here?~)
+	DisplayStringHead("Dorn",@16)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Handle and want it are entirely different things. Ugh, whatever.~)
+	DisplayStringHead("X3Vien",@17)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienDorn1","MYAREA",-1)
 END
@@ -119,23 +119,23 @@ IF
 	Switch("X32VienDorn2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Dorn",~Are you gazing at me for a reason, elf?~)
+	DisplayStringHead("Dorn",@18)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Your...pact. Was it worth the price of the power offered?~)
+	DisplayStringHead("X3Vien",@19)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Dorn",~Assuredly. Considering making one to my patron yourself?~ )
+	DisplayStringHead("Dorn",@20 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~Tempting. But no. I am smarter then that.~)
+	DisplayStringHead("X3Vien",@21)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDorn2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Dorn",~No. Only mouthier.~)
+	DisplayStringHead("Dorn",@22)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienDorn2","MYAREA",-1)
 END
@@ -153,23 +153,23 @@ IF
 	Switch("X32VienDynaheir1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~As the magi in our party, you and I are cut from the same cloth, Dynaheir.~)
+	DisplayStringHead("X3Vien",@23)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Dynaheir",~Thou'rt have little in common with me.~)
+	DisplayStringHead("Dynaheir",@24)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~If you mean in our principles, yes, you are clearly misguided.~ )
+	DisplayStringHead("X3Vien",@25 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Dynaheir",~I can return to my homeland, unlike thou.~)
+	DisplayStringHead("Dynaheir",@26)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Please. Give it time. They will realize their mistake.~)
+	DisplayStringHead("X3Vien",@27)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienDynaheir1","MYAREA",-1)
 END
@@ -182,23 +182,23 @@ IF
 	Switch("X32VienDynaheir2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Do not grow too smug, Dynaheir. You may outpace my magical grasp for now, but that will be reversed in time.~)
+	DisplayStringHead("X3Vien",@28)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Dynaheir",~Art thou feeling insecure?~)
+	DisplayStringHead("Dynaheir",@29)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Please. I am only complimenting your grasp of the weave, you seem to show some compotence.~ )
+	DisplayStringHead("X3Vien",@30 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Dynaheir",~Thou has an odd way of giving praise.~)
+	DisplayStringHead("Dynaheir",@31)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienDynaheir2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Whatever. Forget I said anything.~)
+	DisplayStringHead("X3Vien",@32)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienDynaheir2","MYAREA",-1)
 END
@@ -213,27 +213,27 @@ IF
 	Switch("X32VienEdwin1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Human.~)
+	DisplayStringHead("X3Vien",@33)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Edwin",~Is the elf talking to me?~)
+	DisplayStringHead("Edwin",@34)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~You are the second mage to myself. Thus you should take on an assistant role to myself.~ )
+	DisplayStringHead("X3Vien",@35 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Edwin",~You believe you are better than Edwin Odesseiron? I've heard funnier jokes from monkeys.~)
+	DisplayStringHead("Edwin",@36)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~There is hardly need to be offended. An assistant of a Starlight should be honored.~)
+	DisplayStringHead("X3Vien",@37)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienEdwin1","MYAREA",50)
 RESPONSE #50 
-	DisplayStringHead("Edwin",~(The elf would do better as an assistant of Edwin). No, irritating elf, just shut up!~)
+	DisplayStringHead("Edwin",@38)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienEdwin1","MYAREA",60)	
 END
@@ -246,31 +246,31 @@ IF
 	Switch("X32VienEdwin2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Excuse me, human.~)
+	DisplayStringHead("X3Vien",@39)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Edwin",~(Again she calls for me not by name.) It is Edwin, elf. Sir, if it is too much for you to say.~)
+	DisplayStringHead("Edwin",@40)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Whatever. Do hold these spell components for me.~ )
+	DisplayStringHead("X3Vien",@41 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Edwin",~I am not your packmule, you insolent monkey!~)
+	DisplayStringHead("Edwin",@42)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienEdwin2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Please, I was giving you a second chance to be my second.~)
+	DisplayStringHead("X3Vien",@43)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienEdwin2","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("Edwin",~Deluded monkey, I am by far the superior mage (That she questions it is beyond madness). Ask this of me again and you will regret it!~)
+	DisplayStringHead("Edwin",@44)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienEdwin2","MYAREA",60)
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Ugh. Terrible manners. Have it your way, human.~)
+	DisplayStringHead("X3Vien",@45)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienEdwin2","MYAREA",-1)
 END 	
@@ -285,31 +285,31 @@ IF
 	Switch("X32VienGlint1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Glint",~So Vienxay. You are from Evermeet, I understand?~)
+	DisplayStringHead("Glint",@46)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Well, you hardly understand, but yes I am from there.~)
+	DisplayStringHead("X3Vien",@47)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Glint",~I have heard quite many things. Good things! Impressive place.~ )
+	DisplayStringHead("Glint",@48 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~Of course it's impressive. Cities constructed entirely by magic, the finest navy in the realms...~)
+	DisplayStringHead("X3Vien",@49)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~All lorded by our over nine hundred year old queen.~)
+	DisplayStringHead("X3Vien",@50)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienGlint1","MYAREA",50)
 RESPONSE #50 
-	DisplayStringHead("Glint",~Nine hundred? That's old for an elf, isn't it?~)
+	DisplayStringHead("Glint",@51)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienGlint1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Vien",~It would take an annoying gnome's barrage of questions to get her to pass on to the Seldarine.~)
+	DisplayStringHead("X3Vien",@52)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienGlint1","MYAREA",-1)		
 END
@@ -322,27 +322,27 @@ IF
 	Switch("X32VienGlint2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Glint",~Vienxay. We had a wonderful discussion about Evermeet before. I was wondering something more.~)
+	DisplayStringHead("Glint",@53)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~I suppose I did enjoy thinking back about the splendor of home.~)
+	DisplayStringHead("X3Vien",@54)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Glint",~What made you leave? Wanted to see the sights? I do enjoy the travel myself.~ )
+	DisplayStringHead("Glint",@55 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~I am exiled. Else I would clearly be somewhere far more wonderful.~)
+	DisplayStringHead("X3Vien",@56)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienGlint2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Glint",~Really? Well, there are many fine places. Very fine. I could tell you about many that I've seen.~)
+	DisplayStringHead("Glint",@57)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienGlint2","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("X3Vien",~Please, unless it's another fine elven nation I have no interest in it. Bug someone else with the tales.~)
+	DisplayStringHead("X3Vien",@58)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienGlint2","MYAREA",-1)
 END
@@ -357,23 +357,23 @@ IF
 	Switch("X32VienKhalid1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~There are no half-elves on Evermeet. Such impurity is simply disgraceful.~)
+	DisplayStringHead("X3Vien",@59)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Khalid",~W-were you talking to me?~)
+	DisplayStringHead("Khalid",@60)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~No, I was talking about you to myself and making a remark.~ )
+	DisplayStringHead("X3Vien",@61 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Khalid",~Y-you are very unpleasant.~)
+	DisplayStringHead("Khalid",@62)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Nice does not get you very far in this world, mutt.~)
+	DisplayStringHead("X3Vien",@63)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienKhalid1","MYAREA",-1)
 END
@@ -386,27 +386,27 @@ IF
 	Switch("X32VienKhalid2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Perhaps you take more from your elven side than your human, mutt.~)
+	DisplayStringHead("X3Vien",@64)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Khalid",~W-what do you mean?~)
+	DisplayStringHead("Khalid",@65)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Your actions in our party. At bridgefort. Such competence is unheard of in humans.~ )
+	DisplayStringHead("X3Vien",@66 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~Hardly worthy enough to visit Evermeet. But worthy of recognition.~)
+	DisplayStringHead("X3Vien",@67)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienKhalid2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Khalid",~W-well...t-thank you?~)
+	DisplayStringHead("Khalid",@68)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienKhalid2","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("X3Vien",~Yes, do be very thankful.~)
+	DisplayStringHead("X3Vien",@69)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienKhalid2","MYAREA",-1)
 END
@@ -421,19 +421,19 @@ IF
 	Switch("X32VienJaheria1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~I am so glad Evermeet is absent of mutts. Half-elf appearances are...abominable~)
+	DisplayStringHead("X3Vien",@70)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Jaheria",~If you have nothing nice to say, Vienxay, say nothing at all.~)
+	DisplayStringHead("Jaheria",@71)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Please. I'd rather tell your parents if they have nothing nice to create, create nothing at all.~ )
+	DisplayStringHead("X3Vien",@72 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Jaheria",~Keep trying to rile me, exile. I am not the one bitter from my own mistakes.~)
+	DisplayStringHead("Jaheria",@73)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria1","MYAREA",-1)
 END
@@ -446,34 +446,34 @@ IF
 	Switch("X32VienJaheria2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~You take more to your human side.~)
+	DisplayStringHead("X3Vien",@74)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Jaheria",~If I wanted your opinion, I'd have let you know.~)
+	DisplayStringHead("Jaheria",@75)
 	SetGlobal("X32VienJaheria2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~You act just like human druids. Raised by them, I would guess.~ )
+	DisplayStringHead("X3Vien",@76 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Jaheria",~And what does that mean, exile?~)
+	DisplayStringHead("Jaheria",@77)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienJaheria2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Angry. Unpleasant. And thoroughly irritating.~)
+	DisplayStringHead("X3Vien",@78)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienJaheria2","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("Jaheria",~That is a surprise. That fittingly describes you.~)
+	DisplayStringHead("Jaheria",@79)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienJaheria2","MYAREA",60)
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Please. I do it with a flare of sophistication.~)
+	DisplayStringHead("X3Vien",@80)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienJaheria2","MYAREA",70)	
 RESPONSE #70
-	DisplayStringHead("Jaheria",~If your nose reach any higher with your arrogance? I think not.~)
+	DisplayStringHead("Jaheria",@81)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienJaheria2","MYAREA",-1)	
 END
@@ -490,31 +490,31 @@ IF
 	Switch("X32VienMkhiin1","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("X3Vien",~Gods. If we were in my homeland, you would be *dead*, Goblin.~)
+	DisplayStringHead("X3Vien",@82)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",7)
 	SetGlobal("X32VienMkhiin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Mkhiin",~We're not.~)
+	DisplayStringHead("Mkhiin",@83)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Of course you're not. The point is that we have stooped *so* low as to tolerate you.~)
+	DisplayStringHead("X3Vien",@84)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Mkhiin",~Stop whining. Could be worse.~)
+	DisplayStringHead("Mkhiin",@85)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Please, this is as awful as it gets! You even look hideous.~)
+	DisplayStringHead("X3Vien",@86)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("Mkhiin",~I know.~)
+	DisplayStringHead("Mkhiin",@87)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",-1)
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Merciful Correllon. Spare me from suffering more!~)
+	DisplayStringHead("X3Vien",@88)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin1","MYAREA",-1)
 END 	
@@ -529,31 +529,31 @@ IF
 	Switch("X32VienMkhiin2","MYAREA")
 THEN
 RESPONSE #1
-	DisplayStringHead("X3Vien",~Your dancing. It's primitive.~)
+	DisplayStringHead("X3Vien",@89)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Mkhiin",~It's old magic.~)
+	DisplayStringHead("Mkhiin",@90)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~It lacks grace. Hardly like my dance with shadows.~)
+	DisplayStringHead("X3Vien",@91)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Mkhiin",~Not meant to impress. Meant to work.~)
+	DisplayStringHead("Mkhiin",@92)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~If there's no beauty behind it, it's hardly working.~)
+	DisplayStringHead("X3Vien",@93)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",50)
 RESPONSE #50
-	DisplayStringHead("Mkhiin",~Not the point. Keeps us alive. That's the point.~)
+	DisplayStringHead("Mkhiin",@94)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",60)
 RESPONSE #60 
-	DisplayStringHead("X3Vien",~*I* keep us alive. But do keep believing otherwise.~)
+	DisplayStringHead("X3Vien",@95)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMkhiin2","MYAREA",-1)	
 END 
@@ -569,23 +569,23 @@ IF
 	Switch("X32VienMinsc1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Get away. Get that monstrosity away.~)
+	DisplayStringHead("X3Vien",@96)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Minsc",~Look at how he shivers. You hurt Boo's heart!~)
+	DisplayStringHead("Minsc",@97)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~It bit me!~ )
+	DisplayStringHead("X3Vien",@98 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Minsc",~Boo was just confused. Weren't you Boo?~)
+	DisplayStringHead("Minsc",@99)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Ugh!~)
+	DisplayStringHead("X3Vien",@100)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMinsc1","MYAREA",-1)
 END
@@ -599,19 +599,19 @@ IF
 	Switch("X32VienMinsc2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Minsc",~Vienxay, let Boo say sorry.~)
+	DisplayStringHead("Minsc",@101)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Absolutely not. That creature can't say anything as is, idiot.~)
+	DisplayStringHead("X3Vien",@102)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Minsc",~What's that Boo? Boo says he only thought your finger was a tasty fruit.~ )
+	DisplayStringHead("Minsc",@103 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienMinsc2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~The audacity. Implying my f- why am I going along with a non-sensical conversation? You are clearly not right in the head.~)
+	DisplayStringHead("X3Vien",@104)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienMinsc2","MYAREA",-1)
 END
@@ -626,27 +626,27 @@ IF
 	Switch("X32VienNeera1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Neera",~So, Vienxay. Vien. Vienny. Vie. Can I call you Vie?~)
+	DisplayStringHead("Neera",@105)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~You can call me Lady Vienxay Starlight, and nothing less, half-blood.~)
+	DisplayStringHead("X3Vien",@106)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Neera",~Half-what? Oh, because I'm a half-elf. Why'd you make it sound so terrible?~ )
+	DisplayStringHead("Neera",@107 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~It is *Terrible*. Correllon should have never allowed such an abominable thing to be made.~)
+	DisplayStringHead("X3Vien",@108)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Neera",~I don't know. I think I turned out quite all right.~)
+	DisplayStringHead("Neera",@109)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienNeera1","MYAREA",50)
 RESPONSE #50 
-	DisplayStringHead("X3Vien",~Only a mutt could think like that. Just keep pretending everything is all right, then.~)
+	DisplayStringHead("X3Vien",@110)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienNeera1","MYAREA",-1)	
 END
@@ -660,27 +660,27 @@ IF
 	Switch("X32VienNeera2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Wildmage, your surge *ruined* my fingernails. Look at them! Your latest surge ruined them!~)
+	DisplayStringHead("X3Vien",@111)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Neera",~Haha! Oh, this is too funny! I haven't had something so hilarious happen in a while!~)
+	DisplayStringHead("Neera",@112)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Fix it *right* now!~ )
+	DisplayStringHead("X3Vien",@113 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienNeera2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Neera",~I can't really do that. Maybe the next surge will do it, or more likely, not.~)
+	DisplayStringHead("Neera",@114)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienNeera2","MYAREA",40)
 RESPONSE #40 
-	DisplayStringHead("Neera",~But I think it looks...*giggle*... really.... *giggle*... nice!~)
+	DisplayStringHead("Neera",@115)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienNeera2","MYAREA",50)	
 RESPONSE #50 
-	DisplayStringHead("X3Vien",~I hate you *so* much.~)
+	DisplayStringHead("X3Vien",@116)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienNeera2","MYAREA",-1)		
 END
@@ -695,27 +695,27 @@ IF
 	Switch("X32VienRasaad1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Rasaad",~You are awfully bitter, Vienxay. Is there something I can do to ease your suffering?~)
+	DisplayStringHead("Rasaad",@117)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Don't try to understand me, human.~)
+	DisplayStringHead("X3Vien",@118)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Rasaad",~Many let anger and their emotions have control. But we must learn to let go if we are to have mastery of our selves.~ )
+	DisplayStringHead("Rasaad",@119 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~I am perfectly fine, monk. Do stop your preaching.~)
+	DisplayStringHead("X3Vien",@120)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Rasaad",~If you deny that their is a problem, you will never resolve it.~)
+	DisplayStringHead("Rasaad",@121)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienRasaad1","MYAREA",50)
 RESPONSE #50 
-	DisplayStringHead("X3Vien",~Were there something to resolve. Now do silence yourself.~)
+	DisplayStringHead("X3Vien",@122)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienRasaad1","MYAREA",-1)	
 END
@@ -729,23 +729,23 @@ IF
 	Switch("X32VienRasaad2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~You are not like other humans. Most are violent, short-sighted, and annoying. But even I feel at ease in your serenity.~)
+	DisplayStringHead("X3Vien",@123)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Rasaad",~That is an unexpected compliment. Last we spoke, you were rather dismissive.~)
+	DisplayStringHead("Rasaad",@124)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Yes, well, whatever. There is hardly any reason to over analyze. I am just stating something.~ )
+	DisplayStringHead("X3Vien",@125 )
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienRasaad2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Rasaad",~And I am thankful, whatever made you bring this up.~)
+	DisplayStringHead("Rasaad",@126)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienRasaad2","MYAREA",40)
 RESPONSE #40 
-	DisplayStringHead("X3Vien",~Just don't get used to it! I hardly wish to indulge greediness for my affections.~)
+	DisplayStringHead("X3Vien",@127)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienRasaad2","MYAREA",-1)	
 END
@@ -761,27 +761,27 @@ IF
 	Switch("X32VienSafana1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~I like you, so I'm going to put this bluntly, Safana.~)
+	DisplayStringHead("X3Vien",@128)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Safana",~Oh, this will be good.~)
+	DisplayStringHead("Safana",@129)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~You are clearly only here for your appearance and looks. You've little other benefit.~)
+	DisplayStringHead("X3Vien",@130)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Safana",~Is that so? How about I take a poll? You versus me.~)
+	DisplayStringHead("Safana",@131)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~What? Please, people can be bribed to believe anything. That'd hardly be fair.~)
+	DisplayStringHead("X3Vien",@132)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("Safana",~Then I clearly have a gift you would be just dying to have.~)
+	DisplayStringHead("Safana",@133)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienSafana1","MYAREA",-1)
 END
@@ -795,23 +795,23 @@ GlobalGT("X32VienSafana2","MYAREA",0)
 Switch("X32VienSafana2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~I've had more lovers, you know.~)
+	DisplayStringHead("X3Vien",@134)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana2","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Safana",~Is it a competition? Someone is very jealous.~)
+	DisplayStringHead("Safana",@135)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana2","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~I am not jealous, I was just stating a fact.~)
+	DisplayStringHead("X3Vien",@136)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana2","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Safana",~Darling, when you get an invitation, call me. I want to see how much he was paid.~)
+	DisplayStringHead("Safana",@137)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana2","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~I hate you, human.~)
+	DisplayStringHead("X3Vien",@138)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienSafana2","MYAREA",-1)
 END
@@ -824,27 +824,27 @@ GlobalGT("X32VienSafana3","MYAREA",0)
 Switch("X32VienSafana3","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~If we were in Evermeet, our little contest of seduction would be one sided.~)
+	DisplayStringHead("X3Vien",@139)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana3","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Safana",~Oh Vienxay, just let it go.~)
+	DisplayStringHead("Safana",@140)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana3","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Please. I am merely desiring that a fact be observed for the record.~)
+	DisplayStringHead("X3Vien",@141)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana3","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Safana",~Darling, you are not much like me. Too much roaring fire, too little alluring flame.~)
+	DisplayStringHead("Safana",@142)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana3","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Whatever. You will see for yourself the truth in time.~)
+	DisplayStringHead("X3Vien",@143)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienSafana3","MYAREA",50)
 RESPONSE #50 
-	DisplayStringHead("Safana",~Mhm, all right.~)	
+	DisplayStringHead("Safana",@144)	
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienSafana3","MYAREA",-1)
 END
@@ -857,35 +857,35 @@ GlobalGT("X32VienViconia1","MYAREA",0)
 Switch("X32VienViconia1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Drow.~)
+	DisplayStringHead("X3Vien",@145)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Viconia",~Darthiir.~)
+	DisplayStringHead("Viconia",@146)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Take care where you look at. I've no wish for your gaze.~)
+	DisplayStringHead("X3Vien",@147)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Viconia",~You assume much.~)
+	DisplayStringHead("Viconia",@148)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Whatever. Just stop staring.~)
+	DisplayStringHead("X3Vien",@149)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("Viconia",~You have the attitude of a matron. How did your fellow darthiir not mistake you for one of my own?~)
+	DisplayStringHead("Viconia",@150)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Please. Before...events, I was quite recognized for my greatness. I was on my way to holding great influence.~)
+	DisplayStringHead("X3Vien",@151)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",70)		
 RESPONSE #70
-	DisplayStringHead("Viconia",~Quite the demeanor indeed.~)
+	DisplayStringHead("Viconia",@152)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienViconia1","MYAREA",-1)
 END
@@ -898,35 +898,35 @@ GlobalGT("X32VienViconia2","MYAREA",0)
 Switch("X32VienViconia2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Why Shar?~)
+	DisplayStringHead("X3Vien",@153)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Viconia",~I'm not interested in sharing personal details, darthiir.~)
+	DisplayStringHead("Viconia",@154)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Viconia",~Know only it is fitting, for the night.~)
+	DisplayStringHead("Viconia",@155)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~You choose poorly. I could think of more...agreeable gods to look to, despite Shar's benefits.~)
+	DisplayStringHead("X3Vien",@156)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Viconia",~Why would I take advice from an elf who is here at the mercy of her jailers?~)
+	DisplayStringHead("Viconia",@157)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3Vien",~Please, that was an accident that was clearly none of your business! How did you hear of that?~)
+	DisplayStringHead("X3Vien",@158)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("Viconia",~It wasn't hard to hear the loud indignant screams of yours.~)
+	DisplayStringHead("Viconia",@159)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienViconia1","MYAREA",70)		
 RESPONSE #70
-	DisplayStringHead("X3Vien",~You're lying. Or bluffing. Know I am not entertaining your fun further.~)
+	DisplayStringHead("X3Vien",@160)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienViconia1","MYAREA",-1)
 END
@@ -941,31 +941,31 @@ GlobalGT("X32VienVoghlin1","MYAREA",0)
 Switch("X32VienVoghlin1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~You smell like ale. Human ale.~)
+	DisplayStringHead("X3Vien",@161)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("Voghlin",~Ale is ale, my friend! And all ale is good!~)
+	DisplayStringHead("Voghlin",@162)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~The drinks of Evermeet are refined, though I prefer the wine.~)
+	DisplayStringHead("X3Vien",@163)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("Voghlin",~This ale sounds delight! Perhaps you will share a drink with Voghlin sometime?~)
+	DisplayStringHead("Voghlin",@164)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~The drink? Perhaps. But Evermeet is a lifetime away. Figuratively, at least.~)
+	DisplayStringHead("X3Vien",@165)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("Voghlin",~Oh? That sounds very far, my friend.~)
+	DisplayStringHead("Voghlin",@166)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Vien",~You have no idea, oaf that you are.~)
+	DisplayStringHead("X3Vien",@167)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",-1)		
 END
@@ -978,27 +978,27 @@ GlobalGT("X32VienVoghlin2","MYAREA",0)
 Switch("X32VienVoghlin2","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("Voghlin",~I do be curious, my friend, why is the beautiful elf like yourself so furious?~)
+	DisplayStringHead("Voghlin",@168)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~I am beautiful, but furious? What gives you this idea?~)
+	DisplayStringHead("X3Vien",@169)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("Voghlin",~Well you just seem so unhappy. A lot of moans and groans.~)
+	DisplayStringHead("Voghlin",@170)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~Please, I do not "moan" and "groan". I merely complain when standards do not fit my specifications.~)
+	DisplayStringHead("X3Vien",@171)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("Voghlin",~Voghlin think you should just relax. Enjoy a good ale together and see where it goes.~)
+	DisplayStringHead("Voghlin",@172)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3Vien",~That's hardly necessary. That will go nowhere. Now do stop trying while you are far, far, behind.~)
+	DisplayStringHead("X3Vien",@173)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienVoghlin1","MYAREA",-1)	
 END
@@ -1013,31 +1013,31 @@ GlobalGT("X32VienX3mily1","MYAREA",0)
 Switch("X32VienX3mily1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Vien",~Keep your distance, mutt. I do need to focus without your distraction.~)
+	DisplayStringHead("X3Vien",@174)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3mily",~Vienxay, I am barely close. There's no need to be rude.~)
+	DisplayStringHead("X3mily",@175)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Do tell that to yourself.~)
+	DisplayStringHead("X3Vien",@176)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3mily",~Does this make you feel better? Lashing out at people? Because I don't enjoy receiving it.~)
+	DisplayStringHead("X3mily",@177)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~Then you should heed my words.~)
+	DisplayStringHead("X3Vien",@178)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3mily",~Why do I bother? As you say, miss perfect.~)
+	DisplayStringHead("X3mily",@179)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3mily1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Good. You're learning your place.~)
+	DisplayStringHead("X3Vien",@180)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienX3mily1","MYAREA",-1)
 END
@@ -1052,31 +1052,31 @@ GlobalGT("X32VienX3Helga1","MYAREA",0)
 Switch("X32VienX3Helga1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Helga",~Evermeet, eh? Fine warriors in the tales I heard.~)
+	DisplayStringHead("X3Helga",@181)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~You heard right..~)
+	DisplayStringHead("X3Vien",@182)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Helga",~Also the biggest snobs I've ever heard of.~)
+	DisplayStringHead("X3Helga",@183)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~Dwarven envy does look good on you.~)
+	DisplayStringHead("X3Vien",@184)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Helga",~There ain't no envy. Maybe if you could match me hammer for hammer.~)
+	DisplayStringHead("X3Helga",@185)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3Vien",~Please. I am content with my far more sophisticated arts.~)
+	DisplayStringHead("X3Vien",@186)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Helga1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Helga",~Yeah, you keep up your precious work with that, princess. Steer yourself clean from a duel with a dwarf.~)
+	DisplayStringHead("X3Helga",@187)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienX3Helga1","MYAREA",-1)
 END
@@ -1089,31 +1089,31 @@ GlobalGT("X32VienX3Kale1","MYAREA",0)
 Switch("X32VienX3Kale1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Kale",~Ought to have a bigger breakfast for these treks of ours.~)
+	DisplayStringHead("X3Kale",@188)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Food. That is all your kind thinks about.~)
+	DisplayStringHead("X3Vien",@189)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Kale",~Weren't you from an all elf land? The hells do you know about my kind? And what's with that phrase?~)
+	DisplayStringHead("X3Kale",@190)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Vien",~I've met more than enough. If they're not trying to steal, they're stuffing their mouth full of food.~)
+	DisplayStringHead("X3Vien",@191)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Vien",~It's almost as bad as the constant drinking of the dwarves.~)
+	DisplayStringHead("X3Vien",@192)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3Kale",~Bad? A drinking dwarf livens up any party!~)
+	DisplayStringHead("X3Kale",@193)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Kale1","MYAREA",60)	
 RESPONSE #60
-	DisplayStringHead("X3Vien",~Primitive! So primitive.~)
+	DisplayStringHead("X3Vien",@194)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienX3Kale1","MYAREA",-1)
 END
@@ -1128,27 +1128,27 @@ GlobalGT("X32VienX3Rec1","MYAREA",0)
 Switch("X32VienX3Rec1","MYAREA")
 THEN
 RESPONSE #0
-	DisplayStringHead("X3Rec",~Vienxay, it's been bothering me how disrespectful you are to your friends.~)
+	DisplayStringHead("X3Rec",@195)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Rec1","MYAREA",10)
 RESPONSE #10
-	DisplayStringHead("X3Vien",~Please. First, you are not my friends, save <CHARNAME>.~)
+	DisplayStringHead("X3Vien",@196)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Rec1","MYAREA",20)
 RESPONSE #20
-	DisplayStringHead("X3Vien",~Second, I treat people as their class in life dictates.~)
+	DisplayStringHead("X3Vien",@197)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Rec1","MYAREA",30)
 RESPONSE #30
-	DisplayStringHead("X3Rec",~You are an exile now, are you not? Would that not make you lower than us all, by that view?~)
+	DisplayStringHead("X3Rec",@198)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Rec1","MYAREA",40)
 RESPONSE #40
-	DisplayStringHead("X3Rec",~I know you're hurting, or bitter, and you want to project. But history has shown that only has the pain last longer.~)
+	DisplayStringHead("X3Rec",@199)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",4)
 	SetGlobal("X32VienX3Rec1","MYAREA",50)	
 RESPONSE #50
-	DisplayStringHead("X3Vien",~Gods, do stop talking like a mother and just be a quirky gnome.~)
+	DisplayStringHead("X3Vien",@200)
 	SetGlobalTimer("BD_BANTER_DELAY","MYAREA",6)
 	SetGlobal("X32VienX3Rec1","MYAREA",-1)
 END

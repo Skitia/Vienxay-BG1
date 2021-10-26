@@ -5,3 +5,19 @@
 @6    = ~Vienxay NPC for BG1EE~
 @7    = ~This component must be installed on BG:EE.~
 @8 	  = ~Enhanced Edition Trilogy install detected.~
+@9    = ~Choose a portrait for Vienxay (check mod folder for portraits):~
+@10   = ~Please choose one of the following:
+[1] Default by Crisshasart
+[2] Alt by Aeries1986
+[3] Old Version (NWN)~
+@11   = ~Portrait: Default by Crisshasart~
+@12   = ~Portrait: Alt by Aeries1986~
+@13   = ~Portrait: Old Version (NWN)~
+@14   = ~Would you like to install Music for Vienxay? These will play during banters with the player.~
+@15   = ~Please choose one of the following:
+[1] Yes
+[2] No
+~
+@16   = ~Please select 1 or 2 and press Enter.~
+@17   = ~Installed Music for Vienxay.~
+@18   = ~Did not install Music for Vienxay.~

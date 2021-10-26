@@ -81,15 +81,15 @@ THEN
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("X3Vien",~Gods. So many peasants.~) // Comment here when you replace the string with @ tra.
+		DisplayStringHead("X3Vien",@0) // Comment here when you replace the string with @ tra.
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("X3Vien",~Hrmph. Is this it? Evermeet's armies were far more glorious.~) // Now which one of your big, strong soldiers will help with my packs?
+		DisplayStringHead("X3Vien",@1) // Now which one of your big, strong soldiers will help with my packs?
 	RESPONSE #10
 		SetGlobalTimer("bd_mdd010z_ot_timer","bd0101",ONE_ROUND)
 		SetGlobal("bd_mdd010z_ot","bd0101",0)
-		DisplayStringHead("X3Vien",~Are we going to march or not?~) // Someone stole your purse? This city...
+		DisplayStringHead("X3Vien",@2) // Someone stole your purse? This city...
 	RESPONSE #90 // ~Need to research the particular use of 90.
 		Continue()
 END

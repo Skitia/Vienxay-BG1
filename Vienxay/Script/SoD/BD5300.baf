@@ -8,5 +8,5 @@ THEN
 	RESPONSE #100
 		SetGlobalTimer("bd_sdd350b_ot_timer","bd2000",THREE_MINUTES)
 		SetGlobal("bd_ot_X3Vien","bd5300",1)
-		DisplayStringHead("X3Vien",~If you're going to use dark magic, don't get caught.~) 
+		DisplayStringHead("X3Vien",@0) 
 END

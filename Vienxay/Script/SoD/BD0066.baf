@@ -6,7 +6,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("X3_NPC01","MYAREA",1)
-		DisplayStringHead("X3Vien",~This reminds me of my former mentor's capability.~)  
+		DisplayStringHead("X3Vien",@0)  
 END
 
 /*
@@ -28,5 +28,5 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("X3_NPC01","MYAREA",2)
-		DisplayStringHead("X3Vien",~That is because few are as brilliant as I, gnome.~)  
+		DisplayStringHead("X3Vien",@1)  
 END
