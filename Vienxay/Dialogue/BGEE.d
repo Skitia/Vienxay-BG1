@@ -25,9 +25,9 @@ See("X3Vien")
 CombatCounter(0)
 !See([ENEMY])
 Global("X3VienDorn1","GLOBAL",0)~ THEN %DORN_BANTER% X3VienDorn1
-@3 // ~Your power is not what I expected for an elf.~
+@41 // ~Your power is not what I expected for an elf.~
 DO ~SetGlobal("X3VienDorn1","GLOBAL",1)~
-== X3VienB @4 // ~There are not many of us who delve into Shadow Magic and the general practice of the Weave together.~
+== X3VienB @42 // ~There are not many of us who delve into Shadow Magic and the general practice of the Weave together.~
 == %DORN_BANTER% @5 // ~You are also very good at killing.~
 == X3VienB @6 // ~Of course I am. I know every way to eviscerate my foes. I could even teach you some new ones.~
 == %DORN_BANTER% @7 // ~Ha. Arrogant.~
