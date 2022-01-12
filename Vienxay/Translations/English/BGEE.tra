@@ -3,8 +3,8 @@
 @2 = ~What's stopping you? Go on ahead.~
 @3 = ~I've no desire to listen to the complaining of <CHARNAME>. And your magic is undeniable useful for the party, for now.~
 @4 = ~When that ceases to be however, I may fulfill your wish.~
-@3 = ~Your power is not what I expected for an elf.~
-@4 = ~There are not many of us who delve into Shadow Magic and the general practice of the Weave together.~
+@41 = ~Your power is not what I expected for an elf.~
+@42 = ~There are not many of us who delve into Shadow Magic and the general practice of the Weave together.~
 @5 = ~You are also very good at killing.~
 @6 = ~Of course I am. I know every way to eviscerate my foes. I could even teach you some new ones.~
 @7 = ~Ha. Arrogant.~
