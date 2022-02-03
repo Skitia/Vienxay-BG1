@@ -4,8 +4,6 @@ BEGIN X3VienJ
 IF ~Global("X3VienBaelothConflict","LOCALS",1)~ BaelothConflict 
 SAY @577 
 +~CheckStatGT(Player1,15,STR)~+ @578 +  BA.B 
-+~CheckStatLT(Player1,16,STR)~+ @578 +  BA.B 
-+~CheckStatLT(Player1,16,STR)~+ @578 +  BA.A 
 +~CheckStatLT(Player1,16,STR)~+ @578 +  BA.A 
 +~InParty("Viconia")~+ @579 + BA.D
 ++ @580 + BA.C // ~I didn't think of the ramifications. Baeloth, please go.~
