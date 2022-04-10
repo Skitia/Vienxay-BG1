@@ -30,6 +30,8 @@ END
     END
   END
 
+ACTION_IF FILE_EXISTS_IN_GAME ~LUX3V.2da~ THEN BEGIN
+
 INCLUDE ~%MOD_FOLDER%/library/fl#add_kit_ee.tpa~
 INCLUDE ~%MOD_FOLDER%/library/qd_multiclass.tpa~
 ADD_KIT ~X3VSM~
@@ -107,16 +109,6 @@ LAF qd_multiclass
 		mc_dir = ~%MOD_FOLDER%/spells~
 END
 
-
-
-
-
-
-//AUDIO
-
-
-
-LAF HANDLE_AUDIO END
 //HLA 
 COPY	"%MOD_FOLDER%/Spells/LUX3V.2da" override
 //Spell
@@ -135,6 +127,17 @@ COPY	"Vienxay/Spells/X3VSBLT.spl" override
 	SAY NAME2 @159
 	SAY 0x50 @160
 ///
+
+END
+
+
+
+
+//AUDIO
+
+
+
+LAF HANDLE_AUDIO END
 
 COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
   SAY NAME1 @1 //Vienxay
