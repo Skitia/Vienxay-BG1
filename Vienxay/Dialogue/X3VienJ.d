@@ -1434,10 +1434,12 @@ SAY ~Which one exactly?~
 +~InParty("c0aura")~+ @291 + Em.Aura 
 +~InParty("C0Sirene")~+ @292 + Em.Sirene1 
 + ~InParty("L#1DVER")~ + @293 + Em.Verrsza
-+~InParty("#Ishy")~+ ~Ishlilka.~ + Em.Ishy 
-+~InParty("c0Drake")~+ ~Drake.~ + Em.Drake
-+~InParty("X3Rec")~+ ~Recorder.~ + Em.Recorder
-+~InParty("X3Helga")~+ ~Recorder.~ + Em.Helga
++~InParty("#Ishy")~+ @625 + Em.Ishy 
++~InParty("c0Drake")~+ @626 + Em.Drake
++~InParty("X3Rec")~+ @627 + Em.Recorder
++~InParty("X3Helga")~+ @628 + Em.Helga
++~InParty("X3Isaac")~+ @621 + Em.Isaac
++~InParty("CVSandr")~+ @623 + Em.Sandrah
 // Myself 
 /* There are 4 versions of this:
 High Reputation (13), High Approval.
@@ -1642,6 +1644,16 @@ END
 
 IF ~~ Em.Verrsza 
 SAY @329 // ~You bring a being of great power on your adventures. Our success is even more assured.~
+IF ~~ EXIT 
+END 
+
+IF ~~ Em.Isaac 
+SAY @622
+IF ~~ EXIT 
+END 
+
+IF ~~ Em.Sandrah
+SAY @624
 IF ~~ EXIT 
 END 
  
