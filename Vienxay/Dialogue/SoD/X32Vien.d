@@ -1,5 +1,10 @@
 BEGIN X32Vien 
 
+IF WEIGHT #-1 ~AreaCheck("bd4300")GlobalGT("bd_plot","global",585)~ THEN BEGIN SoD.BattleOver 
+SAY @82
+IF ~~ EXIT 
+END
+
 CHAIN IF WEIGHT #-1 ~Global("X32VienMet","GLOBAL",0)AreaCheck("BD0104")~ THEN X32Vien j1 
 @0
 END 
@@ -77,10 +82,11 @@ DO ~SetGlobal("X32VienMet","GLOBAL",2)AddJournalEntry(@10151,INFO)JoinParty()~ E
 
 CHAIN IF WEIGHT #-1 ~Global("X32VienMet","GLOBAL",0)!AreaCheck("BD0104")!AreaCheck("BD0120")!AreaCheck("BD0130")~ THEN X32Vien j4
 @29
+DO ~SetGlobal("X32VienMet","GLOBAL",1)~
 END 
-+~BeenInParty("X3Vien")~+ @1 DO ~SetGlobal("X32VienMet","GLOBAL",1)SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
-+~BeenInParty("X3Vien")~+ @30 DO ~SetGlobal("X32VienMet","GLOBAL",1)SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
-+~!BeenInParty("X3Vien")~+ @1 DO ~SetGlobal("X32VienMet","GLOBAL",1)SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
++~BeenInParty("X3Vien")~+ @1 DO ~SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
++~BeenInParty("X3Vien")~+ @30 DO ~SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
++~!BeenInParty("X3Vien")~+ @1 DO ~SetGlobal("X32VienWasInBG1","GLOBAL",1)~ + j4InBG1
 +~!BeenInParty("X3Vien")~+ @31 + j4NotInBG1
 ++ @32 DO ~SetGlobal("X32VienMet","GLOBAL",1)~ + j4reject 
 
@@ -264,11 +270,6 @@ END
 
 
 APPEND X32Vien 
-
-IF ~AreaCheck("bd4300")GlobalGT("bd_plot","global",585)~ THEN BEGIN SoD.BattleOver 
-SAY @82
-IF ~~ EXIT 
-END
 
 IF WEIGHT #-1 ~AreaCheck("bd0104")
 Global("chapter","global",13)
