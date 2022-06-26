@@ -118,6 +118,7 @@ COPY	"Vienxay/Spells/X3VSBLT.spl" override
 	SAY NAME2 @55
 	SAY 0x50 @56
 // Kit Fixes	
+	COPY	"Vienxay/Spells/X3VKit.spl" override
 	COPY	"Vienxay/Spells/X3VB1.spl" override
 	COPY	"Vienxay/Spells/X3VB2.spl" override	
 	COPY	"Vienxay/Spells/X3VB3.spl" override
