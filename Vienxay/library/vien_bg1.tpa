@@ -98,6 +98,7 @@ LAF fl#add_kit_ee
 	//	crippstr = ~0 0 0 0 0 0 1 1 1 1 1 1 2 2 2 2 2 2 3 3 3 3 3 3 4 4 4 4 4 4 5 5 5 5 5 5 6 6 6 6 6~ 
 		clswpbon = ~0 0 5~
 		thiefskl = ~30 20~
+		clasiskl = ~0 0 0 0 0 0 0~
 		thiefscl = ~100 100 100 100 100 100 0 0~
 		hpclass = ~HPMT~
 END
@@ -127,6 +128,10 @@ COPY	"Vienxay/Spells/X3VSBLT.spl" override
 	SAY NAME1 @159
 	SAY NAME2 @159
 	SAY 0x50 @160
+	COPY	"Vienxay/Spells/X3VDoor.spl" override	
+	SAY NAME1 @161
+	SAY NAME2 @161
+	SAY 0x50 @162	
 ///
 
 END
