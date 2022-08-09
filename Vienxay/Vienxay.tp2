@@ -2,7 +2,7 @@ BACKUP ~Vienxay\backup~
 AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
 README ~Vienxay/readme.txt~
 
-VERSION ~1.64~
+VERSION ~1.65~
 AUTO_TRA ~Vienxay/translations/%s~
 
 ALWAYS
