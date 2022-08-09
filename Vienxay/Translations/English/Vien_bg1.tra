@@ -161,7 +161,7 @@ Advantages:
 - Slippery Mind: +1 bonus to saving throws
 - May cast Shadow Jump once per day. Gains one use at thief level 5 and an additional use every 5 levels thereafter.
 
-SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and a 20% improvement to their base thaco. They will remain unseen until they make an attack or the spell expires.
+SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next three rounds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or the spell expires. Additionally, while the spell is active, they may make one additional jump to another target of their choosing. The second jump does not reapply invisibility.
 
 Disadvantages: 
 - Alignment restricted to any non-lawful and non-good
@@ -171,7 +171,10 @@ Disadvantages:
 - May not use Set Snare ability.
 - Hit Die: d5~
 @159 = ~Shadow Jump~  
-@160 = ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next twelve seconds, they gain +2 to their backstab modifier and remain unseen until they make an attack.~
+@160 = ~SHADOW JUMP: Manipulating shadow, the shadowmage teleports to the selected living creature, be it ally or enemy, unseen as per the invisibility spell. For the next three rounds, they gain +2 to their backstab modifier and their thaco improves by %20 percent. They remain unseen until they make an attack or the spell expires. Additionally, while the spell is active, they may make one additional jump to another target of their choosing. The second jump does not reapply invisibility.~
+@161 = ~Shadow Displacement~
+@162 = ~SHADOW DISPLACEMENT: While SHADOW JUMP is active, the shadowmage may make one additional jump to another target within 180 feet of their sight. This does not reapply invisiblity.~
+
 @500103  = ~^RVienxay slightly disapproves.^-~
 @500106  = ~^RVienxay disapproves.^-~
 @500109  = ~^RVienxay greatly disapproves.^-~
