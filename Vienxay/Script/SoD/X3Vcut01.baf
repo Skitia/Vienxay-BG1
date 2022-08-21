@@ -15,5 +15,6 @@ THEN
 		Wait(3)
 		DisplayStringHead("bdfritz",@1)
 		Wait(2)
+		EndCutSceneMode()
 		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
 END
