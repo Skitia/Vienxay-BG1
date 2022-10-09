@@ -268,7 +268,9 @@ SAY @80
 ++ @83 + Talk4.C 
 ++ @84 + Talk4.B
 ++ @85 + Talk4.D
+++ @686 + Talk4.New
 END 
+
 
 IF ~~ Talk4.A 
 SAY @86
@@ -288,6 +290,12 @@ IF ~~ Talk4.C
 SAY @91
 IF ~~ + Talk4.G
 END 
+
+IF ~~ Talk4.New
+SAY @687
+IF ~~ + Talk4.G
+END 
+
 
 IF ~~ Talk4.D 
 SAY @92
@@ -391,7 +399,7 @@ IF ~~ T5.B2
 SAY @121
 = @122 
 ++ @123 + T5.C3 
-++ @117 +T5.C1 
+++ @117 + T5.C1 
 ++ @118 + T5.D 
 ++ @119 + T5.C2 
 ++ @120 + T5.D 
@@ -952,8 +960,7 @@ END
 
 CHAIN BDFritz X3VFritz 
 @238
-DO ~SetGlobal("X32Fritz","GLOBAL",2)StartCutSceneMode()
-StartCutScene("X3Vcut01")~ EXIT 
+DO ~SetGlobal("X32Fritz","GLOBAL",2)StartCutScene("X3Vcut01")~ EXIT 
 
 CHAIN BDFritz X3VFritz2 
 @239
@@ -1547,6 +1554,7 @@ SAY  @287
  +~HPPercentGT(Myself,74)RandomNum(5,5)~+ @288 + Vienxay.PHowAreYou5 // @288
  +~HPPercentLT(Myself,75)HPPercentGT(Myself,49)RandomNum(2,2)~+ @288 + Vienxay.PHowAreYouInjured2  // @288
  ++ @289 + Vienxay.PTalk // @289 
+ +~OR(2)Global("X32VienRomanceActive","GLOBAL",2)Global("X32VienRomanceActive","GLOBAL",1)~+ @629 + Flirt
  ++ @290 + stringfix //Exists to fix 1.56->1.57 Vienxay playthroughs.
  ++ @291 EXIT // @291 
  END 
@@ -2014,11 +2022,256 @@ SAY @418
 ++ @400 EXIT 
 END 
 
+IF ~~ Vienxay.PThinkingAbout1a
+SAY @626 // ~What is in my thoughts is in my thoughts for a reason.~
+IF ~~ EXIT  
+END
+
+IF ~~ Vienxay.PThinkingAbout1b
+SAY @627 // ~Evermeet crossed my mind for a moment. A place I can only think about now.~
+IF ~~ EXIT  
+END
+
+IF ~~ Vienxay.PThinkingAbout1c
+SAY @628 // ~I am trying to plan my next spell sequence. Our victories require my brilliant thinking.~
+IF ~~ EXIT  
+END
+
+IF ~~ Flirt 
+SAY @630 
++~RandomNum(3,1)~+ @353 + Vienxay.PThinkingAbout1a //~What are you thinking about?~
++~RandomNum(3,2)~+ @353 + Vienxay.PThinkingAbout1b //~What are you thinking about?~
++~RandomNum(3,3)~+ @353 + Vienxay.PThinkingAbout1c  //~What are you thinking about?~
++~RandomNum(3,1)~+ @632 + Art1
++~RandomNum(3,2)~+ @632 + Art2
++~RandomNum(3,3)~+ @632 + Art3
++~RandomNum(3,1)~+ @633 + Watch1
++~RandomNum(3,2)~+ @633 + Watch2
++~RandomNum(3,3)~+ @633 + Watch3
++~RandomNum(3,1)~+ @634 + TellJoke1
++~RandomNum(3,2)~+ @634 + TellJoke2
++~RandomNum(3,3)~+ @634 + TellJoke3
++~RandomNum(3,1)~+ @635 + Tickle1
++~RandomNum(3,2)~+ @635 + Tickle2
++~RandomNum(3,3)~+ @635 + Tickle3
++~RandomNum(3,1)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell1
++~RandomNum(3,2)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell2
++~RandomNum(3,3)OR(3)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell3
++~RandomNum(3,1)~+ @637 + Cheek1
++~RandomNum(3,2)~+ @637 + Cheek2
++~RandomNum(3,3)~+ @637 + Cheek3
++~RandomNum(3,1)~+ @637 + Nose1
++~RandomNum(3,2)~+ @637 + Nose2
++~RandomNum(3,3)~+ @637 + Nose3
++~RandomNum(3,1)~+ @638 + Drink1
++~RandomNum(3,2)~+ @638 + Drink2
++~RandomNum(3,3)~+ @638 + Drink3
++~RandomNum(3,1)~+ @639 + With1
++~RandomNum(3,2)~+ @639 + With2
++~RandomNum(3,3)~+ @639 + With3
++~RandomNum(3,1)~+ @640 + Wink1
++~RandomNum(3,2)~+ @640 + Wink2
++~RandomNum(3,3)~+ @640 + Wink3
++~RandomNum(3,1)~+ @641 + Hair1
++~RandomNum(3,2)~+ @641 + Hair2
++~RandomNum(3,3)~+ @641 + Hair3
++~RandomNum(3,1)~+ @642 + Pretty1
++~RandomNum(3,2)~+ @642 + Pretty2
++~RandomNum(3,3)~+ @642 + Pretty3
+++ @631 EXIT 
+END 
+
+IF ~~ Art1 
+SAY @643
+IF ~~ EXIT 
+END 
+
+IF ~~ Art2
+SAY @644
+IF ~~ EXIT 
+END 
+
+IF ~~ Art3 
+SAY @645
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch1 
+SAY @646
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch2
+SAY @647
+= @648
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch3
+SAY @649
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke1
+SAY @650 
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke2
+SAY @651
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke3
+SAY @652
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle1
+SAY @653
+= @654
+= @655
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle2 
+SAY @656
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle3 
+SAY @657
+= @658
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell1 
+SAY @659
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell2 
+SAY @660
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell3 
+SAY @661
+= @662
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose1 
+SAY @663
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose2 
+SAY @664
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose3 
+SAY @665
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink1 
+SAY @666
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink2 
+SAY @667
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink3 
+SAY @668
+IF ~~ EXIT 
+END 
+
+IF ~~ With1 
+SAY @669
+IF ~~ EXIT 
+END 
+
+IF ~~ With2 
+SAY @670
+IF ~~ EXIT 
+END 
+
+IF ~~ With3 
+SAY @671
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink1 
+SAY @672
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink2
+SAY @673
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink3 
+SAY @674
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair1 
+SAY @675
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair2 
+SAY @676
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair3 
+SAY @677
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty1 
+SAY @678
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty2
+SAY @679
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty3 
+SAY @680
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek1 
+SAY @682 
+= @683
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek2 
+SAY @684
+IF ~~ EXIT 
+END 
+
+IF ~~ Cheek3 
+SAY @685
+IF ~~ EXIT 
+END 
+
 IF ~~ stringfix
  SAY @419
 IF ~~ THEN DO ~ClearAllActions() 
       StartCutSceneMode() 
-      StartCutScene("X3reset")~ EXIT 
+      StartCutScene("X3VieR")~ EXIT 
 END
 
 
