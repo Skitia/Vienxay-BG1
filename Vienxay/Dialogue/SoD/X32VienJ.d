@@ -1608,8 +1608,8 @@ SAY  @300
 + ~!Race(Player1,Elf)~ + @302 + Em.Me2 // @302
 // Dialogue From Talk Expansions. These fire once, and there will be 3 only: A talk of things while they were gone (7/8), something friendly, and something flirty. 
 +~Global("X32VienxayCell","GLOBAL",0)GlobalGT("Chapter","GLOBAL",7)~+ @303 DO ~SetGlobal("X32VienxayCell","GLOBAL",1)~  + Vienxay.PCell // @303
-+~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",9)~+ @304 DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWYes
-+~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",10)~+ @304 DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWNo
+//+~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",9)~+ @304 DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWYes
+//+~Global("X32VienxayShadowWeave","GLOBAL",0)Global("X32VQuestTalk","GLOBAL",10)~+ @304 DO ~SetGlobal("X32VienxayShadowWeave","GLOBAL",1)~ + Vienxay.PSWNo
 +~Global("X3VienPHaughtyTopic","GLOBAL",0)~+ @305  DO ~SetGlobal("X3VienPHaughtyTopic","GLOBAL",1)~ + Vienxay.PHaughty // @305 
 +~RandomNum(3,1)~+ @306 + Vienxay.PStealth1 // @306
 +~RandomNum(3,2)~+ @306 + Vienxay.PStealth2
