@@ -1,0 +1,22 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SmallWait(1)
+		StartCutSceneMode()
+		OpenDoor("Door02")
+		ActionOverride("X3Vien",JumpToPoint([1458.329]))
+		ActionOverride("bdfritz",MoveToPoint([1456.321]))
+		Wait(7)
+		ActionOverride("bdfritz",MoveToPoint([1014.616]))
+		ActionOverride("X3Vien",MoveToPoint([1118.666]))
+		Wait(6) 
+		DisplayStringHead("X3Vien",@0)
+		ActionOverride("bdfritz",Face(SW))
+		Wait(3)
+		DisplayStringHead("bdfritz",@1)
+		Wait(2)
+		EndCutSceneMode()
+		ActionOverride("X3Vien",StartDialogueNoSet(Player1))
+END
