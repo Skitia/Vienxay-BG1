@@ -602,7 +602,7 @@ IF ~~ EXIT
 END
 
 
-// Shadow Weave. This talk will only fire at night, and one game day after talk 3.
+//Quest Talk 2
 
 IF ~Global("X32VQuestTalk","GLOBAL",2)~ QTalk 
 SAY @181 
@@ -698,11 +698,11 @@ CHAIN IF ~Global("X32VQuestTalk","GLOBAL",4)~ THEN X32VIENJ QTalk2
 ~Come, away from the others. Let us get this over with.~
 END 
 +~IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut03")~ EXIT
+StartCutScene("x3vcuts3")~ EXIT
 +~!IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut02")~ EXIT 
+StartCutScene("x3vcuts2")~ EXIT 
 +~!Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut02")~ EXIT 
+StartCutScene("x3vcuts2")~ EXIT 
 ++ ~Are you sure about this?~ + QTalk2.B
 ++ ~I am having second thoughts about this.~ + QTalk2.C 
 
@@ -711,21 +711,21 @@ CHAIN X32VienJ QTalk2.B
 END
 ++ ~I am having second thoughts about this.~ + QTalk2.C 
 +~IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut03")~ EXIT
+StartCutScene("x3vcuts3")~ EXIT
 +~!IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut02")~ EXIT 
+StartCutScene("x3vcuts2")~ EXIT 
 +~!Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut02")~ EXIT 
+StartCutScene("x3vcuts2")~ EXIT 
 
 
 CHAIN X32VienJ QTalk2.C
 ~Please, hesitation is weakness. Are we doing this or not?~
 END
 +~IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut03")~ EXIT 
+StartCutScene("x3vcuts3")~ EXIT 
 +~!IsValidForPartyDialogue("Viconia")Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()
-StartCutScene("X3Vcut02")~ EXIT 
-+~!Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()StartCutScene("X3Vcut02")~ EXIT  
+StartCutScene("x3vcuts2")~ EXIT 
++~!Global("X32VQuestChoice","GLOBAL",1)~+ ~Lead on.~ DO ~StartCutSceneMode()StartCutScene("x3vcuts2")~ EXIT  
 +~Alignment("X3Vien",NEUTRAL)~+ ~No. I do not want to do this anymore.~ + QTalk.K 
 +~Alignment("X3Vien",NEUTRAL_EVIL)~+ ~No. I do not want to do this anymore.~ + QTalk.L
 
@@ -735,7 +735,7 @@ CHAIN IF ~Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",5)
 == BDVICONJ ~Shar's power is not free. Give her your faith.~
 == X32VienJ ~Shar, I give you my worship in exchange for your weave. I will gradually cast the entire weave off in exchange for the mystery and power of your gifts.~
 == X32VienJ ~Grant me your boon!~
-DO ~StartCutSceneMode()StartCutScene("X3Vcut05")~ EXIT 
+DO ~StartCutSceneMode()StartCutScene("x3vcuts5")~ EXIT 
 
 
 CHAIN IF ~Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",5)!IsValidForPartyDialogue("Viconia")~ THEN X32VienJ QTalk2.A2 
@@ -745,12 +745,12 @@ EXTERN X32VIENJ QTalk2.D
 CHAIN X32VienJ QTalk2.D 
 ~Shar, I give you my worship in exchange for your weave. I will gradually cast the entire weave off in exchange for the mystery and power of your gifts.~
 == X32VienJ ~Grant me your boon!~
-DO ~StartCutSceneMode()StartCutScene("X3Vcut04")~ EXIT 
+DO ~StartCutSceneMode()StartCutScene("x3vcuts4")~ EXIT 
 
 
 CHAIN IF ~!Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",5)~ THEN X32VienJ QTalk2.A3 
 ~This is far enough. I will attempt to call forth the spell. Just watch quietly.~
-DO ~StartCutSceneMode()StartCutScene("X3Vcut04")~ EXIT 
+DO ~StartCutSceneMode()StartCutScene("x3vcuts4")~ EXIT 
 
 
 CHAIN IF ~Global("X32VQuestChoice","GLOBAL",1)Global("X32VQuestTalk","GLOBAL",6)IsValidForPartyDialogue("Viconia")~ THEN X32VienJ QTalk3.1 // Vienxay gave her fealty to Shar. 
@@ -960,7 +960,7 @@ END
 
 CHAIN BDFritz X3VFritz 
 @238
-DO ~SetGlobal("X32Fritz","GLOBAL",2)StartCutScene("X3Vcut01")~ EXIT 
+DO ~SetGlobal("X32Fritz","GLOBAL",2)StartCutScene("x3vcuts1")~ EXIT 
 
 CHAIN BDFritz X3VFritz2 
 @239
