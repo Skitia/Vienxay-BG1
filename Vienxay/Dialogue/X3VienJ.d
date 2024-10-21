@@ -937,6 +937,17 @@ I_C_T Berrun 19 X3VienBerrun19
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @545 // ~The work at hand best be matched by an appropriate reward. Delving into a mine is beneath me.~
 END
 
+// Traitor at Archaelogical place 
+I_C_T Gallor 1 X3VienGallor1 
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @520 // ~I'm no wizard, but that's a name even I recognize. What is he doing here, I wonder.~
+END
+
+ADD_TRANS_ACTION GALLOR BEGIN 6 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",9)~
+
+ADD_TRANS_ACTION GALLOR BEGIN 7 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",9)~
+
+ADD_TRANS_ACTION GALLOR BEGIN 2 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",5)~
+
 //Rasaad 
 I_C_T Rasaad 11 X3VienRasaad11
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @546 // ~What a stupid philosophy. It is only designed to manipulate and reduce self-worth. I'd almost rather revere Shar.~
@@ -1142,6 +1153,38 @@ I_C_T FLAM5 0 X3VienFlam50
 == FLAM5 ~Lying won't help you at all.~
 END
 
+I_C_T NESSIE 5 X3VieNessie
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @681 // ~Mine was one of them, and I wasn't treated all that well by you. I'm surprised you still have a job here.~
+== NESSIE @682
+END 
+
+I_C_T SAFANA 4 X3VieSafana
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @685 // ~Mine was one of them, and I wasn't treated all that well by you. I'm surprised you still have a job here.~
+END
+
+I_C_T Noober 10 X3VienJNoober
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @686 // ~Mine was one of them, and I wasn't treated all that well by you. I'm surprised you still have a job here.~
+END
+
+I_C_T Noober 11 X3VienJNoober
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @687 // 
+Spell("NOOBER",WIZARD_MAGIC_MISSILE)
+== NOOBER @688
+END
+
+I_C_T KIRIAN 3 X3VienKirian
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @689
+END
+
+
+ADD_TRANS_ACTION KIRIAN 5 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",10)~
+
+I_C_T Brage 2 X3VienBrage2
+== X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @683
+END 
+ADD_TRANS_ACTION Brage BEGIN 5 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",7)~
+ADD_TRANS_ACTION Brage BEGIN 4 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",5)~ 
+
 APPEND X3VienJ 
 // Durlag's Tower 
 
@@ -1265,17 +1308,15 @@ END
 // P.I.D. 
 
 
-IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])!Global("X3VienPIDOFF","GLOBAL",1)~ THEN BEGIN Vienxay.PID 
+ IF ~IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])!Global("X3VienPIDOFF","GLOBAL",1)~ THEN BEGIN Vienxay.HighPID 
  SAY @168 // ~Speak.~ [VienCom2]~
  + ~HPPercentGT(Myself,74)RandomNum(3,1)~ + @225 + Vienxay.PHowAreYou1 // ~How are you doing?~
  + ~HPPercentGT(Myself,74)RandomNum(3,2)~ + @225 + Vienxay.PHowAreYou2 // ~How are you doing?~
  + ~HPPercentGT(Myself,74)RandomNum(3,3)~ + @225 + Vienxay.PHowAreYou3 // ~How are you doing?~
  +~HPPercentLT(Myself,75)HPPercentGT(Myself,49)~+ @225 + Vienxay.PHowAreYouInjured // ~How are you doing?~ //(Under 75%, Over 50%)
  +~HPPercentLT(Myself,50)~+ @225 + Vienxay.PHowAreYouHurt // ~How are you doing?~ //(Under 50%)
- +~RandomNum(3,1)~+ @353 + Vienxay.PThinkingAbout1a //~What are you thinking about?~
- +~RandomNum(3,2)~+ @353 + Vienxay.PThinkingAbout1b //~What are you thinking about?~
- +~RandomNum(3,3)~+ @353 + Vienxay.PThinkingAbout1c  //~What are you thinking about?~
  ++ @359 + Vienxay.PTalk // ~Let's stop and chat for a bit.~ 
+ +~GlobalGT("X3VienxayApp","GLOBAL",44)~+ @629 + Flirt
  ++ @595 + stringfix //Exists to fix 1.56->1.57 Vienxay playthroughs.
 ++ @169  EXIT
  END 
@@ -2075,25 +2116,238 @@ END
 
 
 IF ~~ Vienxay.PStealth1
-SAY @332 // ~You want advice? Stop talking to me and be quiet.~
+SAY @690 // ~You want advice? Stop talking to me and be quiet.~
 IF ~~ EXIT 
 END
 
 IF ~~ Vienxay.PStealth2
-SAY @333 // ~Magic can enhance stealth beyond mundane means. But lacking that, quality equipment can make up for deficencies.~
+SAY @691 // ~Magic can enhance stealth beyond mundane means. But lacking that, quality equipment can make up for deficencies.~
 IF ~~ EXIT 
 END
 
 IF ~~ Vienxay.PStealth3
-SAY @334 // ~If you had any hope in the art, you wouldn't be asking me.~
+SAY @692 // ~If you had any hope in the art, you wouldn't be asking me.~
 IF ~~ EXIT 
 END
+
+IF ~~ Flirt 
+SAY @630 
++~RandomNum(3,1)~+ @353 + Vienxay.PThinkingAbout1a //~What are you thinking about?~
++~RandomNum(3,2)~+ @353 + Vienxay.PThinkingAbout1b //~What are you thinking about?~
++~RandomNum(3,3)~+ @353 + Vienxay.PThinkingAbout1c  //~What are you thinking about?~
++~RandomNum(3,1)~+ @632 + Art1
++~RandomNum(3,2)~+ @632 + Art2
++~RandomNum(3,3)~+ @632 + Art3
++~RandomNum(3,1)~+ @633 + Watch1
++~RandomNum(3,2)~+ @633 + Watch2
++~RandomNum(3,3)~+ @633 + Watch3
++~RandomNum(3,1)~+ @634 + TellJoke1
++~RandomNum(3,2)~+ @634 + TellJoke2
++~RandomNum(3,3)~+ @634 + TellJoke3
++~RandomNum(3,1)~+ @635 + Tickle1
++~RandomNum(3,2)~+ @635 + Tickle2
++~RandomNum(3,3)~+ @635 + Tickle3
++~RandomNum(3,1)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell1
++~RandomNum(3,2)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell2
++~RandomNum(3,3)OR(3)Class(Player1,MAGE_ALL) Class(Player1,BARD_ALL) RandomNum(3,1)~+ @636 + Spell3
++~RandomNum(3,1)~+ @637 + Nose1
++~RandomNum(3,2)~+ @637 + Nose2
++~RandomNum(3,3)~+ @637 + Nose3
++~RandomNum(3,1)~+ @638 + Drink1
++~RandomNum(3,2)~+ @638 + Drink2
++~RandomNum(3,3)~+ @638 + Drink3
++~RandomNum(3,1)~+ @639 + With1
++~RandomNum(3,2)~+ @639 + With2
++~RandomNum(3,3)~+ @639 + With3
++~RandomNum(3,1)~+ @640 + Wink1
++~RandomNum(3,2)~+ @640 + Wink2
++~RandomNum(3,3)~+ @640 + Wink3
++~RandomNum(3,1)~+ @641 + Hair1
++~RandomNum(3,2)~+ @641 + Hair2
++~RandomNum(3,3)~+ @641 + Hair3
++~RandomNum(3,1)~+ @642 + Pretty1
++~RandomNum(3,2)~+ @642 + Pretty2
++~RandomNum(3,3)~+ @642 + Pretty3
+++ @631 EXIT 
+END 
+
+IF ~~ Art1 
+SAY @643
+IF ~~ EXIT 
+END 
+
+IF ~~ Art2
+SAY @644
+IF ~~ EXIT 
+END 
+
+IF ~~ Art3 
+SAY @645
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch1 
+SAY @646
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch2
+SAY @647
+= @648
+IF ~~ EXIT 
+END 
+
+IF ~~ Watch3
+SAY @649
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke1
+SAY @650 
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke2
+SAY @651
+IF ~~ EXIT 
+END 
+
+IF ~~ TellJoke3
+SAY @652
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle1
+SAY @653
+= @654
+= @655
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle2 
+SAY @656
+IF ~~ EXIT 
+END 
+
+IF ~~ Tickle3 
+SAY @657
+= @658
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell1 
+SAY @659
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell2 
+SAY @660
+IF ~~ EXIT 
+END 
+
+IF ~~ Spell3 
+SAY @661
+= @662
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose1 
+SAY @663
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose2 
+SAY @664
+IF ~~ EXIT 
+END 
+
+IF ~~ Nose3 
+SAY @665
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink1 
+SAY @666
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink2 
+SAY @667
+IF ~~ EXIT 
+END 
+
+IF ~~ Drink3 
+SAY @668
+IF ~~ EXIT 
+END 
+
+IF ~~ With1 
+SAY @669
+IF ~~ EXIT 
+END 
+
+IF ~~ With2 
+SAY @670
+IF ~~ EXIT 
+END 
+
+IF ~~ With3 
+SAY @671
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink1 
+SAY @672
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink2
+SAY @673
+IF ~~ EXIT 
+END 
+
+IF ~~ Wink3 
+SAY @674
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair1 
+SAY @675
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair2 
+SAY @676
+IF ~~ EXIT 
+END 
+
+IF ~~ Hair3 
+SAY @677
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty1 
+SAY @678
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty2
+SAY @679
+IF ~~ EXIT 
+END 
+
+IF ~~ Pretty3 
+SAY @680
+IF ~~ EXIT 
+END 
+
+
 
 IF ~~ stringfix
  SAY @596
 IF ~~ THEN DO ~ClearAllActions() 
       StartCutSceneMode() 
-      StartCutScene("X3reset")~ EXIT 
+      StartCutScene("X3VieR")~ EXIT 
 END
 
 END  
