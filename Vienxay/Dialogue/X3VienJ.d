@@ -1168,7 +1168,7 @@ END
 
 I_C_T Noober 11 X3VienJNoober
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @687 // 
-Spell("NOOBER",WIZARD_MAGIC_MISSILE)
+DO ~Spell("NOOBER",WIZARD_MAGIC_MISSILE)~
 == NOOBER @688
 END
 
