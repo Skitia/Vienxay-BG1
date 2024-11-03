@@ -1177,7 +1177,7 @@ I_C_T KIRIAN 3 X3VienKirian
 END
 
 
-ADD_TRANS_ACTION KIRIAN 5 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",10)~
+ADD_TRANS_ACTION KIRIAN BEGIN 5 END BEGIN END ~SetGlobal("X3VienxayAppChange","GLOBAL",10)~
 
 I_C_T Brage 2 X3VienBrage2
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @683
