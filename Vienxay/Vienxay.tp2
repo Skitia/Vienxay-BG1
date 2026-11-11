@@ -42,6 +42,10 @@ LANGUAGE ~English~
          ~english~
          ~Vienxay/translations/english/Vienxay.TRA~
 
+LANGUAGE ~Schinese~
+         ~schinese~
+         ~Vienxay/translations/schinese/Vienxay.TRA~
+
 BEGIN @6 /* Vienxay NPC for BG1EE */
   REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */ 
 
