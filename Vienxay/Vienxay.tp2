@@ -1,7 +1,8 @@
-BACKUP ~weidu_external/vienxay/backup~
+BACKUP ~Vienxay\backup~
 AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
 
-VERSION ~1.67~
+
+VERSION ~1.62~
 AUTO_TRA ~Vienxay/translations/%s~
 
 ALWAYS
@@ -29,21 +30,20 @@ END ELSE BEGIN
 		ACTION_IF GAME_IS ~eet~ BEGIN
 			INCLUDE ~EET/other/cpmvars/eet_cpmvars.tpa~
 			PRINT @8	// ~Enhanced Edition Trilogy install detected.~
-	    END ELSE BEGIN
+	    END ELSE BEGIN 
 	FAIL @4 /* Please install on BG:EE, Tutu or BGT. */
     END
   END
 END
 END
-END
+END 
 
 LANGUAGE ~English~
          ~english~
          ~Vienxay/translations/english/Vienxay.TRA~
 
 BEGIN @6 /* Vienxay NPC for BG1EE */
-DESIGNATED 0
-REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */
+  REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */ 
 
 ACTION_IF GAME_IS ~BGEE~ THEN BEGIN
 OUTER_SPRINT "bg1_eet_symbol" AR
@@ -52,53 +52,79 @@ END
 ACTION_IF GAME_IS ~EET~ THEN BEGIN
 OUTER_SPRINT "bg1_eet_symbol" BG
 END
-
-INCLUDE ~Vienxay/library/Vien_items.tpa~
-INCLUDE ~Vienxay/library/vien_bg1.tpa~
+  
+INCLUDE ~Vienxay/library/Vien_items.tpa~  
+INCLUDE ~Vienxay/library/vien_bg1.tpa~ 
 
 ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
-INCLUDE ~Vienxay/library/vien_sod.tpa~
+INCLUDE ~Vienxay/library/vien_sod.tpa~ 
 END
 
-COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
-COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
-COPY ~%MOD_FOLDER%/Portraits/VienxayS.bmp~ ~override/VienxayS.bmp~
+PRINT @9
 
-BEGIN @12 /* Portrait: Alt by Aeries1986 */
-DESIGNATED 1
-REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */
-COPY ~%MOD_FOLDER%/Portraits/AltVienxayL.bmp~ ~override/VienxayL.bmp~
-COPY ~%MOD_FOLDER%/Portraits/AltVienxayM.bmp~ ~override/VienxayM.bmp~
-COPY ~%MOD_FOLDER%/Portraits/AltVienxayS.bmp~ ~override/VienxayS.bmp~
+PRINT @10
 
-BEGIN @13 /* Portrait: Old Version (NWN) */
-DESIGNATED 2
-REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */
-COPY ~%MOD_FOLDER%/Portraits/OldVienxayL.bmp~ ~override/VienxayL.bmp~
-COPY ~%MOD_FOLDER%/Portraits/OldVienxayM.bmp~ ~override/VienxayM.bmp~
-COPY ~%MOD_FOLDER%/Portraits/OldVienxayS.bmp~ ~override/VienxayS.bmp~
+OUTER_SPRINT ~portrait~ ~placeholder_value~
+OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
+  ACTION_READLN ~portrait~
+END
+      ACTION_IF ("portrait" = 1) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/VienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT @11
+	  END
+      ACTION_IF ("portrait" = 2) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/AltVienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT @12
+	  END
+      ACTION_IF ("portrait" = 3) THEN BEGIN
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayL.bmp~ ~override/VienxayL.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayM.bmp~ ~override/VienxayM.bmp~
+		COPY ~%MOD_FOLDER%/Portraits/OldVienxayS.bmp~ ~override/VienxayS.bmp~
+      PRINT @13
+	  END
 
-BEGIN @14 /* Music for Vienxay */
-DESIGNATED 3
-REQUIRE_PREDICATE (GAME_IS ~bgee eet~) @7 /* This component must be installed on BG:EE. */
-COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+		
+/*PRINT @14
 
-MKDIR ~music/blank~
-COPY ~Vienxay/Music/blank.mus~ ~music~
-  ~Vienxay/Music/blank.acm~ ~music/blank/blanka.acm~
+PRINT @15
 
-COPY_EXISTING ~songlist.2da~ ~override~
-    SET_2DA_ENTRY 0 0 2 ~2DA_V1.0~
-    SET_2DA_ENTRY 0 1 2 ~~
-    SET_2DA_ENTRY 0 0 2 ~IDOBEK Name~
-    SET_2DA_ENTRY 1 2 3 ~Blank.mus~
-  SET_2DA_ENTRY 1 1 3 ~BLANK~
-    SET_2DA_ENTRY 0 0 3 ~~
-    REPLACE_TEXTUALLY CASE_INSENSITIVE ~2DA_V1.0~ ~2DA V1.0~
+OUTER_SPRINT ~music~ ~placeholder_value~
+OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
+  PRINT @16
+  ACTION_READLN ~music~
+END
+      ACTION_IF ("music" = 1) THEN BEGIN*/
+	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+
+	MKDIR ~music/blank~
+	COPY ~Vienxay/Music/blank.mus~ ~music~
+		~Vienxay/Music/blank.acm~ ~music/blank/blanka.acm~
+
+	COPY_EXISTING ~songlist.2da~ ~override~
+  		SET_2DA_ENTRY 0 0 2 ~2DA_V1.0~
+  		SET_2DA_ENTRY 0 1 2 ~~
+  		SET_2DA_ENTRY 0 0 2 ~IDOBEK Name~
+  		SET_2DA_ENTRY 1 2 3 ~Blank.mus~
+		SET_2DA_ENTRY 1 1 3 ~BLANK~
+  		SET_2DA_ENTRY 0 0 3 ~~
+  		REPLACE_TEXTUALLY CASE_INSENSITIVE ~2DA_V1.0~ ~2DA V1.0~
 
 LAF HANDLE_AUDIO
-STR_VAR
-  audio_path = ~Vienxay/music~
-  oggdec_path = ~Vienxay/music~
-  sox_path = ~Vienxay/music~
+  STR_VAR
+    audio_path = ~Vienxay/music~
+    oggdec_path = ~Vienxay/music~
+    sox_path = ~Vienxay/music~
 END
+/*
+PRINT @17
+END 
+
+ACTION_IF ("music" = 2) THEN BEGIN
+PRINT @18
+END 
+		
+*/
