@@ -1,0 +1,122 @@
+LOAD_TRA ~Vienxay/translations/%LANGUAGE%/vien_sod.tra~
+
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////Siege of Dragonspear////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+//CREATURES
+
+COPY ~%MOD_FOLDER%/cre/SoD/x32Vien.cre~ ~override~
+  SAY NAME1 @1 //Vienxay
+  SAY NAME2 @1 //Vienxay
+  WRITE_ASCII 0x248 ~X32Vien~ #8  //override script
+  WRITE_ASCII 0x280 ~X3Vien~ #32  //DV
+  WRITE_ASCII 0x2cc ~X32Vien~ #8   //pre-joining dialogue file
+  WRITE_ASCII 0X34 ~VienxayM~ #8   //small portrait, we do not have one right now, comment out.
+  WRITE_ASCII 0x3c ~VienxayL~ #8   //medium portrait, we do not have one right now, comment out. 
+  SAY BIO @2
+  SAY MORALE @3 // ~I will not die here.~
+  SAY HAPPY @4 // ~This party is doing better than I thought it would.~
+  SAY UNHAPPY_ANNOYED @5 // ~If we were under my leadership, things would be looking much better around here.~
+  SAY UNHAPPY_SERIOUS @6 // ~Must we come to the aid of every commoner?~
+  SAY UNHAPPY_BREAKING_POINT @7  // ~I'm done here. Be fools if you wish, but you do so without me.~
+  SAY LEADER @8 // ~A wise choice. I will bring us victory.~
+  SAY TIRED @9 // ~I need to refresh my spells. Let us rest.~
+  SAY BORED @10 // ~Ugh.~
+  SAY BATTLE_CRY1 @11 // ~You will regret crossing an elf.~
+  SAY BATTLE_CRY2 @12 // ~Prepare to be destroyed!~
+  SAY BATTLE_CRY3 @13 // ~No one faces me and lives.~
+  SAY BATTLE_CRY4 @14 // ~My art and shadows will end you all.~
+  SAY BATTLE_CRY5 @15 // ~With vengeance!~
+  SAY DAMAGE @16 //~Ugh!~ 
+  SAY DYING @17 //~My power...was not...~
+  SAY HURT @18 // ~Someone, heal me now!~
+  SAY AREA_FOREST @19 // ~The forests...they bring me back to Evermeet.~ [X3VFor]
+  SAY AREA_CITY @20 // ~Humans and their hideous cities.~ [X3VCit]
+  SAY AREA_DUNGEON @21 // ~Trek carefully. Leave the traps to me.~ [X3VDun]
+  SAY AREA_DAY @22 // ~Evermeet...how I miss you.~ [X3VDay]
+  SAY AREA_NIGHT @23 // ~My talents are well suited to the night.~ [X3VNigh]
+  SAY SELECT_COMMON1 @24 // ~Yes?~ [VienCome3]
+  SAY SELECT_COMMON2 @25 // ~Speak.~ [VienCom2]
+  SAY SELECT_COMMON3 @26 // ~Your desire?~ [VienCom3]
+  SAY SELECT_COMMON4 @27 // ~My art is yours.~ [VienCom4]
+  SAY SELECT_COMMON5 @280 // ~This is Vienxay.~ [VienCom5]
+  SAY SELECT_COMMON6 @290 // ~You called the shadowmage?~ [VienCom6]
+  SAY SELECT_ACTION1 @28 // ~If that is your command.~ [VienAct1]
+  SAY SELECT_ACTION2 @29  // ~Hrmph.~ [VienAct2]
+  SAY SELECT_ACTION3 @30 // ~Done.~ [VienAct3]
+  SAY SELECT_ACTION4 @31 // ~Ugh, fine.~ [VienAct4]
+  SAY SELECT_ACTION5 @32 // ~That's it?~ [VienAct5]
+  SAY SELECT_ACTION6 @330 // ~Follow me.~ [VienAct6]
+  SAY SELECT_ACTION7 @44 // ~I walk.~ [VienAct7]
+  SAY CRITICAL_HIT @49 //~Hahaha, yes!~ [VienCrtH] 
+  SAY CRITICAL_MISS @33 //~Ugh! I won't miss twice.~ [VienCrtM]
+  SAY TARGET_IMMUNE @34 // ~Hrmph. This is what happens when you don't use magic.~ [VienImm]
+  SAY INVENTORY_FULL @35 // ~Do I look like I have room?~  [VienInv]
+  SAY SPELL_DISRUPTED @36 // ~My spell failed? Impossible!~ [VienSpel]
+  SAY SET_A_TRAP @37 // ~It's done.~  
+  SAY HIDDEN_IN_SHADOWS @38 // ~None can see the shadowmage.~ 
+  SAY PICKED_POCKET @43 // ~That's mine now.~ [X3VPick]
+  SAY SELECT_RARE1 @40 // ~Do you even appreciate my contributions?~
+  SAY SELECT_RARE2 @41 // ~Give your command already. I have no patience for this.~ [VienRar2]
+  SAY REACT_TO_DIE_GENERAL @42 // ~Another fallen? Fight harder, fools!~ [X3VDie]
+ 
+APPEND ~bddialog.2da~ ~X3Vien X32Vien X32VienJ X32VienD~ 
+  UNLESS ~X3Vien~
+
+
+////////////////DIALOGUES
+
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/SoD/X32Vien.d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/SoD/X32VienJ.d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogue/SoD/X3VElder.d~
+
+// Non-Area Scripts 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/X32Vien.baf~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/X32VienD.baf~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/X32VBant.baf~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/x3vcuts1.baf~
+//Old Quest Scripts
+//COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/x3vcuts2.baf~
+//COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/x3vcuts3.baf~
+//COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/x3vcuts4.baf~
+//COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/x3vcuts5.baf~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/Script/SoD/X3Vcutg.baf~
+////////////////Area SCRIPTS
+  EXTEND_TOP ~bd0063.bcs~ ~%MOD_FOLDER%/script/SoD/bd0063.baf~
+  EXTEND_TOP ~bd0066.bcs~ ~%MOD_FOLDER%/script/SoD/bd0066.baf~
+  EXTEND_TOP ~bd0101.bcs~ ~%MOD_FOLDER%/script/SoD/bd0101.baf~ 
+  EXTEND_TOP ~bd0103.bcs~ ~%MOD_FOLDER%/script/SoD/bd0103.baf~
+  EXTEND_TOP ~bd0104.bcs~ ~%MOD_FOLDER%/script/SoD/bd0104.baf~  
+  EXTEND_TOP ~bd0120.bcs~ ~%MOD_FOLDER%/script/SoD/bd0120.baf~  
+  EXTEND_TOP ~bd1000.bcs~ ~%MOD_FOLDER%/script/SoD/bd1000.baf~
+  EXTEND_TOP ~bd2000.bcs~ ~%MOD_FOLDER%/script/SoD/bd2000.baf~  
+  EXTEND_TOP ~bd3000.bcs~ ~%MOD_FOLDER%/script/SoD/bd3000.baf~
+  EXTEND_TOP ~bd4100.bcs~ ~%MOD_FOLDER%/script/SoD/bd4100.baf~
+  EXTEND_TOP ~bd4300.bcs~ ~%MOD_FOLDER%/script/SoD/bd4300.baf~
+  EXTEND_TOP ~bd4601.bcs~ ~%MOD_FOLDER%/script/SoD/bd4601.baf~
+  EXTEND_TOP ~bd5300.bcs~ ~%MOD_FOLDER%/script/SoD/bd5300.baf~
+  EXTEND_TOP ~bd7100.bcs~ ~%MOD_FOLDER%/script/SoD/bd7100.baf~
+  EXTEND_TOP ~bd7200.bcs~ ~%MOD_FOLDER%/script/SoD/bd7200.baf~
+  EXTEND_TOP ~bdcut05.bcs~ ~%MOD_FOLDER%/script/SoD/bdcut05.baf~   
+  EXTEND_TOP ~bdcut08.bcs~ ~%MOD_FOLDER%/script/SoD/bdcut08.baf~ 
+  EXTEND_TOP ~bdintro.bcs~ ~%MOD_FOLDER%/script/SoD/bdintro.baf~
+  EXTEND_TOP ~bdparty.bcs~ ~%MOD_FOLDER%/script/SoD/bdparty.baf~
+  EXTEND_TOP ~bdcut58.bcs~ ~%MOD_FOLDER%/script/SoD/bdcut58.baf~
+  EXTEND_TOP ~bdcut59b.bcs~ ~%MOD_FOLDER%/script/SoD/bdcut59b.baf~
+  EXTEND_TOP ~bdcut61.bcs~ ~%MOD_FOLDER%/script/SoD/bdcut61.baf~ 
+  EXTEND_TOP ~bdport01.bcs~ ~%MOD_FOLDER%/script/SoD/bdport01.baf~   
+///////////////Other Creatures 
+COPY ~%MOD_FOLDER%/cre/SoD/X3VELDER.cre~ ~override/X3VELDER.cre~
+  SAY NAME1 ~Elder Mage~
+  SAY NAME2 ~Elder Mage~
+  WRITE_ASCII 0x248 ~X3VELDER~ #8  //override script
+  WRITE_ASCII 0x280 ~X3VELDER~ #32  //DV
+  WRITE_ASCII 0x2cc ~X3VELDER~ #8   //pre-joining dialogue file
+
+
+//TO MAKE IT DISPLAY RIGHT IN WEIDU
+
+LOAD_TRA ~Vienxay/translations/%LANGUAGE%/Vienxay.tra~
