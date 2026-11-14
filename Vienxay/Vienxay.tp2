@@ -1,7 +1,8 @@
 BACKUP ~Vienxay\backup~
 AUTHOR ~https://forums.beamdog.com/discussion/comment/1056542~
 
-VERSION ~1.67~
+
+VERSION ~1.62~
 AUTO_TRA ~Vienxay/translations/%s~
 
 ALWAYS
@@ -91,7 +92,7 @@ END
 	  END
 
 		
-PRINT @14
+/*PRINT @14
 
 PRINT @15
 
@@ -100,7 +101,7 @@ OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
   PRINT @16
   ACTION_READLN ~music~
 END
-      ACTION_IF ("music" = 1) THEN BEGIN
+      ACTION_IF ("music" = 1) THEN BEGIN*/
 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
 
 	MKDIR ~music/blank~
@@ -122,7 +123,7 @@ LAF HANDLE_AUDIO
     oggdec_path = ~Vienxay/music~
     sox_path = ~Vienxay/music~
 END
-
+/*
 PRINT @17
 END 
 
@@ -130,3 +131,4 @@ ACTION_IF ("music" = 2) THEN BEGIN
 PRINT @18
 END 
 		
+*/
