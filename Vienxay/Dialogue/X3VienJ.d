@@ -1150,7 +1150,7 @@ END
 // New 
 I_C_T FLAM5 0 X3VienFlam50
 == X3VienJ IF ~InParty("X3Vien") InMyArea("X3Vien") !StateCheck("X3Vien",CD_STATE_NOTVALID)~ THEN @592 // ~Here we go again. Another false accusation. Ugh.~
-== FLAM5 ~Lying won't help you at all.~
+== FLAM5 @699
 END
 
 I_C_T NESSIE 5 X3VieNessie
@@ -1436,7 +1436,7 @@ IF ~~ EXIT
 END 
 
 IF ~~ Vienxay.PCompanionThoughts 
-SAY ~Which one exactly?~
+SAY @693
 // BG1
 +~InParty("Ajantis")~+ @260 + Em.Ajantis
 +~InParty("Alora")~+ @261 + Em.Alora
@@ -1490,26 +1490,26 @@ Low Approval, but Above 8 Reputation (Standard)
 For now, just script high and low reputation*/
 +~Race(Player1,ELF)~+ @294 + Vie.Me1 
 +~!Race(Player1,ELF)~+ @294 + Vie.Me2
-++ ~Nevermind~ EXIT  
+++ @694 EXIT
 END 
 
 IF ~~ Em.Helga
-SAY ~If she yaps about battle one more time...a dwarf can be so irksome.~
+SAY @695
 IF ~~ EXIT 
 END 
 
 IF ~~ Em.Recorder
-SAY ~I suppose it is useful to have someone to record what you do around. If only she wasn't so righteous.~
+SAY @696
 IF ~~ EXIT 
 END 
 
 IF ~~ Em.Ishy
-SAY ~She is a very whiny spoiled orc. But a useful meat shield, like most of them are.~
+SAY @697
 IF ~~ EXIT 
 END 
 
 IF ~~ Em.Drake
-SAY ~He's...different than what I would expect of a human. But as likable as the rest, which is only so much.~
+SAY @698
 IF ~~ EXIT 
 END 
 

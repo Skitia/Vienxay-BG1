@@ -1,4 +1,4 @@
-LOAD_TRA ~Vienxay/translations/English/vien_bg1.tra~
+LOAD_TRA ~Vienxay/translations/%LANGUAGE%/vien_bg1.tra~
 
 APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
   ~0x80101FEF CD_STATE_NOTVALID~
@@ -202,8 +202,8 @@ COPY ~Vienxay/cre/X3Vien.cre~ ~override/X3Vien.cre~
   WRITE_SHORT 0x246 (IDS_OF_SYMBOL (~kit~ ~X3VSM~)) 
 // JOURNAL ///
 
-ADD_JOURNAL TITLE (%Vienxay's Vengeance%) @10021 @10022 @10023 @10024 @10025 @10026  USING ~Vienxay/tra/english/Vien_bg1.tra~
-ADD_JOURNAL TITLE (@10152) @10153 @10154 @10155 @10149 @10148 @10147 USING ~Vienxay/tra/english/Vien_bg1.tra~ // SoD Quest. 
+ADD_JOURNAL TITLE (%Vienxay's Vengeance%) @10021 @10022 @10023 @10024 @10025 @10026  USING ~Vienxay/translations/%LANGUAGE%/Vien_bg1.tra~
+ADD_JOURNAL TITLE (@10152) @10153 @10154 @10155 @10149 @10148 @10147 USING ~Vienxay/translations/%LANGUAGE%/Vien_bg1.tra~ // SoD Quest. 
 ////
  
 APPEND ~pdialog.2da~ ~X3VIEN X3VienP X3VienJ X3vienD~
@@ -334,4 +334,4 @@ END
 
 //TO MAKE IT DISPLAY RIGHT IN WEIDU
 
-LOAD_TRA ~Vienxay/translations/English/Vienxay.tra~
+LOAD_TRA ~Vienxay/translations/%LANGUAGE%/Vienxay.tra~
